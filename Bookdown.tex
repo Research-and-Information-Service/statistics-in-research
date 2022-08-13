@@ -85,9 +85,9 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{A-Note-About-this-Resource}{%
-\chapter*{A Note About this Resource}\label{A-Note-About-this-Resource}}
-\addcontentsline{toc}{chapter}{A Note About this Resource}
+\hypertarget{Statistics-Primer}{%
+\chapter*{Statistics Primer}\label{Statistics-Primer}}
+\addcontentsline{toc}{chapter}{Statistics Primer}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -878,13 +878,203 @@ Elsewhere & 3.3 & 3.8 & 0.5 \\
 \bottomrule
 \end{longtable}
 
-\hypertarget{correlation}{%
-\chapter{Correlation}\label{correlation}}
+\hypertarget{data-visualisation}{%
+\chapter{Data Visualisation}\label{data-visualisation}}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
+\hypertarget{data-visualisation-1}{%
+\section{Data Visualisation}\label{data-visualisation-1}}
+
+Data visualisation is formally defined as the encoding of data using visual cues such as variations in the size, shape and colour of geometric objects (points, lines, bars). The encoding is generally informed by the relationships within the data.
+
+In the bar chart example below the frequencies of different eye colours have been mapped to the heights of the bars.
+
+\begin{figure}
+
+{\centering \includegraphics{Bookdown_files/figure-latex/unnamed-chunk-5-1} 
+
+}
+
+\caption{The frequency of each observation has been mapped to the height of the bars in the visual.}\label{fig:unnamed-chunk-5}
+\end{figure}
+
+\hypertarget{visual-cues}{%
+\section{Visual Cues}\label{visual-cues}}
+
+Whether data is visualised using points, lines, bars or something else entirely is largely determined by the relationships within the data. Some of the visual cues and relationships used to inform data visualisation are shown below.
+
+The illustration above shows some of the visual cues used to encode data. Magnitudes are typically mapped to sizes of objects. Colour is often used to represent quantities or highlight data. Shapes can be used to represent qualitative data.
+
+\hypertarget{relationships-in-data}{%
+\section{Relationships in Data}\label{relationships-in-data}}
+
+The \href{https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-charts/\#section-9}{Government Statistical Service} has produced guidance on the relationships in data and how they inform chart choices. The guidance can be useful and some of the key points are summarised below.
+
+\hypertarget{frequency-distributions}{%
+\subsection{Frequency Distributions}\label{frequency-distributions}}
+
+Histograms and bar charts are useful for showing category frequencies. Population by age band for instance could be visualised using a histogram or bar chart. A boxplot can also be useful in visualising additional descriptive statistics such as the mean, median, quartiles, outliers and the range.
+
+\begin{figure}
+
+{\centering \includegraphics{Bookdown_files/figure-latex/unnamed-chunk-6-1} 
+
+}
+
+\caption{Simulated weight data illustrating the use of a histogram.}\label{fig:unnamed-chunk-6}
+\end{figure}
+
+\hypertarget{time-series}{%
+\subsection{Time Series}\label{time-series}}
+
+A line chart is often used to demonstrate the trend of a variable over some time period. For instance, temperature over time can be visualised with a line chart.
+
+\begin{figure}
+
+{\centering \includegraphics{Bookdown_files/figure-latex/unnamed-chunk-7-1} 
+
+}
+
+\caption{Simulated temperature data.}\label{fig:unnamed-chunk-7}
+\end{figure}
+
+\hypertarget{rankings}{%
+\subsection{Rankings}\label{rankings}}
+
+Data that is ranked usually consists of categories presented in ascending or descending order. A bar chart may be used to show the comparisons between the different categories. Sometimes, change in ranking over time is shown through slope charts but usually only when comparing a start date and an end date without consideration for the time period in between.
+
+\begin{figure}
+
+{\centering \includegraphics{Bookdown_files/figure-latex/unnamed-chunk-8-1} 
+
+}
+
+\caption{Slope chart showing changes in GDP between 1970 and 1979.}\label{fig:unnamed-chunk-8}
+\end{figure}
+
+\hypertarget{deviation}{%
+\subsection{Deviation}\label{deviation}}
+
+Deviation from a reference value can be shown through bar charts.
+
+\hypertarget{correlation}{%
+\subsection{Correlation}\label{correlation}}
+
+Correlation is usually visualised using scatterplots. Scatterplots are a good way to show comparisons between observations of two variables to determine if there is some correlation because it quickly becomes apparent if there is correlation between the variables or not.
+
+\begin{figure}
+
+{\centering \includegraphics{Bookdown_files/figure-latex/unnamed-chunk-9-1} 
+
+}
+
+\caption{The scatterplot above shows metabolic rate plotted against body weight (kg). This is an example of correlation. This data comes from the Introduction to Statistics with R (ISwR) library for R.}\label{fig:unnamed-chunk-9}
+\end{figure}
+
+\hypertarget{magnitude}{%
+\subsection{Magnitude}\label{magnitude}}
+
+Comparing differences in the magnitudes of values often relies on bar charts. Comparing the total number of research papers by journal for insance.
+
+\hypertarget{spatial}{%
+\subsection{Spatial}\label{spatial}}
+
+Cartograms and heat mapping are common ways to show differences between geographical regions.
+
+\hypertarget{why-visualise-data}{%
+\section{Why Visualise Data?}\label{why-visualise-data}}
+
+In general, people are better at recognising differences in shapes, colours and sizes than they are at identifying the number of times a value occurs or the differences between values in a large excel spread sheet. For this reason data visualisation can be used to find errors in data quickly. It's much easier to recognise an anomalous value on a bar chart than in an Excel spread sheet. Data visualisation can also be used to see patterns that are difficult to determine by looking at raw data.
+Data visualisation can also be used to:
+
+\begin{itemize}
+\tightlist
+\item
+  Answer research questions.
+\item
+  Discover new research questions.
+\item
+  Explain complex relationships in data visually.
+\item
+  Aid in decision making.
+\item
+  Engage and inform.
+\end{itemize}
+
+\hypertarget{data-visualisation-tools}{%
+\section{Data Visualisation Tools}\label{data-visualisation-tools}}
+
+New programming languages and software products have made data analysis and visualisation vastly more accessible. In addition, many of these facilitate dynamic or interactable visualisations. There is an ever expanding ecosystem of data visualisation tools (many of which have been used in this document) including:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Excel} and \textbf{SPSS} produce high quality visualisations and while dynamic visuals are not their focus they are often the simplest and most time efficient option for visualising data.
+\item
+  \textbf{Genially} is an online tool for creating interactive and animated content that is particularly effective for presentations.
+\item
+  \textbf{Tableau} and Power BI are visual analytics platforms which are well suited to the development of dashboards to visualise complex interconnected data sets.
+\item
+  \textbf{Flourish} can be used to produce interactive visuals although its functionality is more limited than Power BI or Tableau.
+\item
+  \textbf{Javascript} facilitates data visualisation through its D3 library. D3 has a steep learning curve as it requires JavaScript skills to use it effectively however it offers a greater degree of customisation and a broader spectrum of visualisation options as a result.
+\item
+  \textbf{Python} libraries such as Matplotlib, Seaborn and Plotly can also be used to visualise data. The learning curve is steep as it requires programming skills to use Python effectively however Python offers customisation options that are not available in Excel or Power BI.
+\item
+  \textbf{R} is another useful tool with libraries such as ggplot2 which can be used to visualise data. This is the programming language used to develop this resource and many of the visualisations throughout.
+\end{itemize}
+
+\hypertarget{dynamic-visualisations-dashboards}{%
+\section{Dynamic Visualisations (Dashboards)}\label{dynamic-visualisations-dashboards}}
+
+There are a number of considerations when developing dynamic data visualisations (sometimes called dashboards) as not all data visualisations need to be dynamic.
+
+Considering the audience, objectives and what visuals will be most appropriate to communicate data can help in determining whether a dynamic or interactive visualisation is needed.
+
+Dashboard style visualisations are best suited to data reporting where there is a need to repeatedly produce the same visuals or reports either daily, monthly, quarterly or annually.
+
+Power BI is well designed for these types of visualisation requirements as it offers automation options enabling data sets to be refreshed at regular time intervals.
+Automation can be as simple as setting a refresh time in the Power BI dashboard and manually updating the excel file it stores in memory or it can be more complex and involve using programming languages to make API calls and perform automated calculations.
+
+Producing dynamic visualisations is often considerably more time expensive than producing static visuals and time constraints should be considered before developing a dashboard visualisation.
+
+\hypertarget{best-practice}{%
+\subsection{Best Practice}\label{best-practice}}
+
+GSS have produced \href{https://gss.civilservice.gov.uk/policy-store/top-tips-for-designing-dashboards/}{guidance on designing dashboards} that covers most aspects of dashboard design. The content below summarises some of the key points in this guidance.
+
+\textbf{Consider Audience and User Needs}
+
+Consider the user needs and whether a dashboard is really needed. Often the simplest solution (bar charts drawn in Excel or SPSS) is the best. Consider the visuals used and whether they're the best way to communicate the data. Sometimes tables or even text can communicate data better than a visual.
+
+\textbf{Guidance}
+
+Providing guidance on how to use a dynamic visual or dashboard is important as many users will not be familiar with interactive dashboards. Guidance can be provided through supplementary documentation, blog text if the visual is being embedded, or it can be provided through tool tips and information pages in the dashboard itself.
+
+\textbf{Streamline Content}
+
+When adding any new data or visuals it is important to ask whether it adds value. Try to group related content and streamlining the content to guide the users through the data.
+
+\textbf{Automate }
+
+Automation can be simple or complex, it can be achieved by setting a refresh date in a Power BI dashboard. It can also involve the use of programming languages to make API calls, web scrape data and perform calculations. Automation typically results in less manual updating and a reduced chance of error and can make the management of the product less resource intensive. It's important to note that automation does not necessarily mean less work, the scripts used to automate processes will need to be updated as languages are developed and updated over time.
+
+\textbf{Consider Design Principles}
+
+Give your dashboard a header and dedicated areas for visuals. Consider other dashboards you have seen in the past and draw inspiration from web design. Most websites have a navigation bar at the top, lists with filters along the left or right hand side and content in the center of the page. Think about things like symmetry, flow and a consistent style or layout. Use white space where possible and try to avoid cluttered visualisations.
+
+\textbf{Ensure Accessibility}
+
+Ensure your product is accessible by checking the colour contrast ratios of text and including alt text in your visualisations where possible. Ensure the fonts are large enough to read and avoid using multiple fonts.
+
 \hypertarget{correlation-1}{%
-\section{Correlation}\label{correlation-1}}
+\chapter{Correlation}\label{correlation-1}}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{correlation-2}{%
+\section{Correlation}\label{correlation-2}}
 
 Correlation refers to the relationship (association) between two or more variables. A correlation coefficient (usually Pearson's r or Spearman's rho) quantifies the relationship:
 
@@ -926,6 +1116,228 @@ It is important to note that correlation does not imply causation. Just because 
 The number of drownings and the sales of ice cream are highly correlated but that doesn't mean one causes the other.
 
 Drowning's and sales of ice cream are higher in the Summer months when weather is warmer. A third variable (good weather) causes both.
+
+\hypertarget{samples}{%
+\chapter{Samples}\label{samples}}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{what-is-a-sample}{%
+\section{What is a Sample?}\label{what-is-a-sample}}
+
+A sample is a small subset of a larger set of data.
+
+The purpose of using a sample is to draw inferences about a wider population. The voting intentions of 1,000 people (sample) might be used to predict the outcome of a general election (population).
+
+Procedures for converting sample responses to population estimates are known as inferential statistics.
+
+\hypertarget{representative-sampling}{%
+\subsection{Representative Sampling}\label{representative-sampling}}
+
+To generalise the results from a sample to the full population, the sample must be representative of the population. If, in a project to gauge the view of the Northern Ireland population, only Antrim residents are surveyed then the sample results cannot be used to infer attitudes of all Northern Ireland residents.
+
+\hypertarget{sampling-error}{%
+\subsection{Sampling Error}\label{sampling-error}}
+
+Surveys are based on a sample rather than the whole population so they are subject to sampling error.
+
+The sampling error is the difference between the sample estimate and the `true' value (which would have been obtained if a census of the whole population were undertaken.
+
+\hypertarget{example-13}{%
+\subsubsection{Example}\label{example-13}}
+
+If one measures heights of 1,000 individuals in Northern Ireland, the average height of the sample is typically not the same as the average height of all 1.8 million people in the country. The difference between the sample and the population values is considered a sampling error. If the sample mean is 176cm and the population mean is 178cm then the sampling error is 2cm.
+
+The exact measurement of sampling error is generally not feasible, since the true population values are not known.
+
+Sampling error however can be estimated by techniques such as the calculation of confidence intervals.
+
+\hypertarget{confidence-intervals}{%
+\chapter{Confidence Intervals}\label{confidence-intervals}}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{confidence-intervals-1}{%
+\section{Confidence Intervals}\label{confidence-intervals-1}}
+
+A confidence interval (CI) is a range of values that would likely contain the true value.
+
+Consider a study to estimate the mean weight of all 10 year old boys in Northern Ireland. It would be impractical to weigh them all so a sample of 16 might be taken. The mean weight of the sample might be 45kg. This is a point estimate of the population mean.
+
+This point estimate has limited utility because it does not reveal uncertainty associated with the estimate. Is there confidence that the population mean is within 5kg of 45kg? It's not possible to know with this information.
+
+That is why confidence intervals are calculated.
+
+The calculation of a confidence interval is not a simple process. There are a number of things that are needed:
+
+\begin{itemize}
+\tightlist
+\item
+  The number of measurements recorded.
+\item
+  The mean of those measurements and the standard deviation.
+\item
+  A `Z-score'.
+\end{itemize}
+
+Before continuing it might be useful to review variance and standard deviation.
+
+\hypertarget{example-14}{%
+\section{Example}\label{example-14}}
+
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2258}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1935}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1613}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2097}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2097}}@{}}
+\caption{\label{tab:table12}}\tabularnewline
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedleft
+Group
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Rate (\%)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+CI (\%)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Lower Limit (\%)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Upper Limit (\%)
+\end{minipage} \\
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedleft
+Group
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Rate (\%)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+CI (\%)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Lower Limit (\%)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Upper Limit (\%)
+\end{minipage} \\
+\midrule
+\endhead
+Protestant Males & 53.3 & +/-2.6 & 50.7 & 55.9 \\
+Roman Catholic Males & 46.7 & +/-2.6 & 44.1 & 49.3 \\
+Protestant Females & 52.6 & +/-2.7 & 49.9 & 55.3 \\
+Roman Catholic Females & 47.4 & +/-2.7 & 44.7 & 50.1 \\
+Protestant both sexes & 53.0 & +/-1.9 & 51.1 & 54.9 \\
+Roman Catholic both sexes & 47.0 & +/-1.9 & 45.1 & 48.9 \\
+\bottomrule
+\end{longtable}
+
+Based on a sample, the table above shows that 52.6 \% of Protestant females (C.I. = +/- 2.7) were estimated to be economically active in 2011.
+
+This means that there is 95\% confidence that the `true value' lies somewhere between 49.9\% and 55.3\%.
+
+\hypertarget{example-15}{%
+\section{Example}\label{example-15}}
+
+We measure the heights of ten people in the office and get a mean height of 172cm and a standard deviation of 15cm.
+
+We need to decide the confidence interval we want. 95\% is the most common
+
+We need to know something called the Z value for that confidence interval.
+
+Without getting too technical, the Z-score describes how far a value is from the mean in terms of standard deviation. A Z-score of zero would indicate that a value is identical to the mean value. A Z-score of 1 would indicate a distance of one standard deviation from the mean and a Z-score of 2 would indicate a distance of 2 standard deviations from the mean. It's not important to remember these details however because the Z score for a confidence interval of 95\% is 1.96.
+
+For a 95\% confidence interval the Z score is 1.96. The confidence interval is then given by:
+
+\[CI=\pm Z \frac{\sigma}{\sqrt{n}},\]
+
+where the Greek letter sigma is the standard deviation, n is the number of observations or measurements and Z is the Z-score.
+
+The mean and its associated confidence interval is given by:
+
+\[172 \pm 1.96 \frac{15}{\sqrt{10}},\]
+\[172cm \pm 9.30cm.\]
+
+In other words, the lower bound of the confidence interval is 162.7cm and the upper bound is 181.3cm. Our true mean is likely between these two values.
+
+The confidence interval can be narrowed by either reducing the standard deviation in our measurements (not always possible but sometimes by improving measurement tools or techniques it can be reduced) or by increasing the number of measurements taken. With 100 measurements of height and the same mean and standard deviation the mean and its associated confidence interval would be stated as:
+
+\[172 \pm 1.96 \frac{15}{\sqrt{100}},\]
+\[172cm \pm 2.94cm.\]
+
+This would make the range 169.1cm to 174.9cm.
+
+\hypertarget{hypothesis-testing-statistical-significance}{%
+\chapter{Hypothesis Testing \& Statistical Significance}\label{hypothesis-testing-statistical-significance}}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{hypothesis-testing}{%
+\section{Hypothesis Testing}\label{hypothesis-testing}}
+
+There are two types of hypothesis in experimental design, namely:
+
+\begin{itemize}
+\tightlist
+\item
+  Null hypothesis.
+\item
+  Research hypothesis.
+\end{itemize}
+
+The null hypothesis states there is no difference between two variables (any observed differences occurred merely by chance).
+
+The research hypothesis states that there is a true difference between the two variables in a study.
+
+\hypertarget{example-16}{%
+\subsection{Example}\label{example-16}}
+
+When considering a study to determine the impact of a drug on hypertension it would be typical to:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Formulate a null hypothesis: The drug has no effect.
+\item
+  Conduct a study and measure pre- and post- intervention blood pressure.
+\item
+  Calculate the probability (p) of obtaining the observed difference in scores if the null hypothesis is true.
+\end{enumerate}
+
+If the probability is small enough (p\textless0.05) then it suggests that the pattern of results is unlikely to have arisen by chance and the drug may have a genuine effect in the population.
+
+\hypertarget{statistical-significance}{%
+\section{Statistical Significance}\label{statistical-significance}}
+
+Statistical significance refers to the probability (p) of finding the pattern of results in a particular study, if the hypothesis is true.
+
+If p is small (\textless0.05) then the effect is unlikely to have occurred by chance alone.
+
+\hypertarget{odds-against-chance-fallacy}{%
+\subsection{Odds against Chance Fallacy}\label{odds-against-chance-fallacy}}
+
+The null hypothesis is a conditional probability and the obtained probability value is conditional on the null hypothesis being true. As it focuses on the null hypothesis it cannot be used to test the research hypothesis and the probability that the research hypothesis is correct is not known.
+
+\hypertarget{statistical-significance-versus-importance}{%
+\subsection{Statistical Significance Versus Importance}\label{statistical-significance-versus-importance}}
+
+In spoken English, the word `significant' is typically taken to mean `important' but in statistics the word means `probably true' (not due to chance).
+
+A research finding might be true (significant) without being important or a research finding might be important without being true (significant).
+
+This is important in medical research.
+
+\hypertarget{example-17}{%
+\subsubsection{Example}\label{example-17}}
+
+A study evaluated four asthma treatments: yoga, transcendental meditation, physiotherapy and a self-help group.
+
+There was substantial improvement in patients taught on the yoga programme (lung function, medication use, well-being\ldots etc) however, while the results were clinically significant, across-group comparison showed results as being not statistically significant.
+
+\hypertarget{in-brief}{%
+\subsection{In Brief}\label{in-brief}}
+
+Do not confuse statistical significance with real world significance.
+
+Just because an observed difference is statistically significant does not mean it is important.
 
   \bibliography{book.bib,packages.bib}
 

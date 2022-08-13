@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Statistics Primer</title>
+  <title>Chapter 8 Correlation | Statistics Primer</title>
   <meta name="description" content="This book is designed to provide readers with a brief introduction to descriptive and inferential statistics." />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Statistics Primer" />
+  <meta property="og:title" content="Chapter 8 Correlation | Statistics Primer" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This book is designed to provide readers with a brief introduction to descriptive and inferential statistics." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Statistics Primer" />
+  <meta name="twitter:title" content="Chapter 8 Correlation | Statistics Primer" />
   
   <meta name="twitter:description" content="This book is designed to provide readers with a brief introduction to descriptive and inferential statistics." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="intro.html"/>
+<link rel="prev" href="data-visualisation.html"/>
+<link rel="next" href="samples.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -206,35 +206,52 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Statistics Primer</h1>
-<p class="author"><em></em></p>
-<p class="date"><em>2022-08-13</em></p>
-</div>
-<div id="Statistics-Primer" class="section level1 unnumbered hasAnchor">
-<h1>Statistics Primer<a href="index.html#Statistics-Primer" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="correlation-1" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Correlation<a href="correlation-1.html#correlation-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <hr />
-<p><strong>What is this?</strong></p>
-<p>This resource has been written using <strong>R</strong>, <strong>LaTeX</strong> and <strong>R Studio</strong> and published through <strong>GitHub</strong>. As the resource is hosted on GitHub it is available anywhere, any time and on any device. This resource supports the embedding of images, video content, html content (iframes), live code and mathematical formula and makes sharing the content much easier. In addition, this resource is capable of embedding Power BI dashboards, Python and R coded visuals.</p>
-<p><strong>Contents</strong></p>
+<div id="correlation-2" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Correlation<a href="correlation-1.html#correlation-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Correlation refers to the relationship (association) between two or more variables. A correlation coefficient (usually Pearson’s r or Spearman’s rho) quantifies the relationship:</p>
 <ul>
-<li>Statistics
-<ul>
-<li>Introduction - What is Statistics?</li>
-<li>Data Types and Levels of Measurement - Types of Data and Levels of Measurement</li>
-<li>Describing Data - Measures of Central Tendency and Dispersion</li>
-<li>Comparing Data - Percentages</li>
-</ul></li>
+<li>r = 1 represents a perfect positive association</li>
+<li>r = -1 represents a perfect negative association</li>
+<li>r = 0 represents a lack of association</li>
 </ul>
+</div>
+<div id="examples" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Examples<a href="correlation-1.html#examples" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="positive-association" class="section level3 hasAnchor" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Positive Association<a href="correlation-1.html#positive-association" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="flourish-embed flourish-chart" data-src="visualisation/10189565"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+<p>The plot above shows a positive association between the number of hours worked and wages earned. As the number of hours worked increases so too do the wages.</p>
+</div>
+<div id="negative-association" class="section level3 hasAnchor" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> Negative Association<a href="correlation-1.html#negative-association" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="flourish-embed flourish-chart" data-src="visualisation/10189632"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+<p>The plot above shows a negative association between the spending and savings. As more money is spent, less is saved.</p>
+</div>
+<div id="no-association" class="section level3 hasAnchor" number="8.2.3">
+<h3><span class="header-section-number">8.2.3</span> No Association<a href="correlation-1.html#no-association" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="flourish-embed flourish-scatter" data-src="visualisation/10189672"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+<p>Ice cream sales plotted against dog food production. There is no association and r=0.</p>
+<p>The plot above shows a positive association between the number of hours worked and wages earned. As the number of hours worked increases so too do the wages.</p>
+</div>
+</div>
+<div id="understanding-correlation" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Understanding Correlation<a href="correlation-1.html#understanding-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It is important to note that correlation does not imply causation. Just because two variables are related, does not mean that one causes the other.</p>
+<p>The number of drownings and the sales of ice cream are highly correlated but that doesn’t mean one causes the other.</p>
+<p>Drowning’s and sales of ice cream are higher in the Summer months when weather is warmer. A third variable (good weather) causes both.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="data-visualisation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="samples.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

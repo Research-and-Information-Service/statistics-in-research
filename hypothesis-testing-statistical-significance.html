@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Statistics Primer</title>
+  <title>Chapter 11 Hypothesis Testing &amp; Statistical Significance | Statistics Primer</title>
   <meta name="description" content="This book is designed to provide readers with a brief introduction to descriptive and inferential statistics." />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Statistics Primer" />
+  <meta property="og:title" content="Chapter 11 Hypothesis Testing &amp; Statistical Significance | Statistics Primer" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This book is designed to provide readers with a brief introduction to descriptive and inferential statistics." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Statistics Primer" />
+  <meta name="twitter:title" content="Chapter 11 Hypothesis Testing &amp; Statistical Significance | Statistics Primer" />
   
   <meta name="twitter:description" content="This book is designed to provide readers with a brief introduction to descriptive and inferential statistics." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="intro.html"/>
+<link rel="prev" href="confidence-intervals.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -206,35 +206,63 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Statistics Primer</h1>
-<p class="author"><em></em></p>
-<p class="date"><em>2022-08-13</em></p>
-</div>
-<div id="Statistics-Primer" class="section level1 unnumbered hasAnchor">
-<h1>Statistics Primer<a href="index.html#Statistics-Primer" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="hypothesis-testing-statistical-significance" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Chapter 11</span> Hypothesis Testing &amp; Statistical Significance<a href="hypothesis-testing-statistical-significance.html#hypothesis-testing-statistical-significance" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <hr />
-<p><strong>What is this?</strong></p>
-<p>This resource has been written using <strong>R</strong>, <strong>LaTeX</strong> and <strong>R Studio</strong> and published through <strong>GitHub</strong>. As the resource is hosted on GitHub it is available anywhere, any time and on any device. This resource supports the embedding of images, video content, html content (iframes), live code and mathematical formula and makes sharing the content much easier. In addition, this resource is capable of embedding Power BI dashboards, Python and R coded visuals.</p>
-<p><strong>Contents</strong></p>
+<div id="hypothesis-testing" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Hypothesis Testing<a href="hypothesis-testing-statistical-significance.html#hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There are two types of hypothesis in experimental design, namely:</p>
 <ul>
-<li>Statistics
-<ul>
-<li>Introduction - What is Statistics?</li>
-<li>Data Types and Levels of Measurement - Types of Data and Levels of Measurement</li>
-<li>Describing Data - Measures of Central Tendency and Dispersion</li>
-<li>Comparing Data - Percentages</li>
-</ul></li>
+<li>Null hypothesis.</li>
+<li>Research hypothesis.</li>
 </ul>
+<p>The null hypothesis states there is no difference between two variables (any observed differences occurred merely by chance).</p>
+<p>The research hypothesis states that there is a true difference between the two variables in a study.</p>
+<div id="example-16" class="section level3 hasAnchor" number="11.1.1">
+<h3><span class="header-section-number">11.1.1</span> Example<a href="hypothesis-testing-statistical-significance.html#example-16" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When considering a study to determine the impact of a drug on hypertension it would be typical to:</p>
+<ol style="list-style-type: decimal">
+<li>Formulate a null hypothesis: The drug has no effect.</li>
+<li>Conduct a study and measure pre- and post- intervention blood pressure.</li>
+<li>Calculate the probability (p) of obtaining the observed difference in scores if the null hypothesis is true.</li>
+</ol>
+<p>If the probability is small enough (p&lt;0.05) then it suggests that the pattern of results is unlikely to have arisen by chance and the drug may have a genuine effect in the population.</p>
+</div>
+</div>
+<div id="statistical-significance" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Statistical Significance<a href="hypothesis-testing-statistical-significance.html#statistical-significance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Statistical significance refers to the probability (p) of finding the pattern of results in a particular study, if the hypothesis is true.</p>
+<p>If p is small (&lt;0.05) then the effect is unlikely to have occurred by chance alone.</p>
+<div id="odds-against-chance-fallacy" class="section level3 hasAnchor" number="11.2.1">
+<h3><span class="header-section-number">11.2.1</span> Odds against Chance Fallacy<a href="hypothesis-testing-statistical-significance.html#odds-against-chance-fallacy" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The null hypothesis is a conditional probability and the obtained probability value is conditional on the null hypothesis being true. As it focuses on the null hypothesis it cannot be used to test the research hypothesis and the probability that the research hypothesis is correct is not known.</p>
+</div>
+<div id="statistical-significance-versus-importance" class="section level3 hasAnchor" number="11.2.2">
+<h3><span class="header-section-number">11.2.2</span> Statistical Significance Versus Importance<a href="hypothesis-testing-statistical-significance.html#statistical-significance-versus-importance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In spoken English, the word ‘significant’ is typically taken to mean ‘important’ but in statistics the word means ‘probably true’ (not due to chance).</p>
+<p>A research finding might be true (significant) without being important or a research finding might be important without being true (significant).</p>
+<p>This is important in medical research.</p>
+<div id="example-17" class="section level4 hasAnchor" number="11.2.2.1">
+<h4><span class="header-section-number">11.2.2.1</span> Example<a href="hypothesis-testing-statistical-significance.html#example-17" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A study evaluated four asthma treatments: yoga, transcendental meditation, physiotherapy and a self-help group.</p>
+<p>There was substantial improvement in patients taught on the yoga programme (lung function, medication use, well-being…etc) however, while the results were clinically significant, across-group comparison showed results as being not statistically significant.</p>
+</div>
+</div>
+<div id="in-brief" class="section level3 hasAnchor" number="11.2.3">
+<h3><span class="header-section-number">11.2.3</span> In Brief<a href="hypothesis-testing-statistical-significance.html#in-brief" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Do not confuse statistical significance with real world significance.</p>
+<p>Just because an observed difference is statistically significant does not mean it is important.</p>
 
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="confidence-intervals.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
