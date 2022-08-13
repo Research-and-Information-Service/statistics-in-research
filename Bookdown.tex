@@ -790,6 +790,33 @@ If you would like to try and test your knowledge of the various levels of measur
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
+Statisticians use several statistical measures like the percentage difference, percentage change and percentage error to evaluate the differences between measured values. All three differ in what they measure.
+
+Percentage difference is the difference between two values divided by the average of two values multiplied by 100\%. This is typically used to understand how close two values are to one another.
+
+If the data is tracking values over time (comparing old values to new values) then you should calculate the percentage change instead of the percentage difference. There is a key difference between the two. While percentage change aims to measure change over time, the percentage difference seeks to understand the difference between two averages.
+
+\hypertarget{percentage-difference}{%
+\section{Percentage Difference}\label{percentage-difference}}
+
+The percentage difference is used to compare two values.
+
+\[ \textrm{Percentage Difference} = 100\% \frac{|Value_1 - Value_2|}{\frac{Value_1+Value_2}{2}}\]
+
+The \textbar{} symbol in the formula below indicates that the `absolute' value (the result of the calculation if you were to ignore whether the result was positive or negative) of the calculation should be taken. For instance:
+
+\[ |3 - 2| = 1,\]
+\[ |10 - 5| = 5,\]
+\[ |7 - 9| = 2,\]
+7-9 is equal to -2 but when we take the `absolute' value (\textbar7-9\textbar) we ignore the negative sign and report the result as 2.
+
+\hypertarget{example-10}{%
+\subsection{Example}\label{example-10}}
+
+One researcher produced thirteen research reports in 2022 another produced 11. What is the percentage difference?
+
+\[ \textrm{Percentage Difference} = 100\% \frac{|13 - 11|}{\frac{13+11}{2}}=100\% \frac{2}{\frac{24}{2}}=16.7\%\]
+
 \hypertarget{percentage-change}{%
 \section{Percentage Change}\label{percentage-change}}
 
@@ -797,8 +824,8 @@ Percentage change is about comparing old to new values. The formula for calculat
 
 \[ \textrm{Percentage Change} = 100\% \frac{\textrm{New Value} - \textrm{Old Value}}{\textrm{Old Value}}.\]
 
-\hypertarget{example-10}{%
-\subsection{Example}\label{example-10}}
+\hypertarget{example-11}{%
+\subsection{Example}\label{example-11}}
 
 What is the percentage change in the population in these three places between 2018 and 2019?
 
@@ -830,8 +857,8 @@ A negative percentage change indicates a percentage decrease while a positive pe
 
 Note that subtracting one percentage from another gives the percentage point change rather than the percentage change.
 
-\hypertarget{example-11}{%
-\subsection{Example}\label{example-11}}
+\hypertarget{example-12}{%
+\subsection{Example}\label{example-12}}
 
 What is the percentage point change in the population in these locations between 2018 and 2019?
 
@@ -850,6 +877,55 @@ Anywhere & 3.4 & 3.3 & -0.1 \\
 Elsewhere & 3.3 & 3.8 & 0.5 \\
 \bottomrule
 \end{longtable}
+
+\hypertarget{correlation}{%
+\chapter{Correlation}\label{correlation}}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{correlation-1}{%
+\section{Correlation}\label{correlation-1}}
+
+Correlation refers to the relationship (association) between two or more variables. A correlation coefficient (usually Pearson's r or Spearman's rho) quantifies the relationship:
+
+\begin{itemize}
+\tightlist
+\item
+  r = 1 represents a perfect positive association
+\item
+  r = -1 represents a perfect negative association
+\item
+  r = 0 represents a lack of association
+\end{itemize}
+
+\hypertarget{examples}{%
+\section{Examples}\label{examples}}
+
+\hypertarget{positive-association}{%
+\subsection{Positive Association}\label{positive-association}}
+
+The plot above shows a positive association between the number of hours worked and wages earned. As the number of hours worked increases so too do the wages.
+
+\hypertarget{negative-association}{%
+\subsection{Negative Association}\label{negative-association}}
+
+The plot above shows a negative association between the spending and savings. As more money is spent, less is saved.
+
+\hypertarget{no-association}{%
+\subsection{No Association}\label{no-association}}
+
+Ice cream sales plotted against dog food production. There is no association and r=0.
+
+The plot above shows a positive association between the number of hours worked and wages earned. As the number of hours worked increases so too do the wages.
+
+\hypertarget{understanding-correlation}{%
+\section{Understanding Correlation}\label{understanding-correlation}}
+
+It is important to note that correlation does not imply causation. Just because two variables are related, does not mean that one causes the other.
+
+The number of drownings and the sales of ice cream are highly correlated but that doesn't mean one causes the other.
+
+Drowning's and sales of ice cream are higher in the Summer months when weather is warmer. A third variable (good weather) causes both.
 
   \bibliography{book.bib,packages.bib}
 

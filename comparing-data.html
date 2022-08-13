@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="descriptive-statistics-quiz.html"/>
-<link rel="next" href="references.html"/>
+<link rel="next" href="correlation.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -113,14 +113,29 @@
 <li class="chapter" data-level="5" data-path="descriptive-statistics-quiz.html"><a href="descriptive-statistics-quiz.html"><i class="fa fa-check"></i><b>5</b> Descriptive Statistics Quiz</a></li>
 <li class="chapter" data-level="6" data-path="comparing-data.html"><a href="comparing-data.html"><i class="fa fa-check"></i><b>6</b> Comparing Data</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="comparing-data.html"><a href="comparing-data.html#percentage-change"><i class="fa fa-check"></i><b>6.1</b> Percentage Change</a>
+<li class="chapter" data-level="6.1" data-path="comparing-data.html"><a href="comparing-data.html#percentage-difference"><i class="fa fa-check"></i><b>6.1</b> Percentage Difference</a>
 <ul>
 <li class="chapter" data-level="6.1.1" data-path="comparing-data.html"><a href="comparing-data.html#example-10"><i class="fa fa-check"></i><b>6.1.1</b> Example</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="comparing-data.html"><a href="comparing-data.html#percentage-point-change"><i class="fa fa-check"></i><b>6.2</b> Percentage Point Change</a>
+<li class="chapter" data-level="6.2" data-path="comparing-data.html"><a href="comparing-data.html#percentage-change"><i class="fa fa-check"></i><b>6.2</b> Percentage Change</a>
 <ul>
 <li class="chapter" data-level="6.2.1" data-path="comparing-data.html"><a href="comparing-data.html#example-11"><i class="fa fa-check"></i><b>6.2.1</b> Example</a></li>
 </ul></li>
+<li class="chapter" data-level="6.3" data-path="comparing-data.html"><a href="comparing-data.html#percentage-point-change"><i class="fa fa-check"></i><b>6.3</b> Percentage Point Change</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="comparing-data.html"><a href="comparing-data.html#example-12"><i class="fa fa-check"></i><b>6.3.1</b> Example</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i><b>7</b> Correlation</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="correlation.html"><a href="correlation.html#correlation-1"><i class="fa fa-check"></i><b>7.1</b> Correlation</a></li>
+<li class="chapter" data-level="7.2" data-path="correlation.html"><a href="correlation.html#examples"><i class="fa fa-check"></i><b>7.2</b> Examples</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="correlation.html"><a href="correlation.html#positive-association"><i class="fa fa-check"></i><b>7.2.1</b> Positive Association</a></li>
+<li class="chapter" data-level="7.2.2" data-path="correlation.html"><a href="correlation.html#negative-association"><i class="fa fa-check"></i><b>7.2.2</b> Negative Association</a></li>
+<li class="chapter" data-level="7.2.3" data-path="correlation.html"><a href="correlation.html#no-association"><i class="fa fa-check"></i><b>7.2.3</b> No Association</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="correlation.html"><a href="correlation.html#understanding-correlation"><i class="fa fa-check"></i><b>7.3</b> Understanding Correlation</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
@@ -146,12 +161,30 @@
 <div id="comparing-data" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">Chapter 6</span> Comparing Data<a href="comparing-data.html#comparing-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <hr />
-<div id="percentage-change" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Percentage Change<a href="comparing-data.html#percentage-change" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Percentage change is about comparing old to new values. The formula for calculating a percentage change is given below:</p>
-<p><span class="math display">\[ \textrm{Percentage Change} = 100\% \frac{\textrm{New Value} - \textrm{Old Value}}{\textrm{Old Value}}.\]</span></p>
+<p>Statisticians use several statistical measures like the percentage difference, percentage change and percentage error to evaluate the differences between measured values. All three differ in what they measure.</p>
+<p>Percentage difference is the difference between two values divided by the average of two values multiplied by 100%. This is typically used to understand how close two values are to one another.</p>
+<p>If the data is tracking values over time (comparing old values to new values) then you should calculate the percentage change instead of the percentage difference. There is a key difference between the two. While percentage change aims to measure change over time, the percentage difference seeks to understand the difference between two averages.</p>
+<div id="percentage-difference" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Percentage Difference<a href="comparing-data.html#percentage-difference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The percentage difference is used to compare two values.</p>
+<p><span class="math display">\[ \textrm{Percentage Difference} = 100\% \frac{|Value_1 - Value_2|}{\frac{Value_1+Value_2}{2}}\]</span></p>
+<p>The | symbol in the formula below indicates that the ‘absolute’ value (the result of the calculation if you were to ignore whether the result was positive or negative) of the calculation should be taken. For instance:</p>
+<p><span class="math display">\[ |3 - 2| = 1,\]</span>
+<span class="math display">\[ |10 - 5| = 5,\]</span>
+<span class="math display">\[ |7 - 9| = 2,\]</span>
+7-9 is equal to -2 but when we take the ‘absolute’ value (|7-9|) we ignore the negative sign and report the result as 2.</p>
 <div id="example-10" class="section level3 hasAnchor" number="6.1.1">
 <h3><span class="header-section-number">6.1.1</span> Example<a href="comparing-data.html#example-10" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>One researcher produced thirteen research reports in 2022 another produced 11. What is the percentage difference?</p>
+<p><span class="math display">\[ \textrm{Percentage Difference} = 100\% \frac{|13 - 11|}{\frac{13+11}{2}}=100\% \frac{2}{\frac{24}{2}}=16.7\%\]</span></p>
+</div>
+</div>
+<div id="percentage-change" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Percentage Change<a href="comparing-data.html#percentage-change" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Percentage change is about comparing old to new values. The formula for calculating a percentage change is given below:</p>
+<p><span class="math display">\[ \textrm{Percentage Change} = 100\% \frac{\textrm{New Value} - \textrm{Old Value}}{\textrm{Old Value}}.\]</span></p>
+<div id="example-11" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Example<a href="comparing-data.html#example-11" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>What is the percentage change in the population in these three places between 2018 and 2019?</p>
 <table>
 <caption></caption>
@@ -190,11 +223,11 @@
 A negative percentage change indicates a percentage decrease while a positive percentage change indicates a percentage increase.</p>
 </div>
 </div>
-<div id="percentage-point-change" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Percentage Point Change<a href="comparing-data.html#percentage-point-change" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="percentage-point-change" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Percentage Point Change<a href="comparing-data.html#percentage-point-change" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Note that subtracting one percentage from another gives the percentage point change rather than the percentage change.</p>
-<div id="example-11" class="section level3 hasAnchor" number="6.2.1">
-<h3><span class="header-section-number">6.2.1</span> Example<a href="comparing-data.html#example-11" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="example-12" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> Example<a href="comparing-data.html#example-12" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>What is the percentage point change in the population in these locations between 2018 and 2019?</p>
 <table>
 <caption></caption>
@@ -237,7 +270,7 @@ A negative percentage change indicates a percentage decrease while a positive pe
         </div>
       </div>
 <a href="descriptive-statistics-quiz.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="correlation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
