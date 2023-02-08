@@ -138,9 +138,11 @@ Chapter 3 details measures of uncertainty and how we describe the differences be
 
 Chapter 4 describes the various data types and levels of measurement and how these classifications inform which statistics we use.
 
-Chapters 7 and 8 will be most useful to those interested in summarising data sets as they outline the most commonly used descriptive statistics with worked examples. This book can be used as an introduction to statistics or a reference. If you are already familiar with statistics and simply want to know how to calculate a descriptive statistic chapters 7 and 8 will be most useful.
+Chapters 7 and 8 will be most useful to those interested in summarising data sets as they outline the most commonly used descriptive statistics with worked examples.
 
-Chapters 9 and 10 provide an introduction to inferential statistics which may be of use to readers interested in hypothesis testing. Chapter 11 provides a brief introduction to data visualisation, the tools used and guidance on when and how to use visuals.
+Chapters 9, 10 and 11 provide an introduction to inferential statistics which may be of use to readers interested in hypothesis testing.
+
+Chapter 12 provides a brief introduction to data visualisation, the tools used and guidance on when and how to use visuals.
 
 Throughout this text, blue boxes will be used to provide depth, context or additional information on mathematical notation for interested readers.
 
@@ -1852,11 +1854,9 @@ The formula for calculating the Pearson correlation coefficient is:
 where \(r\) is the Pearson correlation coefficient, \(n\) is the total number of observations and \(x\) and \(y\) are the recorded data values (in the case of the example above these would be height and weight measurements). This is equivalent to writing:
 
 \[r=\frac{\sum{(x-\bar{x})(y-\bar{y})}}{\sqrt{\sum{(x-\bar{x})^2}\sum{(y-\bar{y})^2}}}.\]
-You might recognise parts of this formula from the section on \protect\hyperlink{varr}{variance}. Recall the expression for the sample variance was:
+Notice that the denominator in this formula is similar to the formula for \protect\hyperlink{varr}{variance} in that it sums the values of \(x\) minus the mean of \(x\) and squares the result.
 
-\[V_{s} = \frac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})^2,\]
-
-and the standard deviation was the square root of this. Essentially the denominator in the formula for r describes the product of the two variables' standard deviations. The numerator is the covariance. Intuitively it makes some sense that the spread should matter when trying to determine if two variables are related - when two variables are perfectly correlated they form a straight line in a scatter plot but when they're poorly correlated they appear more like a cloud of points in a scatter plot.
+Essentially the denominator in the formula for r describes the product of the two variables' standard deviations and standard deviation is obtained by taking the square root of variance. The numerator in the formula for r is the covariance. Intuitively it makes sense that the spread should matter when trying to determine if two variables are related - when two variables are perfectly correlated they form a straight line in a scatter plot but when they're poorly correlated they appear more like a cloud of points in a scatter plot.
 
 The r value for the height and weight data presented above is approximately 0.8.
 
