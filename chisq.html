@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 10 Chi Square Tests | Statistics Primer</title>
+  <title>Chapter 11 Chi Square Tests | Statistics Primer</title>
   <meta name="description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 10 Chi Square Tests | Statistics Primer" />
+  <meta property="og:title" content="Chapter 11 Chi Square Tests | Statistics Primer" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 10 Chi Square Tests | Statistics Primer" />
+  <meta name="twitter:title" content="Chapter 11 Chi Square Tests | Statistics Primer" />
   
   <meta name="twitter:description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
   
@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="infstat.html"/>
+<link rel="prev" href="correlationchapter.html"/>
 <link rel="next" href="datvis.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -175,7 +175,7 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="6.3.1" data-path="descdata.html"><a href="descdata.html#range"><i class="fa fa-check"></i><b>6.3.1</b> Range</a></li>
 <li class="chapter" data-level="6.3.2" data-path="descdata.html"><a href="descdata.html#iqr"><i class="fa fa-check"></i><b>6.3.2</b> Interquartile Range</a></li>
-<li class="chapter" data-level="6.3.3" data-path="descdata.html"><a href="descdata.html#variance"><i class="fa fa-check"></i><b>6.3.3</b> Variance</a></li>
+<li class="chapter" data-level="6.3.3" data-path="descdata.html"><a href="descdata.html#varr"><i class="fa fa-check"></i><b>6.3.3</b> Variance</a></li>
 <li class="chapter" data-level="6.3.4" data-path="descdata.html"><a href="descdata.html#stdv"><i class="fa fa-check"></i><b>6.3.4</b> Standard Deviation</a></li>
 <li class="chapter" data-level="6.3.5" data-path="descdata.html"><a href="descdata.html#using-excel-1"><i class="fa fa-check"></i><b>6.3.5</b> Using Excel</a></li>
 </ul></li>
@@ -211,42 +211,53 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="9.5" data-path="infstat.html"><a href="infstat.html#nonpara"><i class="fa fa-check"></i><b>9.5</b> Paremetric and Non-Parametric Testing</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="chisq.html"><a href="chisq.html"><i class="fa fa-check"></i><b>10</b> Chi Square Tests</a>
+<li class="chapter" data-level="10" data-path="correlationchapter.html"><a href="correlationchapter.html"><i class="fa fa-check"></i><b>10</b> Correlation</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="chisq.html"><a href="chisq.html#description"><i class="fa fa-check"></i><b>10.1</b> Description</a></li>
-<li class="chapter" data-level="10.2" data-path="chisq.html"><a href="chisq.html#assumptions"><i class="fa fa-check"></i><b>10.2</b> Assumptions</a>
+<li class="chapter" data-level="10.1" data-path="correlationchapter.html"><a href="correlationchapter.html#pearson-correlation-coefficient"><i class="fa fa-check"></i><b>10.1</b> Pearson Correlation Coefficient</a>
 <ul>
-<li class="chapter" data-level="10.2.1" data-path="chisq.html"><a href="chisq.html#chi-square-goodness-of-fit-distribution-test"><i class="fa fa-check"></i><b>10.2.1</b> Chi Square Goodness of Fit (Distribution Test)</a></li>
-<li class="chapter" data-level="10.2.2" data-path="chisq.html"><a href="chisq.html#chi-square-test-of-independence"><i class="fa fa-check"></i><b>10.2.2</b> Chi-Square Test of Independence</a></li>
+<li class="chapter" data-level="10.1.1" data-path="correlationchapter.html"><a href="correlationchapter.html#examples"><i class="fa fa-check"></i><b>10.1.1</b> Examples</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="chisq.html"><a href="chisq.html#strength-of-association"><i class="fa fa-check"></i><b>10.3</b> Strength of Association</a>
-<ul>
-<li class="chapter" data-level="10.3.1" data-path="chisq.html"><a href="chisq.html#phi"><i class="fa fa-check"></i><b>10.3.1</b> Phi</a></li>
-<li class="chapter" data-level="10.3.2" data-path="chisq.html"><a href="chisq.html#cramers-v"><i class="fa fa-check"></i><b>10.3.2</b> Cramer’s V</a></li>
+<li class="chapter" data-level="10.2" data-path="correlationchapter.html"><a href="correlationchapter.html#identifying-correlation"><i class="fa fa-check"></i><b>10.2</b> Identifying Correlation</a></li>
+<li class="chapter" data-level="10.3" data-path="correlationchapter.html"><a href="correlationchapter.html#calculating-the-pearson-correlation-coefficient"><i class="fa fa-check"></i><b>10.3</b> Calculating the Pearson Correlation Coefficient</a></li>
+<li class="chapter" data-level="10.4" data-path="correlationchapter.html"><a href="correlationchapter.html#when-to-use-pearson-correlation-coefficient"><i class="fa fa-check"></i><b>10.4</b> When to use Pearson Correlation Coefficient</a></li>
+<li class="chapter" data-level="10.5" data-path="correlationchapter.html"><a href="correlationchapter.html#correlation-vs.-causation"><i class="fa fa-check"></i><b>10.5</b> Correlation vs. Causation</a></li>
 </ul></li>
-<li class="chapter" data-level="10.4" data-path="chisq.html"><a href="chisq.html#relative-risk"><i class="fa fa-check"></i><b>10.4</b> Relative Risk</a></li>
-<li class="chapter" data-level="10.5" data-path="chisq.html"><a href="chisq.html#odds-ratio"><i class="fa fa-check"></i><b>10.5</b> Odds Ratio</a></li>
-<li class="chapter" data-level="10.6" data-path="chisq.html"><a href="chisq.html#chi-square-homogeneity-test"><i class="fa fa-check"></i><b>10.6</b> Chi Square Homogeneity Test</a></li>
+<li class="chapter" data-level="11" data-path="chisq.html"><a href="chisq.html"><i class="fa fa-check"></i><b>11</b> Chi Square Tests</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="chisq.html"><a href="chisq.html#description"><i class="fa fa-check"></i><b>11.1</b> Description</a></li>
+<li class="chapter" data-level="11.2" data-path="chisq.html"><a href="chisq.html#assumptions"><i class="fa fa-check"></i><b>11.2</b> Assumptions</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="chisq.html"><a href="chisq.html#chi-square-goodness-of-fit-distribution-test"><i class="fa fa-check"></i><b>11.2.1</b> Chi Square Goodness of Fit (Distribution Test)</a></li>
+<li class="chapter" data-level="11.2.2" data-path="chisq.html"><a href="chisq.html#chi-square-test-of-independence"><i class="fa fa-check"></i><b>11.2.2</b> Chi-Square Test of Independence</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="datvis.html"><a href="datvis.html"><i class="fa fa-check"></i><b>11</b> Data Visualisation</a>
+<li class="chapter" data-level="11.3" data-path="chisq.html"><a href="chisq.html#strength-of-association"><i class="fa fa-check"></i><b>11.3</b> Strength of Association</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="datvis.html"><a href="datvis.html#data-visualisation"><i class="fa fa-check"></i><b>11.1</b> Data Visualisation</a></li>
-<li class="chapter" data-level="11.2" data-path="datvis.html"><a href="datvis.html#visual-cues"><i class="fa fa-check"></i><b>11.2</b> Visual Cues</a></li>
-<li class="chapter" data-level="11.3" data-path="datvis.html"><a href="datvis.html#relationships-in-data"><i class="fa fa-check"></i><b>11.3</b> Relationships in Data</a>
-<ul>
-<li class="chapter" data-level="11.3.1" data-path="datvis.html"><a href="datvis.html#frequency-distributions"><i class="fa fa-check"></i><b>11.3.1</b> Frequency Distributions</a></li>
-<li class="chapter" data-level="11.3.2" data-path="datvis.html"><a href="datvis.html#time-series"><i class="fa fa-check"></i><b>11.3.2</b> Time Series</a></li>
-<li class="chapter" data-level="11.3.3" data-path="datvis.html"><a href="datvis.html#rankings"><i class="fa fa-check"></i><b>11.3.3</b> Rankings</a></li>
-<li class="chapter" data-level="11.3.4" data-path="datvis.html"><a href="datvis.html#deviation"><i class="fa fa-check"></i><b>11.3.4</b> Deviation</a></li>
-<li class="chapter" data-level="11.3.5" data-path="datvis.html"><a href="datvis.html#correlation"><i class="fa fa-check"></i><b>11.3.5</b> Correlation</a></li>
-<li class="chapter" data-level="11.3.6" data-path="datvis.html"><a href="datvis.html#magnitude"><i class="fa fa-check"></i><b>11.3.6</b> Magnitude</a></li>
-<li class="chapter" data-level="11.3.7" data-path="datvis.html"><a href="datvis.html#spatial"><i class="fa fa-check"></i><b>11.3.7</b> Spatial</a></li>
+<li class="chapter" data-level="11.3.1" data-path="chisq.html"><a href="chisq.html#phi"><i class="fa fa-check"></i><b>11.3.1</b> Phi</a></li>
+<li class="chapter" data-level="11.3.2" data-path="chisq.html"><a href="chisq.html#cramers-v"><i class="fa fa-check"></i><b>11.3.2</b> Cramer’s V</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="datvis.html"><a href="datvis.html#why-visualise-data"><i class="fa fa-check"></i><b>11.4</b> Why Visualise Data?</a></li>
-<li class="chapter" data-level="11.5" data-path="datvis.html"><a href="datvis.html#data-visualisation-tools"><i class="fa fa-check"></i><b>11.5</b> Data Visualisation Tools</a></li>
-<li class="chapter" data-level="11.6" data-path="datvis.html"><a href="datvis.html#dynamic-visualisations-dashboards"><i class="fa fa-check"></i><b>11.6</b> Dynamic Visualisations (Dashboards)</a>
+<li class="chapter" data-level="11.4" data-path="chisq.html"><a href="chisq.html#relative-risk"><i class="fa fa-check"></i><b>11.4</b> Relative Risk</a></li>
+<li class="chapter" data-level="11.5" data-path="chisq.html"><a href="chisq.html#odds-ratio"><i class="fa fa-check"></i><b>11.5</b> Odds Ratio</a></li>
+<li class="chapter" data-level="11.6" data-path="chisq.html"><a href="chisq.html#chi-square-homogeneity-test"><i class="fa fa-check"></i><b>11.6</b> Chi Square Homogeneity Test</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="datvis.html"><a href="datvis.html"><i class="fa fa-check"></i><b>12</b> Data Visualisation</a>
 <ul>
-<li class="chapter" data-level="11.6.1" data-path="datvis.html"><a href="datvis.html#best-practice"><i class="fa fa-check"></i><b>11.6.1</b> Best Practice</a></li>
+<li class="chapter" data-level="12.1" data-path="datvis.html"><a href="datvis.html#data-visualisation"><i class="fa fa-check"></i><b>12.1</b> Data Visualisation</a></li>
+<li class="chapter" data-level="12.2" data-path="datvis.html"><a href="datvis.html#visual-cues"><i class="fa fa-check"></i><b>12.2</b> Visual Cues</a></li>
+<li class="chapter" data-level="12.3" data-path="datvis.html"><a href="datvis.html#relationships-in-data"><i class="fa fa-check"></i><b>12.3</b> Relationships in Data</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="datvis.html"><a href="datvis.html#frequency-distributions"><i class="fa fa-check"></i><b>12.3.1</b> Frequency Distributions</a></li>
+<li class="chapter" data-level="12.3.2" data-path="datvis.html"><a href="datvis.html#time-series"><i class="fa fa-check"></i><b>12.3.2</b> Time Series</a></li>
+<li class="chapter" data-level="12.3.3" data-path="datvis.html"><a href="datvis.html#rankings"><i class="fa fa-check"></i><b>12.3.3</b> Rankings</a></li>
+<li class="chapter" data-level="12.3.4" data-path="datvis.html"><a href="datvis.html#deviation"><i class="fa fa-check"></i><b>12.3.4</b> Deviation</a></li>
+<li class="chapter" data-level="12.3.5" data-path="datvis.html"><a href="datvis.html#correlation"><i class="fa fa-check"></i><b>12.3.5</b> Correlation</a></li>
+<li class="chapter" data-level="12.3.6" data-path="datvis.html"><a href="datvis.html#magnitude"><i class="fa fa-check"></i><b>12.3.6</b> Magnitude</a></li>
+<li class="chapter" data-level="12.3.7" data-path="datvis.html"><a href="datvis.html#spatial"><i class="fa fa-check"></i><b>12.3.7</b> Spatial</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="datvis.html"><a href="datvis.html#why-visualise-data"><i class="fa fa-check"></i><b>12.4</b> Why Visualise Data?</a></li>
+<li class="chapter" data-level="12.5" data-path="datvis.html"><a href="datvis.html#data-visualisation-tools"><i class="fa fa-check"></i><b>12.5</b> Data Visualisation Tools</a></li>
+<li class="chapter" data-level="12.6" data-path="datvis.html"><a href="datvis.html#dynamic-visualisations-dashboards"><i class="fa fa-check"></i><b>12.6</b> Dynamic Visualisations (Dashboards)</a>
+<ul>
+<li class="chapter" data-level="12.6.1" data-path="datvis.html"><a href="datvis.html#best-practice"><i class="fa fa-check"></i><b>12.6.1</b> Best Practice</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -270,17 +281,17 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="chisq" class="section level1 hasAnchor" number="10">
-<h1><span class="header-section-number">Chapter 10</span> Chi Square Tests<a href="chisq.html#chisq" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="description" class="section level2 hasAnchor" number="10.1">
-<h2><span class="header-section-number">10.1</span> Description<a href="chisq.html#description" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="chisq" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Chapter 11</span> Chi Square Tests<a href="chisq.html#chisq" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="description" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Description<a href="chisq.html#description" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Chi-square tests are a set of several non-parametric hypothesis tests used for categorical variables with nominal or ordinal measurement scale. There are three tests, the chi square test of goodness of fit; the chi square test of independence; and the chi square test of homogeneity.</p>
 <p>The goodness-of-fit test is used to determine whether sample data matches a given distribution.</p>
 <p>The test of independence is used to determine whether there is a relationship between two categorical variables in a contingency table.</p>
 <p>The test of homogeneity is used to determine whether two or more categorical variables with unknown distributions have the same distribution as each other in several populations.</p>
 </div>
-<div id="assumptions" class="section level2 hasAnchor" number="10.2">
-<h2><span class="header-section-number">10.2</span> Assumptions<a href="chisq.html#assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="assumptions" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Assumptions<a href="chisq.html#assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Non-parametric tests and parametric tests come with assumptions that ought to hold true if the test is to be performed. Both assume the data was obtained through random selection, however it is not uncommon to find inferential statistics used when data has been collected from convenience samples. Typically, multiple replication studies are performed to ensure confidence in results when this assumption is violated.</p>
 <p>The assumptions of the chi square test are <span class="citation">(<a href="#ref-McHugh2013" role="doc-biblioref">McHugh 2013</a>)</span>:</p>
 <ul>
@@ -292,8 +303,8 @@ div.csl-indent {
 <li><p>At least 80% of the cells should have expected values greater than or equal to five. When this occurs, the chi-square test with Yates’ continuity correction (if the total sample size is greater than 20) or Fisher’s exact test should be used <span class="citation">(<a href="#ref-chica" role="doc-biblioref">Gonzalez-Chica, D. A., Bastos, J. L., Duquia, R. P., Bonamigo, R. R., Martínez-Mesa, J. 2015</a>)</span>.</p></li>
 <li><p>No cell should have an expected value of zero.</p></li>
 </ul>
-<div id="chi-square-goodness-of-fit-distribution-test" class="section level3 hasAnchor" number="10.2.1">
-<h3><span class="header-section-number">10.2.1</span> Chi Square Goodness of Fit (Distribution Test)<a href="chisq.html#chi-square-goodness-of-fit-distribution-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="chi-square-goodness-of-fit-distribution-test" class="section level3 hasAnchor" number="11.2.1">
+<h3><span class="header-section-number">11.2.1</span> Chi Square Goodness of Fit (Distribution Test)<a href="chisq.html#chi-square-goodness-of-fit-distribution-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The Chi-square Goodness-of-fit test, checks whether the frequencies of the individual characteristic values in the sample correspond to the frequencies of a defined distribution. In most cases, this defined distribution is that of the population.</p>
 <p>In the general case the null and alternative hypotheses being tested are:</p>
 <p><span class="math inline">\(H_0\)</span>: The population fits the given distribution.</p>
@@ -314,8 +325,8 @@ where <span class="math inline">\(p\)</span> is the number of categories.</p>
 <p class="caption">Table containing the critical values of the chi-square distribution.</p>
 </div>
 </center>
-<div id="example-14" class="section level4 hasAnchor" number="10.2.1.1">
-<h4><span class="header-section-number">10.2.1.1</span> Example<a href="chisq.html#example-14" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="example-14" class="section level4 hasAnchor" number="11.2.1.1">
+<h4><span class="header-section-number">11.2.1.1</span> Example<a href="chisq.html#example-14" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Rock-scissors-paper is a game of chance in which any player should be expected to win, tie and lose with equal frequency. Over the course of 30 games a player could be expected to win approximately ten times, lose ten times and tie times. Imagine a random sample of 24 games:</p>
 <table>
 <caption> Chi Square Goodness of Fit</caption>
@@ -388,8 +399,8 @@ A <span class="math inline">\(\chi^2\)</span> table is used to compare the calcu
 <p>For a <span class="math inline">\(df\)</span> of 3 and a desired significance of 0.05 the calculated <span class="math inline">\(\chi^2\)</span> value would need to be greater than 7.81 to reject the null hypothesis. In this case, <span class="math inline">\(\chi^2=5.25\)</span> which is not greater than 7.81 so the null hypothesis is not rejected.</p>
 </div>
 </div>
-<div id="chi-square-test-of-independence" class="section level3 hasAnchor" number="10.2.2">
-<h3><span class="header-section-number">10.2.2</span> Chi-Square Test of Independence<a href="chisq.html#chi-square-test-of-independence" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="chi-square-test-of-independence" class="section level3 hasAnchor" number="11.2.2">
+<h3><span class="header-section-number">11.2.2</span> Chi-Square Test of Independence<a href="chisq.html#chi-square-test-of-independence" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The chi-square test of independence is used when two categorical variables are to be tested for independence. The aim is to analyze whether the characteristic values of the first variable are influenced by the characteristic values of the second variable and vice versa.</p>
 <p>In order to calculate the chi-square, an observed and an expected frequency must be given. In the independence test, the expected frequency is the one that results when both variables are independent. If two variables are independent, the expected frequencies of the individual cells are obtained with:</p>
 <p><span class="math display">\[\textrm{Expected Value}= \frac{\textrm{Row Total} \times \textrm{Column Total}}{\textrm{Grand Total}}.\]</span>
@@ -397,8 +408,8 @@ Note that this differs from the goodness of fit test.</p>
 <p>The calculation of degrees of freedom also differs and is given by:</p>
 <p><span class="math display">\[df=(p-1)(q-1),\]</span></p>
 <p>where p is the number of rows and q is the number of columns.</p>
-<div id="example-15" class="section level4 hasAnchor" number="10.2.2.1">
-<h4><span class="header-section-number">10.2.2.1</span> Example<a href="chisq.html#example-15" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="example-15" class="section level4 hasAnchor" number="11.2.2.1">
+<h4><span class="header-section-number">11.2.2.1</span> Example<a href="chisq.html#example-15" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The example below calculates chi square for some simulated data.</p>
 <table>
 <caption> Educational Attainment: Observed Values</caption>
@@ -464,11 +475,11 @@ Note that this differs from the goodness of fit test.</p>
 </div>
 </div>
 </div>
-<div id="strength-of-association" class="section level2 hasAnchor" number="10.3">
-<h2><span class="header-section-number">10.3</span> Strength of Association<a href="chisq.html#strength-of-association" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="strength-of-association" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Strength of Association<a href="chisq.html#strength-of-association" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A few different statistics can be used for calculating effect size when a Chi squared test has been conducted, depending on the number of categories for each variable, the type of variables (nominal or ordinal) and the nature of the study.</p>
-<div id="phi" class="section level3 hasAnchor" number="10.3.1">
-<h3><span class="header-section-number">10.3.1</span> Phi<a href="chisq.html#phi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="phi" class="section level3 hasAnchor" number="11.3.1">
+<h3><span class="header-section-number">11.3.1</span> Phi<a href="chisq.html#phi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In the case where there are only two categories for each variable, then effect size can be measured using phi (<span class="math inline">\(\phi\)</span>). Phi is a measure for the strength of an association between two categorical variables in a 2 <span class="math inline">\(\times\)</span> 2 contingency table. It is calculated by taking the chi-square value, dividing it by the sample size, and then taking the square root of this value <span class="citation">(<a href="#ref-akoglu" role="doc-biblioref">Akoglu, H. 2018</a>)</span>.</p>
 <p>This is calculated using the Chi-square value (<span class="math inline">\(\chi^2\)</span>) and the sample size (<span class="math inline">\(n\)</span>), as follows:</p>
 <p><span class="math display">\[\phi=\sqrt{\frac{\chi^2}{n}}.\]</span></p>
@@ -477,8 +488,8 @@ Note that this differs from the goodness of fit test.</p>
 <p>This is considered a small effect (0.1 is considered a small effect size, 0.3 medium and 0.5 and above large).</p>
 <p>Note also that an extension of ϕ for nominal variables with more than two categories is Cramer’s V, while other measures of effect size include relative risk and odds ratio.</p>
 </div>
-<div id="cramers-v" class="section level3 hasAnchor" number="10.3.2">
-<h3><span class="header-section-number">10.3.2</span> Cramer’s V<a href="chisq.html#cramers-v" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="cramers-v" class="section level3 hasAnchor" number="11.3.2">
+<h3><span class="header-section-number">11.3.2</span> Cramer’s V<a href="chisq.html#cramers-v" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Cramer’s V is an alternative to phi in tables bigger than 2 <span class="math inline">\(\times\)</span> 2 tabules <span class="citation">(<a href="#ref-akoglu" role="doc-biblioref">Akoglu, H. 2018</a>)</span>.</p>
 <p><span class="math display">\[V = \sqrt{\frac{\chi^2}{n*min(r-1,c-1)}},\]</span></p>
 <p>where <span class="math inline">\(n\)</span> in the sample size and <span class="math inline">\(min()\)</span> is the minimum of the two arguments <span class="math inline">\(r-1\)</span> and <span class="math inline">\(c-1\)</span>. A Cramer’s V value of 0-0.29 indicates a weak association; 0.3-0.59 indicates a moderate association and a Cramer’s V of 0.6-1 indicates a strong association. The scale goes from complete independence to perfect association.</p>
@@ -487,8 +498,8 @@ Note that this differs from the goodness of fit test.</p>
 <p>For two ordinal variables, a Spearman correlation or Kendall’s tau are preferable over Cramér’s V. For two metric (interval or ratio) variables, a Pearson correlation is the preferred measure.</p>
 </div>
 </div>
-<div id="relative-risk" class="section level2 hasAnchor" number="10.4">
-<h2><span class="header-section-number">10.4</span> Relative Risk<a href="chisq.html#relative-risk" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="relative-risk" class="section level2 hasAnchor" number="11.4">
+<h2><span class="header-section-number">11.4</span> Relative Risk<a href="chisq.html#relative-risk" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The relative risk (RR) and the odds ratio (OR) are widely used in medical research and are very commonly used measures of association in epidemiology <span class="citation">(<a href="#ref-schmidtty" role="doc-biblioref">Schmidt, C. O., Kohlmann, T. 2008</a>)</span>. Relative risk is a comparison of the chance of an event happening in one group to the chance of it happening in another. For instance, the relative risk of lung cancer in smokers compared to non-smokers is the chance of getting lung cancer for smokers divided by the chance for non-smokers <span class="citation">(<a href="#ref-tenny" role="doc-biblioref">Tenny, S and Hoffman, M.R. 2022</a>)</span>. Relative risk only shows the difference in likelihood between the two groups, it does not show the actual risk of the event happening <span class="citation">(<a href="#ref-tenny" role="doc-biblioref">Tenny, S and Hoffman, M.R. 2022</a>)</span>.</p>
 <p>The Relative Risk is used when comparing the probability of an event occurring to all possible events considered in a study.</p>
 <p>For example consider the risk of developing cancer in those exposed and unexposed to second hand smoke. On a study’s conclusion we might have a table like the one below:</p>
@@ -554,8 +565,8 @@ Information
 <p>You cannot calculate relative risk in a case control study. For instance, a study might involve a control group of 100 people without cancer and a group of 100 people with cancer. The disease rate might be 50% because of how the study was designed.</p>
 </div>
 </div>
-<div id="odds-ratio" class="section level2 hasAnchor" number="10.5">
-<h2><span class="header-section-number">10.5</span> Odds Ratio<a href="chisq.html#odds-ratio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="odds-ratio" class="section level2 hasAnchor" number="11.5">
+<h2><span class="header-section-number">11.5</span> Odds Ratio<a href="chisq.html#odds-ratio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The odds ratio is used in cohort or case-control studies.</p>
 <div class="defbox">
 <h2>
@@ -627,8 +638,8 @@ This is different from the relative risk equation.</p>
 <p>OR &lt; 1, exposure is negatively associated with the disease.</p>
 <p>The further the OR is from 1, the stronger the association.</p>
 </div>
-<div id="chi-square-homogeneity-test" class="section level2 hasAnchor" number="10.6">
-<h2><span class="header-section-number">10.6</span> Chi Square Homogeneity Test<a href="chisq.html#chi-square-homogeneity-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="chi-square-homogeneity-test" class="section level2 hasAnchor" number="11.6">
+<h2><span class="header-section-number">11.6</span> Chi Square Homogeneity Test<a href="chisq.html#chi-square-homogeneity-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The Chi-square homogeneity test can be used to check whether two or more samples come from the same population. One question could be whether the subscription frequency of three fictional video streaming services Netflocks, Amazing, Fizzney and Tantamount differ in different age groups. As a fictitious example, a survey is made in three age groups with the following result:</p>
 <table>
 <caption></caption>
@@ -712,7 +723,7 @@ Tenny, S and Hoffman, M.R. 2022. <em>Relative Risk</em>. StatPearls [Internet] S
           </div>
         </div>
       </div>
-<a href="infstat.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="correlationchapter.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="datvis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

@@ -123,6 +123,8 @@ The book has been written for a broad audience and as such most of the mathemati
 \item
   \protect\hyperlink{infstat}{Inferential Statistics}
 \item
+  \protect\hyperlink{correlationchapter}{Correlation}
+\item
   \protect\hyperlink{chisq}{Chi Square Tests}
 \item
   \protect\hyperlink{datvis}{Data Visualisation}
@@ -1378,8 +1380,8 @@ Find the medians of each of the subsets and calculate the interquartile range. T
 
 The interquartile range is a useful measure of variability for skewed distributions. It can show where most values lie and how clustered they are. It is useful for datasets with outliers as it is based on the middle half of the distribution and less influenced by extreme values. Exclusive calculations result in a wider interquartile range than inclusive calculations.
 
-\hypertarget{variance}{%
-\subsection{Variance}\label{variance}}
+\hypertarget{varr}{%
+\subsection{Variance}\label{varr}}
 
 The standard deviation describes to what extent a set of numbers lie apart (their spread). It is the square root of variance which is also an indicator of the spread of values.
 
@@ -1797,6 +1799,95 @@ Parametric tests and non-parametric tests are statistical tests used to compare 
 They differ in that parametric tests generally make assumptions about the data being normally distributed with equal variances. There are a range of parametric tests including: t-tests, ANOVA, and regression analysis. Parametric tests are typically more powerful but for the tests to be reliable the assumptions must be valid.
 
 Non-parametric tests are often used when data fails to meet the assumptions of parametric tests although non-parametric tests often come with their own sets of assumptions. There are a range of non-parametric tests including: the Wilcoxon rank-sum test, Kruskal-Wallis test, and the Mann-Whitney U test. These tests are generally more flexible but this comes at the expense of being less powerful than parametric tests.
+
+\hypertarget{correlationchapter}{%
+\chapter{Correlation}\label{correlationchapter}}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{pearson-correlation-coefficient}{%
+\section{Pearson Correlation Coefficient}\label{pearson-correlation-coefficient}}
+
+Correlation indicates the strength and direction of a relationship between two variables. Its values range from -1 to 1, where a value of -1 indicates a perfect negative linear relationship (as one variable increases, the other decreases proportionally), 1 indicates a perfect positive linear relationship (as one variable increases, the other increases proportionally), and 0 indicates no linear relationship between the two variables.
+
+The extreme values of -1 and 1 indicate perfect linear relationships and for these relationships all of the data points fall on a single line. In practice it is rare to ever see a correlation this strong. Correlation is measured through the Pearson's Correlation Coefficient which is represented by the Greek letter \(\rho\) for a population parameter or the lower case letter r for a sample statistic.
+
+Correlation can be used to summarize the relationship between two variables and can also be used to make predictions about one variable based on the values of the other.
+
+Height and weight are an example of two variables which are correlated. As height increases weight also tends to increase. This means that we can reasonably predict that people who are tall will weigh more than people who are short. Correlation is a quantitative assessment of both the direction and the strength of this tendency for variables to change together.
+
+Values of r which lie between 0 and 0.3 are typically considered to be weak, between 0.3 and 0.5 are considered to be moderate and greater than 0.5 are considered to be strong although there are differences of opinion on this as the scale is somewhat subjective and different fields of study will deem relationships to be strong when other fields would consider them to be moderate or even weak. As a general rule however these guidelines are generally accurate.
+
+\hypertarget{examples}{%
+\subsection{Examples}\label{examples}}
+
+The figure below shows a perfect negative correlation where r=-1. It's clear from the scatter plot that as x increase the values of y decrease.
+
+The figure below illustrates what two variables with no correlation might look like when plotted in a scatter plot. In this case, r = 0. The data has no discernible pattern through which x and y can be related to one another.
+
+\hypertarget{identifying-correlation}{%
+\section{Identifying Correlation}\label{identifying-correlation}}
+
+The simplest way to determine whether two variables are correlated is to plot them together. Scatterplots are particularly useful for checking whether there might be some relationship between pairs of continuous data.
+
+The scatterplot below shows some simulated height and weight data with a line of best fit. At a glance it's clear that as height increases weight increases. It's not a perfect relationship however. Looking at various heights you can see there are clusters of weight values associated with them. There are taller people who weigh less than some of their shorter peers and there are shorter people who weigh more than their taller peers.
+
+Pearson's correlation takes all of the data points and represents them with a single summary statistic. In this case the output indicates a correlation of 0.8.
+
+\hypertarget{calculating-the-pearson-correlation-coefficient}{%
+\section{Calculating the Pearson Correlation Coefficient}\label{calculating-the-pearson-correlation-coefficient}}
+
+Calculating the correlation coefficient is not simple and the best way to calculate it is to use R, Python, Excel, SPSS or some equivalent software. In Excel, calculating the value of r is as simple as typing:
+
+=PEARSON(array1, array2)
+
+This function takes two arguments, each of which should be an array containing the values of the variables for which the Pearson correlation coefficient is to be calculated. The first array should contain the set of independent variables and the second the set of dependent variables.
+
+The calculations that are performed in the background are described below but it isn't necessary to manually calculate r or its associated test statistics as the process is long and prone to error. The details are provided for context to help understand what goes on in the background.
+
+The formula for calculating the Pearson correlation coefficient is:
+
+\[r = \frac{n \sum{xy}-\sum{x} \sum{y}}{\sqrt{[n \sum{x^2}-(\sum{x})^2][n \sum{y^2}-(\sum{y})^2]}}, \]
+
+where \(r\) is the Pearson correlation coefficient, \(n\) is the total number of observations and \(x\) and \(y\) are the recorded data values (in the case of the example above these would be height and weight measurements). This is equivalent to writing:
+
+\[r=\frac{\sum{(x-\bar{x})(y-\bar{y})}}{\sqrt{\sum{(x-\bar{x})^2}\sum{(y-\bar{y})^2}}}.\]
+You might recognise parts of this formula from the section on \protect\hyperlink{varr}{variance}. Recall the expression for the sample variance was:
+
+\[V_{s} = \frac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})^2,\]
+
+and the standard deviation was the square root of this. Essentially the denominator in the formula for r describes the product of the two variables' standard deviations. The numerator is the covariance. Intuitively it makes some sense that the spread should matter when trying to determine if two variables are related - when two variables are perfectly correlated they form a straight line in a scatter plot but when they're poorly correlated they appear more like a cloud of points in a scatter plot.
+
+The r value for the height and weight data presented above is approximately 0.8.
+
+The Pearson correlation coefficient can also be used to test whether a relationship between two variables is significant using hypothesis testing where the null hypothesis represents the assumption that the Pearson correlation of the population is equal to zero and the alternative hypothesis represents the assumption that it is not equal to zero.
+
+To test the hypotheses it is necessary to calculate a t-value:
+
+\[t=\frac{r}{\sqrt{\frac{1-r^2}{n-2}}}.\]
+
+For the data above this gives:
+
+\[t=\frac{0.8}{\sqrt{\frac{1-0.8^2}{80-2}}},\]
+\[t=\frac{0.8}{\sqrt{\frac{0.36}{78}}}= 11.7.\]
+
+The next step is to find the critical value of t. The critical value of t can be found in a t-table. To find the critical value the degrees of freedom are needed (df=n-2); the significance level (0.05 by convention) and whether the test is one-tailed or two-tailed (two-tailed is most frequently applied).
+
+If the calculated t value is greater than the critical value, then the relationship is statistically significant and the null hypothesis is rejected. If however the calculated t value is less than the critical value, then the relationship is not statistically significant and the null hypothesis cannot be rejected.
+
+From the t table the critical value of t in this case is 1.990 and the calculated value of t is 11.7 which is much greater than the critical value so the null hypothesis is rejected.
+
+\hypertarget{when-to-use-pearson-correlation-coefficient}{%
+\section{When to use Pearson Correlation Coefficient}\label{when-to-use-pearson-correlation-coefficient}}
+
+The Pearson correlation coefficient is one of several correlation coefficients to choose from. It is a good choice when both variables being examined are quantitative; when then variables are normally distributed; the data is free from outliers; and the relationship is linear (the relationship between the two variables can be described by a straight line).
+
+Spearman's rank correlation coefficient may be a better choice when the variables are ordinal; aren't normally distributed; the data contains outliers or the relationship between the variables is non-linear and monotonic.
+
+\hypertarget{correlation-vs.-causation}{%
+\section{Correlation vs.~Causation}\label{correlation-vs.-causation}}
+
+The expression that ``correlation does not imply causation'' is fairly well known and it is a warning against interpreting a strong correlation to imply that change in one variable directly causes the change in another. This is rarely the case. In some countries, ice cream sales and shark attacks are positively correlated but it is unlikely that shark attacks are somehow driving ice cream sales or vice versa. Instead, it is temperature that causes a change in the other two variables. Higher temperatures cause higher ice cream sales and drive a greater number of swimmers into the ocean (where they will be at greater risk of shark attack). There is a substantially lower risk of this in Northern Ireland.
 
 \hypertarget{chisq}{%
 \chapter{Chi Square Tests}\label{chisq}}

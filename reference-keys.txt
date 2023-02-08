@@ -59,7 +59,7 @@ example-7
 iqr
 example-8
 example-9
-variance
+varr
 stdv
 example-10
 using-excel-1
@@ -82,6 +82,13 @@ type-i-errors
 type-ii-errors
 test-power
 nonpara
+correlationchapter
+pearson-correlation-coefficient
+examples
+identifying-correlation
+calculating-the-pearson-correlation-coefficient
+when-to-use-pearson-correlation-coefficient
+correlation-vs.-causation
 chisq
 description
 assumptions

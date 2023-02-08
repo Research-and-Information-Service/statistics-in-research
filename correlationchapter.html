@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 10 Correlation | Statistics Primer</title>
+  <meta name="description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 10 Correlation | Statistics Primer" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 10 Correlation | Statistics Primer" />
+  
+  <meta name="twitter:description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
+  
+
+<meta name="author" content="Aaron McMurray" />
+
+
+<meta name="date" content="2023-02-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="infstat.html"/>
+<link rel="next" href="chisq.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics Primer</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Statistics Primer</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#what-is-statistics"><i class="fa fa-check"></i><b>1.1</b> What is Statistics?</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#descriptive-statistics"><i class="fa fa-check"></i><b>1.1.1</b> Descriptive Statistics</a></li>
+<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#inferential-statistics"><i class="fa fa-check"></i><b>1.1.2</b> Inferential Statistics</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="sampling.html"><a href="sampling.html"><i class="fa fa-check"></i><b>2</b> Sampling</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="sampling.html"><a href="sampling.html#populations-and-samples"><i class="fa fa-check"></i><b>2.1</b> Populations and Samples</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="sampling.html"><a href="sampling.html#population"><i class="fa fa-check"></i><b>2.1.1</b> Population</a></li>
+<li class="chapter" data-level="2.1.2" data-path="sampling.html"><a href="sampling.html#sample"><i class="fa fa-check"></i><b>2.1.2</b> Sample</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="sampling.html"><a href="sampling.html#sampling-methods"><i class="fa fa-check"></i><b>2.2</b> Sampling Methods</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="sampling.html"><a href="sampling.html#probability-sampling"><i class="fa fa-check"></i><b>2.2.1</b> Probability Sampling</a></li>
+<li class="chapter" data-level="2.2.2" data-path="sampling.html"><a href="sampling.html#non-probability-sampling"><i class="fa fa-check"></i><b>2.2.2</b> Non-Probability Sampling</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="sampling.html"><a href="sampling.html#independent-and-dependent-samples"><i class="fa fa-check"></i><b>2.3</b> Independent and Dependent Samples</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="error.html"><a href="error.html"><i class="fa fa-check"></i><b>3</b> Measures of Uncertainty</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="error.html"><a href="error.html#stderr"><i class="fa fa-check"></i><b>3.1</b> Standard Error</a></li>
+<li class="chapter" data-level="3.2" data-path="error.html"><a href="error.html#coeff"><i class="fa fa-check"></i><b>3.2</b> Coefficient of Variation</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="error.html"><a href="error.html#example"><i class="fa fa-check"></i><b>3.2.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="error.html"><a href="error.html#confint"><i class="fa fa-check"></i><b>3.3</b> Confidence Intervals</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="error.html"><a href="error.html#example1"><i class="fa fa-check"></i><b>3.3.1</b> Example</a></li>
+<li class="chapter" data-level="3.3.2" data-path="error.html"><a href="error.html#example2"><i class="fa fa-check"></i><b>3.3.2</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="error.html"><a href="error.html#signif"><i class="fa fa-check"></i><b>3.4</b> Statistical Significance</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="datatypes.html"><a href="datatypes.html"><i class="fa fa-check"></i><b>4</b> Data Types and Levels of Measurement</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="datatypes.html"><a href="datatypes.html#variables"><i class="fa fa-check"></i><b>4.1</b> Variables</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="datatypes.html"><a href="datatypes.html#independent-variables"><i class="fa fa-check"></i><b>4.1.1</b> Independent Variables</a></li>
+<li class="chapter" data-level="4.1.2" data-path="datatypes.html"><a href="datatypes.html#dependent-variables"><i class="fa fa-check"></i><b>4.1.2</b> Dependent Variables</a></li>
+<li class="chapter" data-level="4.1.3" data-path="datatypes.html"><a href="datatypes.html#univariate-and-bivariate-data"><i class="fa fa-check"></i><b>4.1.3</b> Univariate and Bivariate Data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="datatypes.html"><a href="datatypes.html#types-of-data"><i class="fa fa-check"></i><b>4.2</b> Types of Data</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="datatypes.html"><a href="datatypes.html#qualitative-and-quantitative"><i class="fa fa-check"></i><b>4.2.1</b> Qualitative and Quantitative</a></li>
+<li class="chapter" data-level="4.2.2" data-path="datatypes.html"><a href="datatypes.html#continuous-or-discrete"><i class="fa fa-check"></i><b>4.2.2</b> Continuous or Discrete</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="datatypes.html"><a href="datatypes.html#levels-of-measurement"><i class="fa fa-check"></i><b>4.3</b> Levels of Measurement</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="datatypes.html"><a href="datatypes.html#nominal"><i class="fa fa-check"></i><b>4.3.1</b> Nominal</a></li>
+<li class="chapter" data-level="4.3.2" data-path="datatypes.html"><a href="datatypes.html#ordinal"><i class="fa fa-check"></i><b>4.3.2</b> Ordinal</a></li>
+<li class="chapter" data-level="4.3.3" data-path="datatypes.html"><a href="datatypes.html#interval"><i class="fa fa-check"></i><b>4.3.3</b> Interval</a></li>
+<li class="chapter" data-level="4.3.4" data-path="datatypes.html"><a href="datatypes.html#ratio"><i class="fa fa-check"></i><b>4.3.4</b> Ratio</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="quizone.html"><a href="quizone.html"><i class="fa fa-check"></i><b>5</b> Levels of Measurement Quiz</a></li>
+<li class="chapter" data-level="6" data-path="descdata.html"><a href="descdata.html"><i class="fa fa-check"></i><b>6</b> Describing Data</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="descdata.html"><a href="descdata.html#measures-of-central-tendency"><i class="fa fa-check"></i><b>6.1</b> Measures of Central Tendency</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="descdata.html"><a href="descdata.html#mean"><i class="fa fa-check"></i><b>6.1.1</b> Mean</a></li>
+<li class="chapter" data-level="6.1.2" data-path="descdata.html"><a href="descdata.html#median"><i class="fa fa-check"></i><b>6.1.2</b> Median</a></li>
+<li class="chapter" data-level="6.1.3" data-path="descdata.html"><a href="descdata.html#mode"><i class="fa fa-check"></i><b>6.1.3</b> Mode</a></li>
+<li class="chapter" data-level="6.1.4" data-path="descdata.html"><a href="descdata.html#mean-or-median"><i class="fa fa-check"></i><b>6.1.4</b> Mean or Median?</a></li>
+<li class="chapter" data-level="6.1.5" data-path="descdata.html"><a href="descdata.html#using-excel"><i class="fa fa-check"></i><b>6.1.5</b> Using Excel</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="descdata.html"><a href="descdata.html#frequency"><i class="fa fa-check"></i><b>6.2</b> Frequency</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="descdata.html"><a href="descdata.html#mean-of-a-frequency-distribution"><i class="fa fa-check"></i><b>6.2.1</b> Mean of a Frequency Distribution</a></li>
+<li class="chapter" data-level="6.2.2" data-path="descdata.html"><a href="descdata.html#mode-of-a-frequency-distribution"><i class="fa fa-check"></i><b>6.2.2</b> Mode of a Frequency Distribution</a></li>
+<li class="chapter" data-level="6.2.3" data-path="descdata.html"><a href="descdata.html#median-of-a-frequency-distribution"><i class="fa fa-check"></i><b>6.2.3</b> Median of a Frequency Distribution</a></li>
+<li class="chapter" data-level="6.2.4" data-path="descdata.html"><a href="descdata.html#mean-of-a-grouped-frequency-distribution"><i class="fa fa-check"></i><b>6.2.4</b> Mean of a Grouped Frequency Distribution</a></li>
+<li class="chapter" data-level="6.2.5" data-path="descdata.html"><a href="descdata.html#median-of-a-grouped-frequency-distribution"><i class="fa fa-check"></i><b>6.2.5</b> Median of a Grouped Frequency Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="descdata.html"><a href="descdata.html#measures-of-dispersion"><i class="fa fa-check"></i><b>6.3</b> Measures of Dispersion</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="descdata.html"><a href="descdata.html#range"><i class="fa fa-check"></i><b>6.3.1</b> Range</a></li>
+<li class="chapter" data-level="6.3.2" data-path="descdata.html"><a href="descdata.html#iqr"><i class="fa fa-check"></i><b>6.3.2</b> Interquartile Range</a></li>
+<li class="chapter" data-level="6.3.3" data-path="descdata.html"><a href="descdata.html#varr"><i class="fa fa-check"></i><b>6.3.3</b> Variance</a></li>
+<li class="chapter" data-level="6.3.4" data-path="descdata.html"><a href="descdata.html#stdv"><i class="fa fa-check"></i><b>6.3.4</b> Standard Deviation</a></li>
+<li class="chapter" data-level="6.3.5" data-path="descdata.html"><a href="descdata.html#using-excel-1"><i class="fa fa-check"></i><b>6.3.5</b> Using Excel</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="quiztwo.html"><a href="quiztwo.html"><i class="fa fa-check"></i><b>7</b> Descriptive Statistics Quiz</a></li>
+<li class="chapter" data-level="8" data-path="compdat.html"><a href="compdat.html"><i class="fa fa-check"></i><b>8</b> Comparing Data</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="compdat.html"><a href="compdat.html#percentage-difference"><i class="fa fa-check"></i><b>8.1</b> Percentage Difference</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="compdat.html"><a href="compdat.html#example-11"><i class="fa fa-check"></i><b>8.1.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="compdat.html"><a href="compdat.html#percentage-change"><i class="fa fa-check"></i><b>8.2</b> Percentage Change</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="compdat.html"><a href="compdat.html#example-12"><i class="fa fa-check"></i><b>8.2.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="compdat.html"><a href="compdat.html#percentage-point-change"><i class="fa fa-check"></i><b>8.3</b> Percentage Point Change</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="compdat.html"><a href="compdat.html#example-13"><i class="fa fa-check"></i><b>8.3.1</b> Example</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="compdat.html"><a href="compdat.html#quantiles"><i class="fa fa-check"></i><b>8.4</b> Quantiles</a></li>
+<li class="chapter" data-level="8.5" data-path="compdat.html"><a href="compdat.html#deciles-and-percentiles"><i class="fa fa-check"></i><b>8.5</b> Deciles and Percentiles</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="infstat.html"><a href="infstat.html"><i class="fa fa-check"></i><b>9</b> Inferential Statistics</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="infstat.html"><a href="infstat.html#what-is-inferential-statistics"><i class="fa fa-check"></i><b>9.1</b> What is Inferential Statistics?</a></li>
+<li class="chapter" data-level="9.2" data-path="infstat.html"><a href="infstat.html#hypothesis-testing"><i class="fa fa-check"></i><b>9.2</b> Hypothesis Testing</a></li>
+<li class="chapter" data-level="9.3" data-path="infstat.html"><a href="infstat.html#statistical-significance"><i class="fa fa-check"></i><b>9.3</b> Statistical Significance</a></li>
+<li class="chapter" data-level="9.4" data-path="infstat.html"><a href="infstat.html#errors-in-hypothesis-testing"><i class="fa fa-check"></i><b>9.4</b> Errors in Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="infstat.html"><a href="infstat.html#type-i-errors"><i class="fa fa-check"></i><b>9.4.1</b> Type I Errors</a></li>
+<li class="chapter" data-level="9.4.2" data-path="infstat.html"><a href="infstat.html#type-ii-errors"><i class="fa fa-check"></i><b>9.4.2</b> Type II Errors</a></li>
+<li class="chapter" data-level="9.4.3" data-path="infstat.html"><a href="infstat.html#test-power"><i class="fa fa-check"></i><b>9.4.3</b> Test Power</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="infstat.html"><a href="infstat.html#nonpara"><i class="fa fa-check"></i><b>9.5</b> Paremetric and Non-Parametric Testing</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="correlationchapter.html"><a href="correlationchapter.html"><i class="fa fa-check"></i><b>10</b> Correlation</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="correlationchapter.html"><a href="correlationchapter.html#pearson-correlation-coefficient"><i class="fa fa-check"></i><b>10.1</b> Pearson Correlation Coefficient</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="correlationchapter.html"><a href="correlationchapter.html#examples"><i class="fa fa-check"></i><b>10.1.1</b> Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="correlationchapter.html"><a href="correlationchapter.html#identifying-correlation"><i class="fa fa-check"></i><b>10.2</b> Identifying Correlation</a></li>
+<li class="chapter" data-level="10.3" data-path="correlationchapter.html"><a href="correlationchapter.html#calculating-the-pearson-correlation-coefficient"><i class="fa fa-check"></i><b>10.3</b> Calculating the Pearson Correlation Coefficient</a></li>
+<li class="chapter" data-level="10.4" data-path="correlationchapter.html"><a href="correlationchapter.html#when-to-use-pearson-correlation-coefficient"><i class="fa fa-check"></i><b>10.4</b> When to use Pearson Correlation Coefficient</a></li>
+<li class="chapter" data-level="10.5" data-path="correlationchapter.html"><a href="correlationchapter.html#correlation-vs.-causation"><i class="fa fa-check"></i><b>10.5</b> Correlation vs. Causation</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="chisq.html"><a href="chisq.html"><i class="fa fa-check"></i><b>11</b> Chi Square Tests</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="chisq.html"><a href="chisq.html#description"><i class="fa fa-check"></i><b>11.1</b> Description</a></li>
+<li class="chapter" data-level="11.2" data-path="chisq.html"><a href="chisq.html#assumptions"><i class="fa fa-check"></i><b>11.2</b> Assumptions</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="chisq.html"><a href="chisq.html#chi-square-goodness-of-fit-distribution-test"><i class="fa fa-check"></i><b>11.2.1</b> Chi Square Goodness of Fit (Distribution Test)</a></li>
+<li class="chapter" data-level="11.2.2" data-path="chisq.html"><a href="chisq.html#chi-square-test-of-independence"><i class="fa fa-check"></i><b>11.2.2</b> Chi-Square Test of Independence</a></li>
+</ul></li>
+<li class="chapter" data-level="11.3" data-path="chisq.html"><a href="chisq.html#strength-of-association"><i class="fa fa-check"></i><b>11.3</b> Strength of Association</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="chisq.html"><a href="chisq.html#phi"><i class="fa fa-check"></i><b>11.3.1</b> Phi</a></li>
+<li class="chapter" data-level="11.3.2" data-path="chisq.html"><a href="chisq.html#cramers-v"><i class="fa fa-check"></i><b>11.3.2</b> Cramer’s V</a></li>
+</ul></li>
+<li class="chapter" data-level="11.4" data-path="chisq.html"><a href="chisq.html#relative-risk"><i class="fa fa-check"></i><b>11.4</b> Relative Risk</a></li>
+<li class="chapter" data-level="11.5" data-path="chisq.html"><a href="chisq.html#odds-ratio"><i class="fa fa-check"></i><b>11.5</b> Odds Ratio</a></li>
+<li class="chapter" data-level="11.6" data-path="chisq.html"><a href="chisq.html#chi-square-homogeneity-test"><i class="fa fa-check"></i><b>11.6</b> Chi Square Homogeneity Test</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="datvis.html"><a href="datvis.html"><i class="fa fa-check"></i><b>12</b> Data Visualisation</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="datvis.html"><a href="datvis.html#data-visualisation"><i class="fa fa-check"></i><b>12.1</b> Data Visualisation</a></li>
+<li class="chapter" data-level="12.2" data-path="datvis.html"><a href="datvis.html#visual-cues"><i class="fa fa-check"></i><b>12.2</b> Visual Cues</a></li>
+<li class="chapter" data-level="12.3" data-path="datvis.html"><a href="datvis.html#relationships-in-data"><i class="fa fa-check"></i><b>12.3</b> Relationships in Data</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="datvis.html"><a href="datvis.html#frequency-distributions"><i class="fa fa-check"></i><b>12.3.1</b> Frequency Distributions</a></li>
+<li class="chapter" data-level="12.3.2" data-path="datvis.html"><a href="datvis.html#time-series"><i class="fa fa-check"></i><b>12.3.2</b> Time Series</a></li>
+<li class="chapter" data-level="12.3.3" data-path="datvis.html"><a href="datvis.html#rankings"><i class="fa fa-check"></i><b>12.3.3</b> Rankings</a></li>
+<li class="chapter" data-level="12.3.4" data-path="datvis.html"><a href="datvis.html#deviation"><i class="fa fa-check"></i><b>12.3.4</b> Deviation</a></li>
+<li class="chapter" data-level="12.3.5" data-path="datvis.html"><a href="datvis.html#correlation"><i class="fa fa-check"></i><b>12.3.5</b> Correlation</a></li>
+<li class="chapter" data-level="12.3.6" data-path="datvis.html"><a href="datvis.html#magnitude"><i class="fa fa-check"></i><b>12.3.6</b> Magnitude</a></li>
+<li class="chapter" data-level="12.3.7" data-path="datvis.html"><a href="datvis.html#spatial"><i class="fa fa-check"></i><b>12.3.7</b> Spatial</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="datvis.html"><a href="datvis.html#why-visualise-data"><i class="fa fa-check"></i><b>12.4</b> Why Visualise Data?</a></li>
+<li class="chapter" data-level="12.5" data-path="datvis.html"><a href="datvis.html#data-visualisation-tools"><i class="fa fa-check"></i><b>12.5</b> Data Visualisation Tools</a></li>
+<li class="chapter" data-level="12.6" data-path="datvis.html"><a href="datvis.html#dynamic-visualisations-dashboards"><i class="fa fa-check"></i><b>12.6</b> Dynamic Visualisations (Dashboards)</a>
+<ul>
+<li class="chapter" data-level="12.6.1" data-path="datvis.html"><a href="datvis.html#best-practice"><i class="fa fa-check"></i><b>12.6.1</b> Best Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics Primer</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="correlationchapter" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Correlation<a href="correlationchapter.html#correlationchapter" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<hr />
+<div id="pearson-correlation-coefficient" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Pearson Correlation Coefficient<a href="correlationchapter.html#pearson-correlation-coefficient" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Correlation indicates the strength and direction of a relationship between two variables. Its values range from -1 to 1, where a value of -1 indicates a perfect negative linear relationship (as one variable increases, the other decreases proportionally), 1 indicates a perfect positive linear relationship (as one variable increases, the other increases proportionally), and 0 indicates no linear relationship between the two variables.</p>
+<p>The extreme values of -1 and 1 indicate perfect linear relationships and for these relationships all of the data points fall on a single line. In practice it is rare to ever see a correlation this strong. Correlation is measured through the Pearson’s Correlation Coefficient which is represented by the Greek letter <span class="math inline">\(\rho\)</span> for a population parameter or the lower case letter r for a sample statistic.</p>
+<p>Correlation can be used to summarize the relationship between two variables and can also be used to make predictions about one variable based on the values of the other.</p>
+<p>Height and weight are an example of two variables which are correlated. As height increases weight also tends to increase. This means that we can reasonably predict that people who are tall will weigh more than people who are short. Correlation is a quantitative assessment of both the direction and the strength of this tendency for variables to change together.</p>
+<p>Values of r which lie between 0 and 0.3 are typically considered to be weak, between 0.3 and 0.5 are considered to be moderate and greater than 0.5 are considered to be strong although there are differences of opinion on this as the scale is somewhat subjective and different fields of study will deem relationships to be strong when other fields would consider them to be moderate or even weak. As a general rule however these guidelines are generally accurate.</p>
+<div id="examples" class="section level3 hasAnchor" number="10.1.1">
+<h3><span class="header-section-number">10.1.1</span> Examples<a href="correlationchapter.html#examples" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The figure below shows a perfect negative correlation where r=-1. It’s clear from the scatter plot that as x increase the values of y decrease.</p>
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.18.0.min.js"></script>                <div id="077266c3-dffb-413c-b251-2b02c258b544" class="plotly-graph-div" style="height:600px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("077266c3-dffb-413c-b251-2b02c258b544")) {                    Plotly.newPlot(                        "077266c3-dffb-413c-b251-2b02c258b544",                        [{"hovertemplate":"x: %{x}<br>y: %{y}","legendgroup":"","marker":{"color":"#547BBD","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":[0.0,0.25316455696202533,0.5063291139240507,0.759493670886076,1.0126582278481013,1.2658227848101267,1.518987341772152,1.7721518987341773,2.0253164556962027,2.278481012658228,2.5316455696202533,2.7848101265822787,3.037974683544304,3.2911392405063293,3.5443037974683547,3.79746835443038,4.050632911392405,4.30379746835443,4.556962025316456,4.810126582278482,5.063291139240507,5.3164556962025316,5.569620253164557,5.822784810126583,6.075949367088608,6.329113924050633,6.582278481012659,6.835443037974684,7.088607594936709,7.341772151898734,7.59493670886076,7.848101265822786,8.10126582278481,8.354430379746836,8.60759493670886,8.860759493670887,9.113924050632912,9.367088607594937,9.620253164556964,9.873417721518988,10.126582278481013,10.379746835443038,10.632911392405063,10.88607594936709,11.139240506329115,11.39240506329114,11.645569620253166,11.898734177215191,12.151898734177216,12.405063291139241,12.658227848101266,12.911392405063292,13.164556962025317,13.417721518987342,13.670886075949369,13.924050632911394,14.177215189873419,14.430379746835444,14.683544303797468,14.936708860759495,15.18987341772152,15.443037974683545,15.696202531645572,15.949367088607596,16.20253164556962,16.455696202531648,16.70886075949367,16.962025316455698,17.21518987341772,17.468354430379748,17.721518987341774,17.974683544303797,18.227848101265824,18.48101265822785,18.734177215189874,18.9873417721519,19.240506329113927,19.49367088607595,19.746835443037977,20.0],"xaxis":"x","y":[80.0,78.9873417721519,77.9746835443038,76.9620253164557,75.9493670886076,74.9367088607595,73.92405063291139,72.9113924050633,71.89873417721519,70.88607594936708,69.87341772151899,68.86075949367088,67.84810126582278,66.83544303797468,65.82278481012658,64.81012658227849,63.79746835443038,62.78481012658228,61.77215189873418,60.75949367088607,59.74683544303797,58.734177215189874,57.72151898734177,56.70886075949367,55.69620253164557,54.68354430379747,53.67088607594937,52.65822784810126,51.64556962025316,50.63291139240506,49.62025316455696,48.60759493670886,47.59493670886076,46.58227848101266,45.56962025316456,44.55696202531645,43.54430379746835,42.53164556962025,41.518987341772146,40.506329113924046,39.49367088607595,38.48101265822785,37.46835443037975,36.45569620253164,35.44303797468354,34.43037974683544,33.417721518987335,32.405063291139236,31.392405063291136,30.379746835443036,29.367088607594937,28.35443037974683,27.34177215189873,26.32911392405063,25.316455696202524,24.303797468354425,23.291139240506325,22.278481012658226,21.265822784810126,20.25316455696202,19.24050632911392,18.22784810126582,17.215189873417714,16.202531645569614,15.189873417721515,14.177215189873408,13.164556962025316,12.151898734177209,11.139240506329116,10.12658227848101,9.113924050632903,8.10126582278481,7.088607594936704,6.075949367088597,5.063291139240505,4.050632911392398,3.0379746835442916,2.025316455696199,1.0126582278480925,0.0],"yaxis":"y","type":"scatter","hoverlabel":{"font":{"size":16}}},{"hovertemplate":"x: %{x}<br>y: %{y}","legendgroup":"","marker":{"color":"#547BBD","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":[0.0,0.25316455696202533,0.5063291139240507,0.759493670886076,1.0126582278481013,1.2658227848101267,1.518987341772152,1.7721518987341773,2.0253164556962027,2.278481012658228,2.5316455696202533,2.7848101265822787,3.037974683544304,3.2911392405063293,3.5443037974683547,3.79746835443038,4.050632911392405,4.30379746835443,4.556962025316456,4.810126582278482,5.063291139240507,5.3164556962025316,5.569620253164557,5.822784810126583,6.075949367088608,6.329113924050633,6.582278481012659,6.835443037974684,7.088607594936709,7.341772151898734,7.59493670886076,7.848101265822786,8.10126582278481,8.354430379746836,8.60759493670886,8.860759493670887,9.113924050632912,9.367088607594937,9.620253164556964,9.873417721518988,10.126582278481013,10.379746835443038,10.632911392405063,10.88607594936709,11.139240506329115,11.39240506329114,11.645569620253166,11.898734177215191,12.151898734177216,12.405063291139241,12.658227848101266,12.911392405063292,13.164556962025317,13.417721518987342,13.670886075949369,13.924050632911394,14.177215189873419,14.430379746835444,14.683544303797468,14.936708860759495,15.18987341772152,15.443037974683545,15.696202531645572,15.949367088607596,16.20253164556962,16.455696202531648,16.70886075949367,16.962025316455698,17.21518987341772,17.468354430379748,17.721518987341774,17.974683544303797,18.227848101265824,18.48101265822785,18.734177215189874,18.9873417721519,19.240506329113927,19.49367088607595,19.746835443037977,20.0],"xaxis":"x","y":[80.00000000000001,78.98734177215191,77.97468354430382,76.96202531645571,75.94936708860762,74.93670886075951,73.9240506329114,72.91139240506331,71.8987341772152,70.8860759493671,69.873417721519,68.8607594936709,67.8481012658228,66.8354430379747,65.82278481012659,64.8101265822785,63.79746835443039,62.7848101265823,61.772151898734194,60.75949367088609,59.746835443037995,58.73417721518989,57.72151898734179,56.70886075949369,55.69620253164559,54.68354430379749,53.67088607594938,52.65822784810128,51.645569620253184,50.632911392405084,49.620253164556985,48.60759493670888,47.59493670886078,46.58227848101268,45.56962025316458,44.55696202531647,43.54430379746837,42.531645569620274,41.51898734177217,40.50632911392407,39.49367088607597,38.48101265822787,37.46835443037977,36.45569620253166,35.44303797468356,34.43037974683546,33.417721518987356,32.40506329113926,31.392405063291164,30.379746835443065,29.367088607594965,28.35443037974686,27.34177215189876,26.32911392405066,25.316455696202553,24.303797468354453,23.291139240506354,22.278481012658254,21.265822784810155,20.253164556962048,19.24050632911395,18.22784810126585,17.215189873417742,16.202531645569643,15.189873417721543,14.177215189873436,13.164556962025344,12.151898734177237,11.139240506329145,10.126582278481038,9.113924050632932,8.101265822784839,7.088607594936732,6.075949367088626,5.063291139240533,4.050632911392427,3.03797468354432,2.0253164556962275,1.0126582278481209,2.842170943040401e-14],"yaxis":"y","type":"scatter","hoverlabel":{"font":{"size":16}}}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"x","font":{"size":20}},"tickfont":{"size":16},"range":[0,20],"showticklabels":true,"showgrid":false,"linecolor":"black","linewidth":2,"tickmode":"auto","nticks":20},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"y","font":{"size":20}},"tickfont":{"size":16},"range":[0,100],"showticklabels":true,"showgrid":false,"linecolor":"black","linewidth":2,"tickmode":"auto","nticks":20},"legend":{"tracegroupgap":0},"margin":{"t":60,"b":50,"pad":5},"height":600,"title":{"text":"<b>Perfect Negative Correlation</b>","font":{"color":"#547BBD","size":20}},"paper_bgcolor":"rgba(0,0,0,0)","plot_bgcolor":"rgba(0,0,0,0)","annotations":[{"font":{"color":"black","size":16},"showarrow":false,"text":"Pearson's r: -1","x":0.5,"xref":"paper","y":0.8,"yref":"paper"}]},                        {"responsive": true}                    )                };                            </script>        </div>
+<p>The figure below illustrates what two variables with no correlation might look like when plotted in a scatter plot. In this case, r = 0. The data has no discernible pattern through which x and y can be related to one another.</p>
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.18.0.min.js"></script>                <div id="0d7b2d68-7a7d-413f-a6a3-f4b679b51f73" class="plotly-graph-div" style="height:600px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("0d7b2d68-7a7d-413f-a6a3-f4b679b51f73")) {                    Plotly.newPlot(                        "0d7b2d68-7a7d-413f-a6a3-f4b679b51f73",                        [{"hovertemplate":"x: %{x}<br>y: %{y}","legendgroup":"","marker":{"color":"#547BBD","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":[0.0,0.25316456,0.50632911,0.75949367,1.01265823,1.26582278,1.51898734,1.7721519,2.02531646,2.27848101,2.53164557,2.78481013,3.03797468,3.29113924,3.5443038,3.79746835,4.05063291,4.30379747,4.55696203,4.81012658,5.06329114,5.3164557,5.56962025,5.82278481,6.07594937,6.32911392,6.58227848,6.83544304,7.08860759,7.34177215,7.59493671,7.84810127,8.10126582,8.35443038,8.60759494,8.86075949,9.11392405,9.36708861,9.62025316,9.87341772,10.12658228,10.37974684,10.63291139,10.88607595,11.13924051,11.39240506,11.64556962,11.89873418,12.15189873,12.40506329,12.65822785,12.91139241,13.16455696,13.41772152,13.67088608,13.92405063,14.17721519,14.43037975,14.6835443,14.93670886,15.18987342,15.44303797,15.69620253,15.94936709,16.20253165,16.4556962,16.70886076,16.96202532,17.21518987,17.46835443,17.72151899,17.97468354,18.2278481,18.48101266,18.73417722,18.98734177,19.24050633,19.49367089,19.74683544,20.0],"xaxis":"x","y":[92.69903343,94.42504856,51.05691279,89.77269494,52.21635356,87.66046463,35.02375881,50.65778615,62.82055444,69.6702809,101.47228859,91.07998348,104.50935817,97.13215796,67.34272897,67.67346231,94.37943244,73.80742862,69.86012655,46.29594554,70.87079757,17.18007187,63.8776489,53.40219497,86.85148695,63.42655287,66.41896901,99.94210929,52.0186451,79.3331779,35.09466105,74.79458235,81.20531491,90.19741944,55.02633613,79.39313884,79.36308399,72.61536732,76.00032557,82.27068643,80.9576085,53.07978222,49.08276979,123.11960571,111.39584573,45.16612248,82.00435484,85.54874166,88.0267447,75.80790873,54.46256122,69.35159187,63.17749724,75.68746232,67.63257392,70.36648747,93.3710495,97.611164,49.37793654,63.80139791,57.18400092,97.47444424,71.81264195,101.97978808,63.44838291,73.51999988,46.02607106,99.05071073,65.74775825,43.29687097,61.1507743,26.90184124,72.36365655,75.24975485,78.76156334,102.96216367,66.98047692,89.14911834,79.24477378,69.13356719],"yaxis":"y","type":"scatter","hoverlabel":{"font":{"size":16}}},{"hovertemplate":"x: %{x}<br>y: %{y}","legendgroup":"","marker":{"color":"#547BBD","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":[0.0,0.25316456,0.50632911,0.75949367,1.01265823,1.26582278,1.51898734,1.7721519,2.02531646,2.27848101,2.53164557,2.78481013,3.03797468,3.29113924,3.5443038,3.79746835,4.05063291,4.30379747,4.55696203,4.81012658,5.06329114,5.3164557,5.56962025,5.82278481,6.07594937,6.32911392,6.58227848,6.83544304,7.08860759,7.34177215,7.59493671,7.84810127,8.10126582,8.35443038,8.60759494,8.86075949,9.11392405,9.36708861,9.62025316,9.87341772,10.12658228,10.37974684,10.63291139,10.88607595,11.13924051,11.39240506,11.64556962,11.89873418,12.15189873,12.40506329,12.65822785,12.91139241,13.16455696,13.41772152,13.67088608,13.92405063,14.17721519,14.43037975,14.6835443,14.93670886,15.18987342,15.44303797,15.69620253,15.94936709,16.20253165,16.4556962,16.70886076,16.96202532,17.21518987,17.46835443,17.72151899,17.97468354,18.2278481,18.48101266,18.73417722,18.98734177,19.24050633,19.49367089,19.74683544,20.0],"xaxis":"x","y":[72.70056685050938,72.70159868241393,72.70263051427771,72.70366234618227,72.70469417808681,72.70572600995061,72.70675784185515,72.7077896737597,72.70882150566426,72.70985333752805,72.7108851694326,72.71191700133714,72.71294883320094,72.71398066510548,72.71501249701004,72.71604432887382,72.71707616077838,72.71810799268293,72.71913982458747,72.72017165645127,72.72120348835581,72.72223532026037,72.72326715212415,72.7242989840287,72.72533081593326,72.72636264779705,72.7273944797016,72.72842631160614,72.72945814346994,72.73048997537448,72.73152180727904,72.73255363918359,72.73358547104738,72.73461730295193,72.73564913485647,72.73668096672027,72.73771279862481,72.73874463052937,72.73977646239315,72.74080829429771,72.74184012620226,72.7428719581068,72.7439037899706,72.74493562187514,72.7459674537797,72.74699928564348,72.74803111754804,72.7490629494526,72.75009478131638,72.75112661322093,72.75215844512547,72.75319027703003,72.75422210889381,72.75525394079837,72.75628577270292,72.75731760456671,72.75834943647126,72.7593812683758,72.7604131002396,72.76144493214414,72.7624767640487,72.7635085959125,72.76454042781704,72.7655722597216,72.76660409162614,72.76763592348993,72.76866775539447,72.76969958729903,72.77073141916281,72.77176325106737,72.77279508297192,72.77382691483571,72.77485874674026,72.7758905786448,72.77692241054936,72.77795424241314,72.7789860743177,72.78001790622226,72.78104973808604,72.7820815699906],"yaxis":"y","type":"scatter","hoverlabel":{"font":{"size":16}}}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"x","font":{"size":20}},"tickfont":{"size":16},"range":[0,20],"showticklabels":true,"showgrid":false,"linecolor":"black","linewidth":2,"tickmode":"auto","nticks":20},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"y","font":{"size":20}},"tickfont":{"size":16},"range":[0,100],"showticklabels":true,"showgrid":false,"linecolor":"black","linewidth":2,"tickmode":"auto","nticks":20},"legend":{"tracegroupgap":0},"margin":{"t":60,"b":50,"pad":5},"height":600,"title":{"text":"<b>No Correlation</b>","font":{"color":"#547BBD","size":20}},"paper_bgcolor":"rgba(0,0,0,0)","plot_bgcolor":"rgba(0,0,0,0)","annotations":[{"font":{"color":"black","size":16},"showarrow":false,"text":"Pearson's r: 0","x":0.5,"xref":"paper","y":0.2,"yref":"paper"}]},                        {"responsive": true}                    )                };                            </script>        </div>
+</div>
+</div>
+<div id="identifying-correlation" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Identifying Correlation<a href="correlationchapter.html#identifying-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The simplest way to determine whether two variables are correlated is to plot them together. Scatterplots are particularly useful for checking whether there might be some relationship between pairs of continuous data.</p>
+<p>The scatterplot below shows some simulated height and weight data with a line of best fit. At a glance it’s clear that as height increases weight increases. It’s not a perfect relationship however. Looking at various heights you can see there are clusters of weight values associated with them. There are taller people who weigh less than some of their shorter peers and there are shorter people who weigh more than their taller peers.</p>
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script src="https://cdn.plot.ly/plotly-2.18.0.min.js"></script>                <div id="8b832358-903c-4ea2-9741-682faee446d7" class="plotly-graph-div" style="height:600px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("8b832358-903c-4ea2-9741-682faee446d7")) {                    Plotly.newPlot(                        "8b832358-903c-4ea2-9741-682faee446d7",                        [{"hovertemplate":"Height /inches: %{x}<br>Weight /lbs: %{y}","legendgroup":"","marker":{"color":"#547BBD","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":[65.0,65.12658227848101,65.25316455696202,65.37974683544304,65.50632911392405,65.63291139240506,65.75949367088607,65.88607594936708,66.0126582278481,66.13924050632912,66.26582278481013,66.39240506329114,66.51898734177215,66.64556962025317,66.77215189873418,66.89873417721519,67.0253164556962,67.15189873417721,67.27848101265823,67.40506329113924,67.53164556962025,67.65822784810126,67.78481012658227,67.9113924050633,68.0379746835443,68.16455696202532,68.29113924050633,68.41772151898735,68.54430379746836,68.67088607594937,68.79746835443038,68.92405063291139,69.0506329113924,69.17721518987342,69.30379746835443,69.43037974683544,69.55696202531645,69.68354430379748,69.81012658227849,69.9367088607595,70.0632911392405,70.18987341772151,70.31645569620252,70.44303797468355,70.56962025316456,70.69620253164557,70.82278481012658,70.9493670886076,71.07594936708861,71.20253164556962,71.32911392405063,71.45569620253164,71.58227848101266,71.70886075949367,71.83544303797468,71.9620253164557,72.0886075949367,72.21518987341773,72.34177215189874,72.46835443037975,72.59493670886076,72.72151898734177,72.84810126582279,72.9746835443038,73.10126582278481,73.22784810126582,73.35443037974683,73.48101265822785,73.60759493670886,73.73417721518987,73.86075949367088,73.9873417721519,74.11392405063292,74.24050632911393,74.36708860759494,74.49367088607595,74.62025316455697,74.74683544303798,74.87341772151899,75.0],"xaxis":"x","y":[138.7173389055905,136.68483408599602,121.75415447078228,129.03629426095367,125.8313095398755,133.88539950174496,126.6405465029517,132.1761918105992,147.59838718891368,131.9920694780695,134.9156035841048,130.8014798203195,138.58853612591156,122.79345176394457,135.62050777421905,131.40136444392977,131.96711708298952,132.89966355904266,144.90973162668223,135.70890226126403,137.3846761920414,131.4349661788995,137.94223741677536,142.3899086499794,135.95576760502402,141.2729936147899,138.27097184906773,142.1935449437479,144.65762673866786,139.56102292561772,133.32742793881096,134.736530021559,132.48971154676974,148.4045663686113,133.4434015718421,155.48284731492166,146.40027481640664,143.45928362984677,143.08255887137972,132.97609470422498,141.27530615395747,133.06716671706786,147.05859055642193,137.38986584548184,137.20158727054093,143.4933075877381,138.804646930517,152.1904195660945,140.65979451375173,148.28435762314646,151.74756932330132,141.46222439177896,134.55877437805498,142.00198938862343,153.21256721913159,140.80642832868247,140.96083163474583,141.40158530766368,151.78096199460904,149.67568421646078,147.49350279090098,137.82828848090492,145.6963258351201,150.58341319786572,151.0212255092321,152.56797183088187,153.46295700539966,144.62260647370505,149.76053072216752,155.15505282121245,146.21050642940543,155.2635522411006,145.45931522220306,155.29034237687776,145.49577966306254,152.90510487971196,154.86461394120244,151.46448093212,148.041397149948,149.53762446209848],"yaxis":"y","type":"scatter","hoverlabel":{"font":{"size":16}}},{"hovertemplate":"Height /inches: %{x}<br>Weight /lbs: %{y}","legendgroup":"","marker":{"color":"#547BBD","symbol":"circle"},"mode":"lines","name":"","showlegend":false,"x":[65.0,65.12658227848101,65.25316455696202,65.37974683544304,65.50632911392405,65.63291139240506,65.75949367088607,65.88607594936708,66.0126582278481,66.13924050632912,66.26582278481013,66.39240506329114,66.51898734177215,66.64556962025317,66.77215189873418,66.89873417721519,67.0253164556962,67.15189873417721,67.27848101265823,67.40506329113924,67.53164556962025,67.65822784810126,67.78481012658227,67.9113924050633,68.0379746835443,68.16455696202532,68.29113924050633,68.41772151898735,68.54430379746836,68.67088607594937,68.79746835443038,68.92405063291139,69.0506329113924,69.17721518987342,69.30379746835443,69.43037974683544,69.55696202531645,69.68354430379748,69.81012658227849,69.9367088607595,70.0632911392405,70.18987341772151,70.31645569620252,70.44303797468355,70.56962025316456,70.69620253164557,70.82278481012658,70.9493670886076,71.07594936708861,71.20253164556962,71.32911392405063,71.45569620253164,71.58227848101266,71.70886075949367,71.83544303797468,71.9620253164557,72.0886075949367,72.21518987341773,72.34177215189874,72.46835443037975,72.59493670886076,72.72151898734177,72.84810126582279,72.9746835443038,73.10126582278481,73.22784810126582,73.35443037974683,73.48101265822785,73.60759493670886,73.73417721518987,73.86075949367088,73.9873417721519,74.11392405063292,74.24050632911393,74.36708860759494,74.49367088607595,74.62025316455697,74.74683544303798,74.87341772151899,75.0],"xaxis":"x","y":[130.96489363534624,131.2311455520462,131.49739746874621,131.76364938544629,132.02990130214624,132.29615321884626,132.56240513554627,132.82865705224629,133.0949089689463,133.3611608856463,133.62741280234633,133.89366471904634,134.15991663574636,134.42616855244637,134.69242046914638,134.9586723858464,135.2249243025464,135.49117621924643,135.75742813594644,136.02368005264645,136.28993196934647,136.55618388604643,136.82243580274644,137.0886877194465,137.35493963614653,137.62119155284648,137.8874434695465,138.15369538624657,138.41994730294653,138.68619921964654,138.95245113634655,139.21870305304657,139.48495496974658,139.7512068864466,140.0174588031466,140.28371071984662,140.54996263654664,140.81621455324665,141.08246646994667,141.34871838664668,141.6149703033467,141.8812222200467,142.14747413674667,142.41372605344674,142.67997797014675,142.9462298868467,143.21248180354672,143.4787337202468,143.7449856369468,144.01123755364677,144.27748947034678,144.5437413870468,144.8099933037468,145.07624522044682,145.34249713714684,145.60874905384685,145.87500097054686,146.14125288724688,146.4075048039469,146.6737567206469,146.94000863734692,147.20626055404693,147.47251247074695,147.73876438744696,148.00501630414698,148.271268220847,148.53752013754695,148.80377205424702,149.07002397094703,149.336275887647,149.602527804347,149.86877972104702,150.1350316377471,150.40128355444705,150.66753547114706,150.93378738784708,151.2000393045471,151.4662912212471,151.73254313794712,151.99879505464713],"yaxis":"y","type":"scatter","hoverlabel":{"font":{"size":16}}}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Weight /lbs","font":{"size":20}},"tickfont":{"size":16},"range":[65,75],"showticklabels":true,"showgrid":false,"linecolor":"black","linewidth":2,"tickmode":"auto","nticks":20},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Height/ inches","font":{"size":20}},"tickfont":{"size":16},"range":[120,155],"showticklabels":true,"showgrid":false,"linecolor":"black","linewidth":2,"tickmode":"auto","nticks":20},"legend":{"tracegroupgap":0},"margin":{"t":60,"b":50,"pad":5},"height":600,"title":{"text":"<b>Height and Weight of Students</b>","font":{"color":"#547BBD","size":20}},"paper_bgcolor":"rgba(0,0,0,0)","plot_bgcolor":"rgba(0,0,0,0)","annotations":[{"font":{"color":"black","size":16},"showarrow":false,"text":"Pearson's r: 0.8","x":0.5,"xref":"paper","y":0.8,"yref":"paper"}]},                        {"responsive": true}                    )                };                            </script>        </div>
+<p>Pearson’s correlation takes all of the data points and represents them with a single summary statistic. In this case the output indicates a correlation of 0.8.</p>
+</div>
+<div id="calculating-the-pearson-correlation-coefficient" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Calculating the Pearson Correlation Coefficient<a href="correlationchapter.html#calculating-the-pearson-correlation-coefficient" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Calculating the correlation coefficient is not simple and the best way to calculate it is to use R, Python, Excel, SPSS or some equivalent software. In Excel, calculating the value of r is as simple as typing:</p>
+<p>=PEARSON(array1, array2)</p>
+<p>This function takes two arguments, each of which should be an array containing the values of the variables for which the Pearson correlation coefficient is to be calculated. The first array should contain the set of independent variables and the second the set of dependent variables.</p>
+<p>The calculations that are performed in the background are described below but it isn’t necessary to manually calculate r or its associated test statistics as the process is long and prone to error. The details are provided for context to help understand what goes on in the background.</p>
+<p>The formula for calculating the Pearson correlation coefficient is:</p>
+<p><span class="math display">\[r = \frac{n \sum{xy}-\sum{x} \sum{y}}{\sqrt{[n \sum{x^2}-(\sum{x})^2][n \sum{y^2}-(\sum{y})^2]}}, \]</span></p>
+<p>where <span class="math inline">\(r\)</span> is the Pearson correlation coefficient, <span class="math inline">\(n\)</span> is the total number of observations and <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are the recorded data values (in the case of the example above these would be height and weight measurements). This is equivalent to writing:</p>
+<p><span class="math display">\[r=\frac{\sum{(x-\bar{x})(y-\bar{y})}}{\sqrt{\sum{(x-\bar{x})^2}\sum{(y-\bar{y})^2}}}.\]</span>
+You might recognise parts of this formula from the section on <a href="descdata.html#varr">variance</a>. Recall the expression for the sample variance was:</p>
+<p><span class="math display">\[V_{s} = \frac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})^2,\]</span></p>
+<p>and the standard deviation was the square root of this. Essentially the denominator in the formula for r describes the product of the two variables’ standard deviations. The numerator is the covariance. Intuitively it makes some sense that the spread should matter when trying to determine if two variables are related - when two variables are perfectly correlated they form a straight line in a scatter plot but when they’re poorly correlated they appear more like a cloud of points in a scatter plot.</p>
+<p>The r value for the height and weight data presented above is approximately 0.8.</p>
+<p>The Pearson correlation coefficient can also be used to test whether a relationship between two variables is significant using hypothesis testing where the null hypothesis represents the assumption that the Pearson correlation of the population is equal to zero and the alternative hypothesis represents the assumption that it is not equal to zero.</p>
+<p>To test the hypotheses it is necessary to calculate a t-value:</p>
+<p><span class="math display">\[t=\frac{r}{\sqrt{\frac{1-r^2}{n-2}}}.\]</span></p>
+<p>For the data above this gives:</p>
+<p><span class="math display">\[t=\frac{0.8}{\sqrt{\frac{1-0.8^2}{80-2}}},\]</span>
+<span class="math display">\[t=\frac{0.8}{\sqrt{\frac{0.36}{78}}}= 11.7.\]</span></p>
+<p>The next step is to find the critical value of t. The critical value of t can be found in a t-table. To find the critical value the degrees of freedom are needed (df=n-2); the significance level (0.05 by convention) and whether the test is one-tailed or two-tailed (two-tailed is most frequently applied).</p>
+<p>If the calculated t value is greater than the critical value, then the relationship is statistically significant and the null hypothesis is rejected. If however the calculated t value is less than the critical value, then the relationship is not statistically significant and the null hypothesis cannot be rejected.</p>
+<p>From the t table the critical value of t in this case is 1.990 and the calculated value of t is 11.7 which is much greater than the critical value so the null hypothesis is rejected.</p>
+</div>
+<div id="when-to-use-pearson-correlation-coefficient" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> When to use Pearson Correlation Coefficient<a href="correlationchapter.html#when-to-use-pearson-correlation-coefficient" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The Pearson correlation coefficient is one of several correlation coefficients to choose from. It is a good choice when both variables being examined are quantitative; when then variables are normally distributed; the data is free from outliers; and the relationship is linear (the relationship between the two variables can be described by a straight line).</p>
+<p>Spearman’s rank correlation coefficient may be a better choice when the variables are ordinal; aren’t normally distributed; the data contains outliers or the relationship between the variables is non-linear and monotonic.</p>
+</div>
+<div id="correlation-vs.-causation" class="section level2 hasAnchor" number="10.5">
+<h2><span class="header-section-number">10.5</span> Correlation vs. Causation<a href="correlationchapter.html#correlation-vs.-causation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The expression that “correlation does not imply causation” is fairly well known and it is a warning against interpreting a strong correlation to imply that change in one variable directly causes the change in another. This is rarely the case. In some countries, ice cream sales and shark attacks are positively correlated but it is unlikely that shark attacks are somehow driving ice cream sales or vice versa. Instead, it is temperature that causes a change in the other two variables. Higher temperatures cause higher ice cream sales and drive a greater number of swimmers into the ocean (where they will be at greater risk of shark attack). There is a substantially lower risk of this in Northern Ireland.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="infstat.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chisq.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["Bookdown.pdf", "Bookdown.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
