@@ -2,6 +2,7 @@ p.caption {
   color: #777;
   margin-top: 10px;
 }
+
 p code {
   white-space: inherit;
 }
@@ -12,3 +13,68 @@ pre {
 pre code {
   white-space: inherit;
 }
+
+.defbox {
+  margin: 1em;
+  background-position: 0px;
+  padding: 0em 0em 0em 0em;
+  border-radius: 15px 30px; 
+  border: 5px outset #2A6DC7;
+  position: relative;
+}
+
+.defbox h2{
+font-size: 1.6em;
+margin-top: 0px ;
+width: 100% ;
+padding: 0em 0em 0em 0.5em;
+}
+
+.defbox p{
+  padding: 0em 1em 1em 1em;
+}
+
+.sumbox {
+  margin: 1em;
+  background-position: 0px;
+  padding: 0em 0em 1em 0em;
+  border-radius: 15px 30px; 
+  border: 5px outset #D74657;
+  position: relative;
+}
+
+
+.sumbox h2{
+font-size: 1.6em;
+margin-top: 0px ;
+width: 100% ;
+padding: 0em 0em 0em 0.5em;
+}
+
+.sumbox p{
+  padding: 0em 1em 1em 1em;
+}
+
+.exbox {
+  margin: 1em;
+  background-position: 0px;
+  padding: 0em 0em 1em 0em;
+  border-radius: 5px; 
+  border: 5px dashed #17C3B2;
+  position: relative;
+}
+
+
+.exbox h2{
+font-size: 1.6em;
+margin-top: 0px ;
+width: 100% ;
+padding: 0em 0em 0em 0.5em;
+}
+
+.exbox p{
+  padding: 0em 1em 1em 1em;
+}
+
+
+

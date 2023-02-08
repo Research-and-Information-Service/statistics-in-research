@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Levels of Measurement Quiz | Statistics Primer</title>
+  <title>Chapter 8 Inferential Statistics | Statistics Primer</title>
   <meta name="description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Levels of Measurement Quiz | Statistics Primer" />
+  <meta property="og:title" content="Chapter 8 Inferential Statistics | Statistics Primer" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Levels of Measurement Quiz | Statistics Primer" />
+  <meta name="twitter:title" content="Chapter 8 Inferential Statistics | Statistics Primer" />
   
   <meta name="twitter:description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="datatypes.html"/>
-<link rel="next" href="describing-data.html"/>
+<link rel="prev" href="comparing-data.html"/>
+<link rel="next" href="chi-square-tests.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -237,20 +237,108 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="levels-of-measurement-quiz" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Chapter 4</span> Levels of Measurement Quiz<a href="levels-of-measurement-quiz.html#levels-of-measurement-quiz" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="inferential-statistics-1" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Inferential Statistics<a href="inferential-statistics-1.html#inferential-statistics-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <hr />
-<p>If you would like to try and test your knowledge of the various levels of measurement outlined in this chapter you can take the <a href="https://view.genial.ly/62867083cd8fd700184ca06f/presentation-quiz">Levels of Measurement Quiz</a> below. This quiz isn’t scored or recorded anywhere.</p>
-<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genial.ly/62867083cd8fd700184ca06f" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+<div id="what-is-inferential-statistics" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> What is Inferential Statistics?<a href="inferential-statistics-1.html#what-is-inferential-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Inferential statistics help suggest explanations for various phenomenon by allowing researchers to draw conclusions based on extrapolations. This is in contrast to descriptive statistics which merely describe the important characteristics of data by using mean, median, mode, variance etc.</p>
+</div>
+<div id="hypothesis-testing" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Hypothesis Testing<a href="inferential-statistics-1.html#hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Hypothesis testing is an important part of inferential statistics. In testing hypotheses we make assumptions about a population parameter and test those assumptions using statistical tests to determine whether we should reject the assumption.</p>
+<p>There are two types of hypothesis:</p>
+<ul>
+<li><p>The Null hypothesis (denoted <span class="math inline">\(H_0\)</span>): The null hypothesis is a hypothesis which states there is no difference between two variables and that the sample observations and any observed differences occur purely by chance.</p></li>
+<li><p>The Alternate hypothesis (denoted by <span class="math inline">\(H_1\)</span> or <span class="math inline">\(H_a\)</span>): The alternate hypothesis states that there is a difference between two variables and that the sample observations do not occur by chance.</p></li>
+</ul>
+<div class="defbox">
+<h2>
+Information
+</h2>
+<p>Inferential statistics provide a quantitative method to decide if the null hypothesis should be rejected. Inferential statistics usually suggest but cannot absolutely prove an explanation or cause-and-effect relationship.</p>
+<p>Typically, the researcher constructs these hypotheses with the expectation that their findings will contradict the null hypothesis.</p>
+<p>When we reject the null hypothesis we typically avoid saying that we accept the alternative hypothesis because this implies it to be proven to be true and in general studies provide evidence for or against a hypothesis rather than conclusively proving one or another to be true.</p>
+<p>Likewise, when we fail to reject the null hypothesis we do not say that the null hypothesis was accepted. This is often compared to how verdicts are made in a court of law where a person can be found guilty or not guilty. A not guilty verdict means that the prosecution was unable not prove beyond a reasonable doubt that the person committed the crime - it doesn’t necessarily mean the person is innocent. The court can provide evidence of guilt but it cannot prove innocence.</p>
+<p>In the same way, statistical tests cannot prove the null hypothesis but can provide evidence against it. As for the alternative hypothesis, studies are typically designed to reject a null hypothesis, not the alternative hypothesis, so rather than saying we reject the alternative hypothesis we say it wasn’t supported.</p>
+<p>If that’s all confusing to you don’t worry because it’s confusing to just about everyone…</p>
+</div>
+</div>
+<div id="how-to-perform-hypothesis-testing" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> How to Perform Hypothesis Testing<a href="inferential-statistics-1.html#how-to-perform-hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The process to determine whether to reject a null hypothesis or to fail to reject the null hypothesis, based on sample data is called hypothesis testing. It consists of four steps:</p>
+<ul>
+<li>Define the null and alternate hypothesis</li>
+<li>Define an analysis plan to find how to use sample data to estimate the null hypothesis</li>
+<li>Do some analysis on the sample data to create a single number called ‘test statistic’</li>
+<li>Understand the result by applying the decision rule to check whether the Null hypothesis is true or not.</li>
+</ul>
+<p>If the value of t-stat is less than the significance level we will reject the null hypothesis, otherwise, we will fail to reject the null hypothesis.</p>
+<p>Technically, we never accept the null hypothesis, we say that either we fail to reject or we reject the null hypothesis.</p>
+<div id="example-17" class="section level3 hasAnchor" number="8.3.1">
+<h3><span class="header-section-number">8.3.1</span> Example<a href="inferential-statistics-1.html#example-17" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When considering a study to determine the impact of a drug on hypertension it would be typical to:</p>
+<p>Formulate a null hypothesis: The drug has no effect.</p>
+<p>Conduct a study and measure pre- and post- intervention blood pressure.</p>
+<p>Calculate the probability (p) of obtaining the observed difference in scores if the null hypothesis is true.</p>
+<p>If the probability is small enough (p&lt;0.05) then it suggests that the pattern of results is unlikely to have arisen by chance and the drug may have a genuine effect in the population.</p>
+</div>
+</div>
+<div id="statistical-significance" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Statistical Significance<a href="inferential-statistics-1.html#statistical-significance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In spoken English, the word ‘significant’ is typically taken to mean ‘important’ but in statistics the word means ‘probably true’ (not due to chance).</p>
+<p>A research finding might be true (significant) without being important or a research finding might be important without being true (significant).</p>
+<p>This is important in medical research.</p>
+<p>The significance level is defined as the probability of the case when we reject the null hypothesis but in actual it is true. E.g., a 0.05 significance level indicates that there is 5% risk in assuming that there is some difference when in actual there is no difference. It is denoted by alpha (<span class="math inline">\(\alpha\)</span>).</p>
+<p>The above figure shows that the two shaded regions are equidistant from the null hypothesis, each having a probability of 0.025 and a total of 0.05 which is our significance level. The shaded region in case of a two-tailed test is called critical region.</p>
+<p>Statistical significance refers to the probability of finding the pattern of results in a particular study, if the hypothesis is true.</p>
+<p>If p is small (&lt;0.05) then the effect is unlikely to have occurred by chance alone.</p>
+</div>
+<div id="p-value" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> P-Value<a href="inferential-statistics-1.html#p-value" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The p-value is defined as the probability of seeing a t-statistic as extreme as the calculated value if the null hypothesis value is true. Low enough p-value is ground for rejecting the null hypothesis. We reject the null hypothesis if the p-value is less than the significance level.</p>
+</div>
+<div id="errors-in-hypothesis-testing" class="section level2 hasAnchor" number="8.6">
+<h2><span class="header-section-number">8.6</span> Errors in Hypothesis Testing<a href="inferential-statistics-1.html#errors-in-hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We have explained what is hypothesis testing and the steps to do the testing. Now during performing the hypothesis testing, there might be some errors.</p>
+<p>We classify these errors in two categories.</p>
+<ul>
+<li><p>Type-1 error: Type 1 error is the case when we reject the null hypothesis but in actual it was true. The probability of having a Type-1 error is called significance level alpha (<span class="math inline">\(\alpha\)</span>).</p></li>
+<li><p>Type-2 error: Type 2 error is the case when we fail to reject the null hypothesis but actually it is false. The probability of having a type-2 error is called beta (<span class="math inline">\(\beta\)</span>).
+Therefore:</p></li>
+</ul>
+<p><span class="math display">\[\alpha= \textrm{P}(\textrm{Null hypothesis rejected} | \textrm{Null hypothesis is true}).\]</span></p>
+<p><span class="math display">\[\beta= \textrm{P} (\textrm{Null hypothesis accepted} | \textrm{Null hypothesis is false}).\]</span></p>
+<p>Power of test is defined as</p>
+<p><span class="math display">\[\textrm{P} = 1 - \textrm{Type-2 error}\]</span>,</p>
+<p><span class="math display">\[\textrm{P} = 1 – \beta\]</span>.</p>
+<p>Lesser the type-2 error more the power of the hypothesis test.</p>
+</div>
+<div id="paremetric-and-non-parametric-testing" class="section level2 hasAnchor" number="8.7">
+<h2><span class="header-section-number">8.7</span> Paremetric and Non-Parametric Testing<a href="inferential-statistics-1.html#paremetric-and-non-parametric-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>When comparing the average of two or more groups with the help of hypothesis tests, the assumption is that the data is a sample from a normally distributed population. That is why hypothesis tests such as the t-test, paired t-test and analysis of variance (ANOVA) are also called parametric tests.</p>
+<p>Nonparametric tests do not make assumptions about a specific distribution. If assumptions do not hold, nonparametric tests are a better safeguard against drawing wrong conclusions.</p>
+<p>Non-parametric tests should be used when any one of the following conditions pertains to the data:</p>
+<ul>
+<li>The level of measurement of all the variables is nominal or ordinal.</li>
+<li>The sample sizes of the study groups are unequal; for the χ2 the groups may be of equal size or unequal size whereas some parametric tests require groups of equal or approximately equal size.</li>
+<li>The original data were measured at an interval or ratio level, but violate one of the following assumptions of a parametric test:
+<ul>
+<li>The distribution of the data was seriously skewed or kurtotic (parametric tests assume approximately normal distribution of the dependent variable), and thus the researcher must use a distribution free statistic rather than a parametric statistic.</li>
+<li>The data violate the assumptions of equal variance or homoscedasticity.</li>
+<li>For any of a number of reasons (1), the continuous data were collapsed into a small number of categories, and thus the data are no longer interval or ratio.</li>
+</ul></li>
+</ul>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="datatypes.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="describing-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="comparing-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="chi-square-tests.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

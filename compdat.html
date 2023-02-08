@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | Statistics Primer</title>
+  <title>Chapter 8 Comparing Data | Statistics Primer</title>
   <meta name="description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | Statistics Primer" />
+  <meta property="og:title" content="Chapter 8 Comparing Data | Statistics Primer" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | Statistics Primer" />
+  <meta name="twitter:title" content="Chapter 8 Comparing Data | Statistics Primer" />
   
   <meta name="twitter:description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="datvis.html"/>
-
+<link rel="prev" href="quiztwo.html"/>
+<link rel="next" href="infstat.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -270,64 +270,146 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered hasAnchor">
-<h1>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="compdat" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Comparing Data<a href="compdat.html#compdat" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<hr />
+<p>Statisticians use several statistical measures like the percentage difference, percentage change and percentage error to evaluate the differences between measured values. All three differ in what they measure.</p>
+<p>Percentage difference is the difference between two values divided by the average of two values multiplied by 100%. This is typically used to understand how close two values are to one another.</p>
+<p>If the data tracks changes in values over time (comparing old values to new values) then it is nearly always better to calculate the percentage change instead of the percentage difference. This is the key difference between the two.</p>
+<p>While percentage change aims to measure change over time, the percentage difference seeks to understand the difference between two values.</p>
+<div id="percentage-difference" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Percentage Difference<a href="compdat.html#percentage-difference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The percentage difference is used to compare two values.</p>
+<p><span class="math display">\[ \textrm{Percentage Difference} = 100\% \frac{|\textrm{Value}_1 - \textrm{Value}_2|}{\frac{\textrm{Value}_1+\textrm{Value}_2}{2}}.\]</span></p>
+<p>The | symbol in the formula below indicates that the absolute value should be taken.</p>
+<div class="defbox">
+<h2>
+Information
+</h2>
+<p>The absolute value of a calculation is the result of the calculation if the numerical answer was always assumed to be positive.</p>
+<p>For example:</p>
+<p><span class="math display">\[ |3 - 2| = 1,\]</span>
+<span class="math display">\[ |10 - 5| = 5,\]</span>
+<span class="math display">\[ |7 - 9| = 2.\]</span>
+Seven minus nine is equal to -2 but when we take the ‘absolute’ value (|7-9|) we ignore the negative sign and report the result as 2.</p>
+</div>
+<div id="example-11" class="section level3 hasAnchor" number="8.1.1">
+<h3><span class="header-section-number">8.1.1</span> Example<a href="compdat.html#example-11" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>One researcher produced thirteen research reports in 2022 another produced 11. What is the percentage difference?</p>
+<p><span class="math display">\[ \textrm{Percentage Difference} = 100\% \frac{|13 - 11|}{(\frac{13+11}{2})},\]</span></p>
+<p><span class="math display">\[ \textrm{Percentage Difference} = 100\% \frac{2}{(\frac{24}{2})},\]</span></p>
+<p><span class="math display">\[ \textrm{Percentage Difference} = 100\% \frac{2}{12},\]</span></p>
+<p><span class="math display">\[ \textrm{Percentage Difference} = 100\% \frac{1}{6},\]</span></p>
+<p><span class="math display">\[ \textrm{Percentage Difference} =16.7\%.\]</span></p>
+</div>
+</div>
+<div id="percentage-change" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> Percentage Change<a href="compdat.html#percentage-change" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Percentage change is about comparing old to new values. The formula for calculating a percentage change is given below:</p>
+<p><span class="math display">\[ \textrm{Percentage Change} = 100\% \frac{\textrm{New Value} - \textrm{Old Value}}{\textrm{Old Value}}.\]</span></p>
+<div id="example-12" class="section level3 hasAnchor" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> Example<a href="compdat.html#example-12" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>What is the percentage change in the population in these three places between 2018 and 2019?</p>
+<table>
+<caption></caption>
+<thead>
+<tr class="header">
+<th align="right">Location</th>
+<th align="right">2018</th>
+<th align="right">2019</th>
+<th align="right">Percentage Change (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">Somewhere</td>
+<td align="right">50</td>
+<td align="right">36</td>
+<td align="right">-28</td>
+</tr>
+<tr class="even">
+<td align="right">Anywhere</td>
+<td align="right">50</td>
+<td align="right">50</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="right">Elsewhere</td>
+<td align="right">50</td>
+<td align="right">58</td>
+<td align="right">16</td>
+</tr>
+</tbody>
+</table>
+<p>Use the formula above to calculate the percentage change for Upper Braniel:</p>
+<p><span class="math display">\[ \textrm{Percentage Change} = 100\% \frac{\textrm{New Value} - \textrm{Old Value}}{\textrm{Old Value}},\]</span></p>
+<p><span class="math display">\[ \textrm{Percentage Change} = 100\% \frac{36 - 50}{50},\]</span></p>
+<p><span class="math display">\[ \textrm{Percentage Change} = 100\% \frac{(-14)}{50},\]</span></p>
+<p><span class="math display">\[ \textrm{Percentage Change} = -100\% \frac{14}{50},\]</span></p>
+<p><span class="math display">\[ \textrm{Percentage Change} = -100\% \frac{7}{25},\]</span></p>
+<p><span class="math display">\[ \textrm{Percentage Change} = -28\%.\]</span></p>
+<p>A negative percentage change indicates a percentage decrease while a positive percentage change indicates a percentage increase.</p>
+</div>
+</div>
+<div id="percentage-point-change" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Percentage Point Change<a href="compdat.html#percentage-point-change" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Note that subtracting one percentage from another gives the percentage point change rather than the percentage change.</p>
+<div id="example-13" class="section level3 hasAnchor" number="8.3.1">
+<h3><span class="header-section-number">8.3.1</span> Example<a href="compdat.html#example-13" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>What is the percentage point change in the population in these locations between 2018 and 2019?</p>
+<table>
+<caption></caption>
+<thead>
+<tr class="header">
+<th align="right">Location</th>
+<th align="right">2018</th>
+<th align="right">2019</th>
+<th align="right">Percentage Change (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">Somewhere</td>
+<td align="right">3.5</td>
+<td align="right">2.5</td>
+<td align="right">-1</td>
+</tr>
+<tr class="even">
+<td align="right">Anywhere</td>
+<td align="right">3.4</td>
+<td align="right">3.3</td>
+<td align="right">-0.1</td>
+</tr>
+<tr class="odd">
+<td align="right">Elsewhere</td>
+<td align="right">3.3</td>
+<td align="right">3.8</td>
+<td align="right">0.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="quantiles" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Quantiles<a href="compdat.html#quantiles" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Quantiles are subsets of a larger data set that has been split into some number of equal parts. Quartiles and quintiles are commonly used quantiles which divide data in four and five equal parts respectively.</p>
+<p>Quartiles divide a rank-ordered data set into four equal parts. The values that divide each part are called the first, second, and third quartiles; and they are denoted by Q1, Q2, and Q3, respectively. 25% of the measurements or observations in the data set are less than or equal to the first quartiles (Q1); 50% are less than or equal to the second quartile (Q2); and 75% are less than or equal to the third quartile (Q3).</p>
+</div>
+<div id="deciles-and-percentiles" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> Deciles and Percentiles<a href="compdat.html#deciles-and-percentiles" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Deciles are another type of quantile that divide the data into 10 equal parts, instead of Q1, Q2 and Q3, we have decile 1 (D1) through to decile 9 (D9) as a result.</p>
+<p>Percentiles divide the data into 100 equal parts resulting in percentile 1 (P1) through to percentile 99 (P99).Assume that the elements in a data set are rank ordered from the smallest to the largest. The values that divide a rank-ordered set of elements into 100 equal parts are called percentiles. The observation at the 50th percentile would be denoted would be greater than 50 percent of the observations in the set. An observation at the 50th percentile would correspond to the median value in the set.</p>
+<div class="sumbox">
+<h2>
+Summary
+</h2>
+<p>The percentage difference is used to compare two values.</p>
+<p><span class="math display">\[ \textrm{Percentage Difference} = 100\% \frac{|Value_1 - Value_2|}{\frac{Value_1+Value_2}{2}}.\]</span>
+The formula for calculating a percentage change is given below:</p>
+<p><span class="math display">\[ \textrm{Percentage Change} = 100\% \frac{\textrm{New Value} - \textrm{Old Value}}{\textrm{Old Value}}.\]</span>
+Subtracting one percentage from another gives the percentage point change rather than the percentage change.</p>
+</div>
 
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-Akoglu, H. 2018. <span>“<span class="nocase">User’s guide to correlation coefficients</span>.”</span> <em>Turkish Journal of Emergency Medicine</em> 18 (3): 91–93. https://doi.org/<a href="https://doi.org/10.1016/j.tjem.2018.08.001">https://doi.org/10.1016/j.tjem.2018.08.001</a>.
-</div>
-<div class="csl-entry">
-Altman, D. G., and Bland, J. M. 2005. <span>“<span class="nocase">Standard Deviations and Standard Errors</span>.”</span> <em>British Medical Journal</em> 331:903: 331. <a href="https://doi.org/10.1136/bmj.331.7521.903">https://doi.org/10.1136/bmj.331.7521.903</a>.
-</div>
-<div class="csl-entry">
-Andrade, C. 2020. <span>“<span class="nocase">The Inconvenient Truth About Convenience and Purposive Samples</span>.”</span> <em>Indian Journal of Psychological Medicine</em> 43(1): 86–88. <a href="https://doi.org/10.1177/0253717620977000">https://doi.org/10.1177/0253717620977000</a>.
-</div>
-<div class="csl-entry">
-Campbell, M. J. 2021. <em>Statistics at Square One</em>. John Wiley &amp; Sons. <a href="https://www.wiley.com/en-ie/Statistics+at+Square+One,+12th+Edition-p-9781119401308">https://www.wiley.com/en-ie/Statistics+at+Square+One,+12th+Edition-p-9781119401308</a>.
-</div>
-<div class="csl-entry">
-Family Practicioner Services. 2020. <span>“<span class="nocase">General Medical Services for Northern Ireland, Annual Statistics 2019/20</span>.”</span> <a href="https://hscbusiness.hscni.net/pdf/FPS%20General%20Medical%20Services%20Statistics%20201920.pdf">https://hscbusiness.hscni.net/pdf/FPS%20General%20Medical%20Services%20Statistics%20201920.pdf</a>.
-</div>
-<div class="csl-entry">
-Frost, J. 2019. <em>Introduction to Statistics</em>. Statistics By Jim Publishing. <a href="https://statisticsbyjim.com/basics/introduction-statistics-intuitive-guide/">https://statisticsbyjim.com/basics/introduction-statistics-intuitive-guide/</a>.
-</div>
-<div class="csl-entry">
-Gonzalez-Chica, D. A., Bastos, J. L., Duquia, R. P., Bonamigo, R. R., Martínez-Mesa, J. 2015. <span>“<span class="nocase">Tests of association: which one is the most appropriate for my study?</span>”</span> <em>An Bras Dermatol.</em> 90 (4): 523–28. https://doi.org/<a href="https://doi.org/10.1590/abd1806-4841.20154289">https://doi.org/10.1590/abd1806-4841.20154289</a>.
-</div>
-<div class="csl-entry">
-Health &amp; Social Care Trust. 2020. <span>“<span>The Health Survey Northern Ireland</span>.”</span> <a href="https://www.ninis2.nisra.gov.uk/public/PivotGrid.aspx?ds=10512&amp;lh=63&amp;yn=2010-2020&amp;sk=134&amp;sn=Health%20and%20Social%20Care&amp;yearfilter=">https://www.ninis2.nisra.gov.uk/public/PivotGrid.aspx?ds=10512&amp;lh=63&amp;yn=2010-2020&amp;sk=134&amp;sn=Health%20and%20Social%20Care&amp;yearfilter=</a>.
-</div>
-<div class="csl-entry">
-Lee, D. K., In, J., and Lee, S. 2015. <span>“Standard Deviation and Standard Error of the Mean.”</span> <em>Korean Journal of Anesthesiology</em> 68 (3): 220–23. <a href="https://doi.org/10.4097/kjae.2015.68.3.220">https://doi.org/10.4097/kjae.2015.68.3.220</a>.
-</div>
-<div class="csl-entry">
-Leung, W-C. 2001. <span>“<span class="nocase">Balancing statistical and clinical significance in evaluating treatment effects</span>.”</span> <em>Postgraduate Medical Journal</em> 77 (905): 201–4. <a href="https://doi.org/10.1136/pmj.77.905.201">https://doi.org/10.1136/pmj.77.905.201</a>.
-</div>
-<div class="csl-entry">
-Martin, J. D., and Louis, N. G. 1997. <span>“<span class="nocase">Measurement of Relative Variation: Sociological Examples.</span>”</span> <em>American Sociological Review</em> 33 (3): 496–502. <a href="https://doi.org/10.2307/2093089">https://doi.org/10.2307/2093089</a>.
-</div>
-<div class="csl-entry">
-McHugh, M. L. 2013. <span>“<span class="nocase">The chi-square test of independence.</span>”</span> <em>Biochem Med (Zagreb)</em> 23(2):1: 43–49. <a href="https://doi.org/10.11613/bm.2013.018">https://doi.org/10.11613/bm.2013.018</a>.
-</div>
-<div class="csl-entry">
-McHugh, M. L. and Hudson-Barr, D. 2003. <span>“<span>Descriptive Statistics, Part II: Most Commonly Used Descriptive Statistics</span>.”</span> <em>Journal for Specialists in Pediatric Nursing</em> 8 (3): 111–16. https://doi.org/<a href="https://doi.org/10.1111/j.1088-145X.2003.00111.x">https://doi.org/10.1111/j.1088-145X.2003.00111.x</a>.
-</div>
-<div class="csl-entry">
-McHugh, M. L., and Villarruel, A. M. 2003. <span>“<span class="nocase">Descriptive Statistics, Part I: Level of Measurement</span>.”</span> <em>Journal for Specialists in Pediatric Nursing</em> 8 (1): 35–37. https://doi.org/<a href="https://doi.org/10.1111/j.1744-6155.2003.tb00182.x">https://doi.org/10.1111/j.1744-6155.2003.tb00182.x</a>.
-</div>
-<div class="csl-entry">
-Office for National Statistics. 2022. <span>“Uncertainty and How We Measure It for Our Surveys.”</span> <a href="https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts/uncertaintyandhowwemeasureit" class="uri">https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts/uncertaintyandhowwemeasureit</a>.
-</div>
-<div class="csl-entry">
-Schmidt, C. O., Kohlmann, T. 2008. <span>“<span class="nocase">When to use the odds ratio or the relative risk?</span>”</span> <em>International Journal of Public Health</em> 53 (2): 165. https://doi.org/<a href="https://doi.org/10.11613/bm.2013.018">https://doi.org/10.11613/bm.2013.018</a>.
-</div>
-<div class="csl-entry">
-Tenny, S and Hoffman, M.R. 2022. <em>Relative Risk</em>. StatPearls [Internet] StatPearls Publishing, Treasure Island (FL). <a href="https://europepmc.org/article/nbk/nbk430824#free-full-text">https://europepmc.org/article/nbk/nbk430824#free-full-text</a>.
-</div>
-<div class="csl-entry">
-Witte R. S. and Witte J.S. 2017. <em>Statistics</em>. John Wiley &amp; Sons. <a href="https://www.wiley.com/en-us/Statistics,+11th+Edition-p-9781119254515">https://www.wiley.com/en-us/Statistics,+11th+Edition-p-9781119254515</a>.
-</div>
 </div>
 </div>
             </section>
@@ -335,8 +417,8 @@ Witte R. S. and Witte J.S. 2017. <em>Statistics</em>. John Wiley &amp; Sons. <a 
           </div>
         </div>
       </div>
-<a href="datvis.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="quiztwo.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="infstat.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

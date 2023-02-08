@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | Statistics Primer</title>
+  <title>Chapter 2 Sampling | Statistics Primer</title>
   <meta name="description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | Statistics Primer" />
+  <meta property="og:title" content="Chapter 2 Sampling | Statistics Primer" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | Statistics Primer" />
+  <meta name="twitter:title" content="Chapter 2 Sampling | Statistics Primer" />
   
   <meta name="twitter:description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="datvis.html"/>
-
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="error.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -270,64 +270,89 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered hasAnchor">
-<h1>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="sampling" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Sampling<a href="sampling.html#sampling" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<hr />
+<p>Samples and populations are important in both inferential and descriptive statistics. Some descriptive statistics are calculated differently depending on whether they are being calculated for a sample or a population.</p>
+<div id="populations-and-samples" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Populations and Samples<a href="sampling.html#populations-and-samples" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="population" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Population<a href="sampling.html#population" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The population includes all the elements from a set of data and the population characteristics that we calculate (e.g. mean, median, mode… etc) are called parameters.</p>
+<p>Populations can include people but other examples include objects, events, businesses and so on. Before starting a research study it is important to define the population that is being studied. Many populations can additionally be stratified into sub populations where sub-populations share additional attributes <span class="citation">(<a href="#ref-Frost2019" role="doc-biblioref">Frost 2019</a>)</span> for instance, the population of a country can be subdivided into the male and female or subdivided into age bands. Sometimes the differences between sub-populations are unimportant and other times they are crucial.</p>
+</div>
+<div id="sample" class="section level3 hasAnchor" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Sample<a href="sampling.html#sample" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A sample differs from a population in that it is comprised of one or more observations which are drawn from the population. It is a subset of the population. The sample characteristics (e.g. mean, median, mode… etc) that we calculate are called statistics. Where possible, w use samples to draw inferences about wider populations. For instance, the voting intentions of 1,000 people (a sample) might be used to predict the outcome of a vote held for a general election involving 68,000,000 people (the population).</p>
+<p>Surveying a sample rather than an entire population is often more financially cost effective but using a sample comes with a different kind of cost. Using a sample rather than the population means that the reported statistics come with associated measures of uncertainty which describe how the estimate might differ from the true value of the population <span class="citation">(<a href="#ref-uncertainty" role="doc-biblioref">Office for National Statistics 2022</a>)</span>. If we were to measure the heights of 1,000 individuals in Northern Ireland, the average height of the sample is typically not going to be the same as the average height of all 1.8 million people in the country. The difference between the sample and the population values is considered a sampling error. If the sample mean is 176 cm and the population mean is 178 cm then the sampling error is 2 cm.</p>
+<p>The exact measurement of sampling error is generally not feasible, since the true population values are not usually known. Sampling error however can be estimated by techniques such as the calculation of confidence intervals.</p>
+<p>The various measures of uncertainty used to describe how estimates differ from the true value of the population include <span class="citation">(<a href="#ref-uncertainty" role="doc-biblioref">Office for National Statistics 2022</a>)</span>:</p>
+<ul>
+<li><p>the <a href="error.html#stderr">standard error</a></p></li>
+<li><p>the <a href="error.html#coeff">coefficient of variation</a></p></li>
+<li><p><a href="error.html#confint">confidence intervals</a></p></li>
+<li><p><a href="error.html#signif">statistical significance</a></p></li>
+</ul>
+<p>Calculating parameters of a population or statistics for a sample often falls within the remit of descriptive statistics but if we want to convert sample responses to population estimates we need to use inferential statistics.</p>
+<p>To generalise the results from a sample to the full population, the sample must be representative of the population (this is known as representative sampling). For a sample to be representative of the population it must accurately represent the characteristics of the population.</p>
+<p>In practice, this means that if we conducted a survey to gauge the views of the Northern Ireland population on an upcoming election and only residents of Antrim were surveyed then the sample results could not be used to infer attitudes of all Northern Ireland residents.</p>
+</div>
+</div>
+<div id="sampling-methods" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Sampling Methods<a href="sampling.html#sampling-methods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="probability-sampling" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Probability Sampling<a href="sampling.html#probability-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Probability sampling involves random selection allowing you to make statistical inferences about the whole group.</p>
+<p>This chapter focuses on simple random sampling as it is one of the most common forms of probability sampling however there a a variety of different methods of probability sampling including: systematic sampling, stratified random sampling, cluster sampling, multi-stage sampling and multi-phase sampling.</p>
+<div id="simple-random-sampling" class="section level4 hasAnchor" number="2.2.1.1">
+<h4><span class="header-section-number">2.2.1.1</span> Simple Random Sampling<a href="sampling.html#simple-random-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Simple random sampling (SRS) is a procedure for selecting samples from a population. Under this procedure samples are taken from a population where each sample has equal probability of being selected. A very simple example of this is removing marbles from a bag of ten marbles one at a time, recording some characteristic (their colour or weight for instance) and replacing them. All the marbles have equal probability of being selected (p=0.1) regardless of how many samples we have taken.</p>
+<p>Not replacing the marbles we sampled results in simple random sampling without replacement (SRSWOR). The first time we take a sample, each marble has a p=0.1 chance of being sampled. If we don’t replace the marble we sampled before sampling a second marble however then the chance we select the first marble again is 0 and the other 9 marbles now have a p=0.11 chance of being selected. By the time we get to the bottom of the bag and two marbles remain they each have a p=0.5 chance of being selected.</p>
+<p>In real world scenarios SRS can be difficult to achieve either due to the scale of the population or because SRS can introduce resampling (inadvertently giving a survey to the same person twice). SRSWOR is often used instead instead for these reasons.</p>
+</div>
+</div>
+<div id="non-probability-sampling" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Non-Probability Sampling<a href="sampling.html#non-probability-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Non-probability sampling involves non-random selection. To draw conclusions about a population from a sample it is a requirement that the sample be representative of the population however when using non-probability sampling this is not guarenteed and it is important to consider this when using it as a sampling method in a study.</p>
+<p>Non-probability sampling has seen some use within official statistics as a result of the growing popularity of non-probability data sources such as social media (webscraping Twitter or Facebook to conduct sentiment analysis for instance) and the desire for real time statistics. There are a range of methods which can be used to conduct non-probability sampling including: convenience or haphazard sampling, volunteer sampling, judgement sampling, quota sampling, snowball or network sampling, crowd-sourcing and web panels.</p>
+<p>One of the more widely used forms of non-probability sampling is convenience sampling. Convenience sampling consists of drawing from a source that is conveniently accessible to us <span class="citation">(<a href="#ref-andrade" role="doc-biblioref">Andrade 2020</a>)</span>. A convenience sample of students may be drawn from a physics department in Queen’s University but these students may not be representative of all students in Northern Ireland.</p>
+<p>The findings of a study based on convenience sampling can normally only be generalized to the sub population from which the sample is drawn and not to the entire population <span class="citation">(<a href="#ref-andrade" role="doc-biblioref">Andrade 2020</a>)</span>.</p>
+</div>
+</div>
+<div id="independent-and-dependent-samples" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Independent and Dependent Samples<a href="sampling.html#independent-and-dependent-samples" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Samples are independent if the subjects in one sample do not determine which subjects are chosen for a second sample. Each group contains different subjects with no meaningful way to pair them. Independent groups are more commonly seen in hypothesis testing, for instance medical drug trials typically have a control group and a treatment group with different subjects. These studies typically use inferential statistical tests to determine if there are differences between the groups.</p>
+<p>Dependent samples (sometimes referred to as matched pairs) differ from independent samples in that subjects in one sample can be matched with a corresponding subject in another sample. This can get confusing because sometimes matched pair consists of just one subject. For instance, if a sample is drawn of people who have hip replacement surgery with the NHS and the people in the sample are each interviewed before and after the surgery to assess their mobility before and after surgery then the study is engaged in dependent sampling. The same person was interviewed at two points in time.</p>
+<div class="sumbox">
+<h2>
+Summary
+</h2>
+<p><strong>Populations and Samples</strong></p>
+<p>The population includes all the elements from a set of data. The population characteristics (e.g. mean or standard deviation) that we measure are called parameters.</p>
+<p>A sample is comprised of one or more observations which are drawn from the population. Sample characteristics that we measure are called statistics.</p>
+<p><strong>Sampling</strong></p>
+<p>To generalise the results from a sample to the full population, the sample must be representative of the population.</p>
+<p>Surveys are based on a sample rather than the whole population so they are subject to sampling error.</p>
+<p>The sampling error is the difference between the sample estimate and the ‘true’ value (which would have been obtained if a census of the whole population were undertaken.</p>
+<p>Probability sampling involves random selection.</p>
+<p>Simple random sampling (SRS) is a method for selecting samples from a population where all possible samples are equally likely to occur. Taking marbles from a bag, detailing a property (like weight), and replacing it in the bag is an example of SRS.</p>
+<p>Not replacing a sample would constitute simple random sampling without replacement (SRSWOR).</p>
+<p>Non-probability sampling involves non-random selection based on convenience or other criteria.</p>
+<p>In independent samples subjects in one group provide no information about subjects in another.</p>
+</div>
 
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-Akoglu, H. 2018. <span>“<span class="nocase">User’s guide to correlation coefficients</span>.”</span> <em>Turkish Journal of Emergency Medicine</em> 18 (3): 91–93. https://doi.org/<a href="https://doi.org/10.1016/j.tjem.2018.08.001">https://doi.org/10.1016/j.tjem.2018.08.001</a>.
-</div>
-<div class="csl-entry">
-Altman, D. G., and Bland, J. M. 2005. <span>“<span class="nocase">Standard Deviations and Standard Errors</span>.”</span> <em>British Medical Journal</em> 331:903: 331. <a href="https://doi.org/10.1136/bmj.331.7521.903">https://doi.org/10.1136/bmj.331.7521.903</a>.
-</div>
-<div class="csl-entry">
+<div id="ref-andrade" class="csl-entry">
 Andrade, C. 2020. <span>“<span class="nocase">The Inconvenient Truth About Convenience and Purposive Samples</span>.”</span> <em>Indian Journal of Psychological Medicine</em> 43(1): 86–88. <a href="https://doi.org/10.1177/0253717620977000">https://doi.org/10.1177/0253717620977000</a>.
 </div>
-<div class="csl-entry">
-Campbell, M. J. 2021. <em>Statistics at Square One</em>. John Wiley &amp; Sons. <a href="https://www.wiley.com/en-ie/Statistics+at+Square+One,+12th+Edition-p-9781119401308">https://www.wiley.com/en-ie/Statistics+at+Square+One,+12th+Edition-p-9781119401308</a>.
-</div>
-<div class="csl-entry">
-Family Practicioner Services. 2020. <span>“<span class="nocase">General Medical Services for Northern Ireland, Annual Statistics 2019/20</span>.”</span> <a href="https://hscbusiness.hscni.net/pdf/FPS%20General%20Medical%20Services%20Statistics%20201920.pdf">https://hscbusiness.hscni.net/pdf/FPS%20General%20Medical%20Services%20Statistics%20201920.pdf</a>.
-</div>
-<div class="csl-entry">
+<div id="ref-Frost2019" class="csl-entry">
 Frost, J. 2019. <em>Introduction to Statistics</em>. Statistics By Jim Publishing. <a href="https://statisticsbyjim.com/basics/introduction-statistics-intuitive-guide/">https://statisticsbyjim.com/basics/introduction-statistics-intuitive-guide/</a>.
 </div>
-<div class="csl-entry">
-Gonzalez-Chica, D. A., Bastos, J. L., Duquia, R. P., Bonamigo, R. R., Martínez-Mesa, J. 2015. <span>“<span class="nocase">Tests of association: which one is the most appropriate for my study?</span>”</span> <em>An Bras Dermatol.</em> 90 (4): 523–28. https://doi.org/<a href="https://doi.org/10.1590/abd1806-4841.20154289">https://doi.org/10.1590/abd1806-4841.20154289</a>.
-</div>
-<div class="csl-entry">
-Health &amp; Social Care Trust. 2020. <span>“<span>The Health Survey Northern Ireland</span>.”</span> <a href="https://www.ninis2.nisra.gov.uk/public/PivotGrid.aspx?ds=10512&amp;lh=63&amp;yn=2010-2020&amp;sk=134&amp;sn=Health%20and%20Social%20Care&amp;yearfilter=">https://www.ninis2.nisra.gov.uk/public/PivotGrid.aspx?ds=10512&amp;lh=63&amp;yn=2010-2020&amp;sk=134&amp;sn=Health%20and%20Social%20Care&amp;yearfilter=</a>.
-</div>
-<div class="csl-entry">
-Lee, D. K., In, J., and Lee, S. 2015. <span>“Standard Deviation and Standard Error of the Mean.”</span> <em>Korean Journal of Anesthesiology</em> 68 (3): 220–23. <a href="https://doi.org/10.4097/kjae.2015.68.3.220">https://doi.org/10.4097/kjae.2015.68.3.220</a>.
-</div>
-<div class="csl-entry">
-Leung, W-C. 2001. <span>“<span class="nocase">Balancing statistical and clinical significance in evaluating treatment effects</span>.”</span> <em>Postgraduate Medical Journal</em> 77 (905): 201–4. <a href="https://doi.org/10.1136/pmj.77.905.201">https://doi.org/10.1136/pmj.77.905.201</a>.
-</div>
-<div class="csl-entry">
-Martin, J. D., and Louis, N. G. 1997. <span>“<span class="nocase">Measurement of Relative Variation: Sociological Examples.</span>”</span> <em>American Sociological Review</em> 33 (3): 496–502. <a href="https://doi.org/10.2307/2093089">https://doi.org/10.2307/2093089</a>.
-</div>
-<div class="csl-entry">
-McHugh, M. L. 2013. <span>“<span class="nocase">The chi-square test of independence.</span>”</span> <em>Biochem Med (Zagreb)</em> 23(2):1: 43–49. <a href="https://doi.org/10.11613/bm.2013.018">https://doi.org/10.11613/bm.2013.018</a>.
-</div>
-<div class="csl-entry">
-McHugh, M. L. and Hudson-Barr, D. 2003. <span>“<span>Descriptive Statistics, Part II: Most Commonly Used Descriptive Statistics</span>.”</span> <em>Journal for Specialists in Pediatric Nursing</em> 8 (3): 111–16. https://doi.org/<a href="https://doi.org/10.1111/j.1088-145X.2003.00111.x">https://doi.org/10.1111/j.1088-145X.2003.00111.x</a>.
-</div>
-<div class="csl-entry">
-McHugh, M. L., and Villarruel, A. M. 2003. <span>“<span class="nocase">Descriptive Statistics, Part I: Level of Measurement</span>.”</span> <em>Journal for Specialists in Pediatric Nursing</em> 8 (1): 35–37. https://doi.org/<a href="https://doi.org/10.1111/j.1744-6155.2003.tb00182.x">https://doi.org/10.1111/j.1744-6155.2003.tb00182.x</a>.
-</div>
-<div class="csl-entry">
+<div id="ref-uncertainty" class="csl-entry">
 Office for National Statistics. 2022. <span>“Uncertainty and How We Measure It for Our Surveys.”</span> <a href="https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts/uncertaintyandhowwemeasureit" class="uri">https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts/uncertaintyandhowwemeasureit</a>.
-</div>
-<div class="csl-entry">
-Schmidt, C. O., Kohlmann, T. 2008. <span>“<span class="nocase">When to use the odds ratio or the relative risk?</span>”</span> <em>International Journal of Public Health</em> 53 (2): 165. https://doi.org/<a href="https://doi.org/10.11613/bm.2013.018">https://doi.org/10.11613/bm.2013.018</a>.
-</div>
-<div class="csl-entry">
-Tenny, S and Hoffman, M.R. 2022. <em>Relative Risk</em>. StatPearls [Internet] StatPearls Publishing, Treasure Island (FL). <a href="https://europepmc.org/article/nbk/nbk430824#free-full-text">https://europepmc.org/article/nbk/nbk430824#free-full-text</a>.
-</div>
-<div class="csl-entry">
-Witte R. S. and Witte J.S. 2017. <em>Statistics</em>. John Wiley &amp; Sons. <a href="https://www.wiley.com/en-us/Statistics,+11th+Edition-p-9781119254515">https://www.wiley.com/en-us/Statistics,+11th+Edition-p-9781119254515</a>.
-</div>
 </div>
 </div>
             </section>
@@ -335,8 +360,8 @@ Witte R. S. and Witte J.S. 2017. <em>Statistics</em>. John Wiley &amp; Sons. <a 
           </div>
         </div>
       </div>
-<a href="datvis.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="error.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
