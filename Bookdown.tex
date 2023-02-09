@@ -77,7 +77,7 @@
 
 \title{Statistics Primer}
 \author{Aaron McMurray}
-\date{2023-02-08}
+\date{2023-02-09}
 
 \begin{document}
 \maketitle
@@ -652,7 +652,9 @@ The levels of measurement describe how precisely variables are recorded. The dif
 
 To be measured at the nominal level, a variable must be able to be divided up into separate or discrete categories, which are then named \citep{mchugh2}. The nominal level of measurement is the simplest form of a scale of measurement.
 
-Nominal data is also called categorical data since the subjects are allocated to different categories. It can be categorised but not ranked (eye colour and gender for instance). The values grouped into these categories have no meaningful order. It is not possible to form a meaningful hierarchy of gender or eye colour for instance.
+Nominal data is also called categorical data since the subjects are allocated to different categories. It can be categorised but not ranked (eye colour and gender for instance). The values grouped into these categories have no meaningful order. It is not possible to form a meaningful hierarchy of gender, hair colour, eye colour or marital status for instance.
+
+It is fairly common to represent nominal data using bar charts like the chart below. The bar chart below shows the marital status of people in Northern Ireland based on the Census 2011 data \citep{census2011}.
 
 Nominal data can be analysed by grouping variables into categories. For each category, the frequency or the relative frequency can be calculated. The data can be presented visually and usually is illustrated using bar charts or pie charts. The only measure of central tendency used with nominal data is the mode.
 
@@ -662,6 +664,8 @@ Inferential statistics can be used with nominal data. \protect\hyperlink{chisq}{
 \subsection{Ordinal}\label{ordinal}}
 
 The ordinal level of measurement is the second level of measurement. Ordinal data is another type of qualitative data that groups variables into descriptive categories. The categories used for ordinal data are ordered in some kind of hierarchical scale although the distance between those categories may be uneven or even unknown. For example, measuring economic status using a social class hierarchy involves the use of categories with no clearly identifiable or evenly spaced interval between them.
+
+The pie chart below shows the highest level of qualification of usual residents in households in Northern Ireland aged 16-64 in 2011 \citep{census2011b}. Ordinal data is often illustrated through pie charts or bar charts.
 
 Ordinal variables often include ratings about opinions that can be categorised (strongly agree, agree, don't know, disagree, strongly disagree).
 
@@ -705,13 +709,15 @@ Spearman's rho or Kendall's Tau & Correlate 2 variables & 2 ordinal variables \\
 \hypertarget{interval}{%
 \subsection{Interval}\label{interval}}
 
-The next level of measurement is interval measurement. Interval measures have categories and magnitude, just like nominal and ordinal measures but this measure adds the concept that the intervals be- tween each measure are exactly equal \citep{mchugh2}. Interval data groups variables into categories where the values are ordered and separated by equal distances.
+The next level of measurement is interval measurement. Interval measures have categories and magnitude, just like nominal and ordinal measures but this measure adds the concept that the intervals between each measure are exactly equal \citep{mchugh2}. Interval data groups variables into categories where the values are ordered and separated by equal distances.
 
 Interval data is a type of quantitative data that groups variables into categories. Values can be ordered and separated using an equal measure of distance.
 
 An example of interval level data is temperature data recorded in Celsius or Fahrenheit. The values on either scale are ordered and separated using an equal measure of distance (the distances between notches on a thermometer are always equally spaced).
 
 Temperature in Celsius is interval data. The values are ordered and separated by an equal interval. The distance between 0°C and 1°C is the same as the distance between 2°C and 3°C.
+
+The line chart below shows some simulated temperature data for Belfast. Interval data is often visualised using line charts.
 
 Mathematical operations can be carried out on this type of data, for instance, subtracting one value from another to find the difference.
 
@@ -1887,7 +1893,7 @@ Spearman's rank correlation coefficient may be a better choice when the variable
 \hypertarget{correlation-vs.-causation}{%
 \section{Correlation vs.~Causation}\label{correlation-vs.-causation}}
 
-The expression that ``correlation does not imply causation'' is fairly well known and it is a warning against interpreting a strong correlation to imply that change in one variable directly causes the change in another. This is rarely the case. In some countries, ice cream sales and shark attacks are positively correlated but it is unlikely that shark attacks are somehow driving ice cream sales or vice versa. Instead, it is temperature that causes a change in the other two variables. Higher temperatures cause higher ice cream sales and drive a greater number of swimmers into the ocean (where they will be at greater risk of shark attack). There is a substantially lower risk of this in Northern Ireland.
+The expression that ``correlation does not imply causation'' is fairly well known and it is a warning against interpreting a strong correlation to imply that change in one variable directly causes the change in another. This is rarely the case. Ice cream sales and drownings are positively correlated but it is unlikely that ice cream sales are somehow driving people to drown or vice versa. Instead, it is temperature that causes a change in the other two variables. Higher temperatures cause higher ice cream sales and drives a greater number of swimmers into the sea and swimming pools (where they will be at greater risk of drowning).
 
 \hypertarget{chisq}{%
 \chapter{Chi Square Tests}\label{chisq}}
@@ -2345,9 +2351,7 @@ Use the test for homogeneity to decide if two or more populations with unknown d
 
 Data visualisation is formally defined as the encoding of data using visual cues such as variations in the size, shape and colour of geometric objects (points, lines, bars). The encoding is generally informed by the relationships within the data.
 
-In the bar chart example below the frequencies of different eye colours have been mapped to the heights of the bars.
-
-The bar chart below shows simulated counts of eye colour.
+The bar chart below shows the marital status of people in Northern Ireland based on the Census 2011 data \citep{census2011}. The frequencies of different marital statuses have been mapped to the heights of the bars.
 
 \hypertarget{visual-cues}{%
 \section{Visual Cues}\label{visual-cues}}
