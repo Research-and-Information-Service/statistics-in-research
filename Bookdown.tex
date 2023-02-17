@@ -77,7 +77,7 @@
 
 \title{Statistics Primer}
 \author{Aaron McMurray}
-\date{2023-02-11}
+\date{2023-02-17}
 
 \begin{document}
 \maketitle
@@ -1889,6 +1889,16 @@ From the t table the critical value of t in this case is 1.990 and the calculate
 The Pearson correlation coefficient is one of several correlation coefficients to choose from. It is a good choice when both variables being examined are quantitative; when then variables are normally distributed; the data is free from outliers; and the relationship is linear (the relationship between the two variables can be described by a straight line).
 
 Spearman's rank correlation coefficient may be a better choice when the variables are ordinal; aren't normally distributed; the data contains outliers or the relationship between the variables is non-linear and monotonic.
+
+It is also worth noting that the plots presented above used ``linear regression'' to establish a line of best fit. Correlation is often used hand in hand with linear regression. Correlation quantifies the strength of a linear relationship between variables whilst linear regression expresses the relationship in the form of an equation which we can use to predict the values of our dependent variable and establish a line of best fit. When the relationship is not linear we may need to use more complex methods of fitting.
+
+A non-linear regression can be used when the relationship between the dependent variable and the independent variable is non-linear (when a straight line will not adequately describe the relationship between the variables). Non-linear regression is generally used when fitting a curve or a function to the data that best describes the relationship between the variables.
+
+LOWESS stands for Locally Weighted Scatterplot Smoothing and is a method used to create a smooth curve through a set of data points. It is particularly useful when there is no clear relationship between variables or when the relationship is too complex to be described by a simple linear or non-linear model. LOWESS works by fitting a regression line to a subset of the data points. This regression line is then shifted along the data points, fitting a new regression line at each point. The final curve is the result of a weighted combination of all the regression lines.
+
+The plot below illustrates what some non-linear data might look like and two methods for fitting the data (non-linear regression and LOWESS fitting). The data is simulated for a fictional political party and represents the percentage change in their share of the vote according to various fictional polls held between the year 2000 and 2005.
+
+The scatterplot shows simulated data representing the percentage change to the share of the vote held by some fictional party. The data (in blue) is fit using both a non-linear regression (orange dashed line) and LOWESS smoothing (teal line). The faint blue lines show the outcome of a technique called ``bootstrapping'' where the the original data set is resampled with replacement to create a larger number of new data sets allowing us to estimate the uncertainty in the fitted LOWESS curve and calculate confidence intervals. This process can also be applied to non-linear regression fits.
 
 \hypertarget{correlation-vs.-causation}{%
 \section{Correlation vs.~Causation}\label{correlation-vs.-causation}}
