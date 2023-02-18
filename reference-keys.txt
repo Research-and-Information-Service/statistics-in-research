@@ -88,6 +88,9 @@ examples
 identifying-correlation
 calculating-the-pearson-correlation-coefficient
 when-to-use-pearson-correlation-coefficient
+fitting-data
+linear-relationships
+non-linear-relationships
 correlation-vs.-causation
 chisq
 description
