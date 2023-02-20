@@ -77,7 +77,7 @@
 
 \title{Statistics Primer}
 \author{Aaron McMurray}
-\date{2023-02-19}
+\date{2023-02-20}
 
 \begin{document}
 \maketitle
@@ -365,36 +365,36 @@ The coefficient of variation should not be used for estimates of values that are
 
 Imagine a study that measures household expenditures where we want to compare the variability of spending in households of different incomes.
 
-\begin{longtable}[]{@{}rrrr@{}}
+\begin{longtable}[]{@{}rrrrrr@{}}
 \caption{\label{tab:table0000} Income Study Data}\tabularnewline
 \toprule
-Expenditure & High Income & Middle Income & Low Income \\
+Expenditure & Q1 (least deprived) & Q2 & Q3 & Q4 & Q5 (most deprived) \\
 \midrule
 \endfirsthead
 \toprule
-Expenditure & High Income & Middle Income & Low Income \\
+Expenditure & Q1 (least deprived) & Q2 & Q3 & Q4 & Q5 (most deprived) \\
 \midrule
 \endhead
-Mean & £1,000,000 & £40,000 & £25,000 \\
-Standard Deviation & £250,000 & £10,000 & £12,500 \\
+Mean & £120,000 & £60,000 & £40,000 & £25,000 & £12,000 \\
+Standard Error & £24,000 & £12,000 & £6,000 & £7,500 & £4,800 \\
 \bottomrule
 \end{longtable}
 
 The variability is very high in the high income households compared to the low income households which is unsurprising given the substantial differences in the means. In order to account for the differences in the means a measure of relative variability like the coefficient of variation is used.
 
-Calculating the coefficient of variation shows that when we account for differences in expenses the groups actually have equal variability in the high and middle income households with much greater variability in the low income households.
+Calculating the coefficient of variation shows that when we account for differences in expenses the first two quintiles (Q1 and Q2) actually have equal variability and the greatest variability in seen in the most deprived quntile (Q5).
 
-\begin{longtable}[]{@{}rrrr@{}}
+\begin{longtable}[]{@{}rrrrrr@{}}
 \caption{\label{tab:table00000} Income Study Data}\tabularnewline
 \toprule
-& High Income & Middle Income & Low Income \\
+Expenditure & Q1 (least deprived) & Q2 & Q3 & Q4 & Q5 (most deprived) \\
 \midrule
 \endfirsthead
 \toprule
-& High Income & Middle Income & Low Income \\
+Expenditure & Q1 (least deprived) & Q2 & Q3 & Q4 & Q5 (most deprived) \\
 \midrule
 \endhead
-Coefficient of Variation & 25\% & 25\% & 50\% \\
+Coefficient of Variation & 20\% & 20\% & 30\% & 30\% & 40\% \\
 \bottomrule
 \end{longtable}
 
@@ -2520,6 +2520,90 @@ Give your dashboard a header and dedicated areas for visuals. Consider other das
 \textbf{Ensure Accessibility}
 
 Ensure your product is accessible by checking the colour contrast ratios of text and including alt text in your visualisations where possible. Ensure the fonts are large enough to read and avoid using multiple fonts.
+
+\hypertarget{appendices}{%
+\chapter*{Appendices}\label{appendices}}
+\addcontentsline{toc}{chapter}{Appendices}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\hypertarget{excel-functions}{%
+\section*{Excel Functions}\label{excel-functions}}
+\addcontentsline{toc}{section}{Excel Functions}
+
+\textbf{Frequency}
+
+=FREQUENCY(start:end,bins\_array)
+
+The frequency() function will return a frequency table describing your data. It takes two arguments, the first being the array of values and the second being an array describing the upper boundary of the bins used.
+
+\textbf{Average}
+
+=AVERAGE(start:end)
+
+The mean is calculated using the average() function. There are several other functions relating to means: geomean(), harmean() and trimmean(). Take care not to use these as they are quite different from calculating the mean that has been described here.
+
+\textbf{Median}
+
+=MEDIAN(start:end)
+
+The median is calculated using the median() function.
+
+\textbf{Mode}
+
+=MODE.SNGL(start:end)
+
+=MODE.MULT(start:end)
+
+There are several functions for calculating the mode: mode(), mode.sngl() and mode.mult().
+
+mode() was used in Excel 2007 and may still appear as an option in some versions of Excel.
+
+mode.sngl() will return one mode and mode.mult() will return multiple modes (if there are multiple modes).
+
+Neither mode() nor mode.sngl() will provide a warning if there are multiple modes so mode.mult() is usually the safest option.
+
+\textbf{Range}
+
+=MAX(start:end)-MIN(start:end)
+
+There is no single function for calculating the range in Excel but the formula above will subtract the smallest value from the largest value in an array.
+
+\textbf{Square Root}
+
+=SQRT(number)
+
+Takes the square root of a number.
+
+\textbf{Percentile}
+
+=PERCENTILE.EXC(array,k)
+
+=PERCENTILE.INC(array,k)
+
+These two percentile functions will return the k-th percentile of values in a range where k is in the range 0 to 1 (exclusive and inclusive respectively).
+
+\textbf{Standard Deviation}
+
+=STDEV.S(start:end)
+
+=STDEV.P(stard:end)
+
+stdev.s() estimates standard deviation based on a sample. stdev.p() calculates standard deviation based on the entire population given as arguments.
+
+\textbf{Variance}
+
+=VAR.S(start:end)
+
+=VAR.P(start:end)
+
+var.s() estimates variance based on a sample. var.p() calculates variance based on the entire population given as arguments.
+
+\textbf{Pearson Correlation Coefficient}
+
+=PEARSON(array1, array2)
+
+Calculating the correlation coefficient is not simple and the best way to calculate it is to use R, Python, Excel, SPSS or some equivalent software.
 
   \bibliography{example.bib}
 

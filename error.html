@@ -23,7 +23,7 @@
 <meta name="author" content="Aaron McMurray" />
 
 
-<meta name="date" content="2023-02-19" />
+<meta name="date" content="2023-02-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -265,6 +265,10 @@ div.csl-indent {
 <li class="chapter" data-level="12.6.1" data-path="datvis.html"><a href="datvis.html#best-practice"><i class="fa fa-check"></i><b>12.6.1</b> Best Practice</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="" data-path="appendices.html"><a href="appendices.html"><i class="fa fa-check"></i>Appendices</a>
+<ul>
+<li class="chapter" data-level="" data-path="appendices.html"><a href="appendices.html#excel-functions"><i class="fa fa-check"></i>Excel Functions</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -330,44 +334,54 @@ Information
 <thead>
 <tr class="header">
 <th align="right">Expenditure</th>
-<th align="right">High Income</th>
-<th align="right">Middle Income</th>
-<th align="right">Low Income</th>
+<th align="right">Q1 (least deprived)</th>
+<th align="right">Q2</th>
+<th align="right">Q3</th>
+<th align="right">Q4</th>
+<th align="right">Q5 (most deprived)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="right">Mean</td>
-<td align="right">£1,000,000</td>
+<td align="right">£120,000</td>
+<td align="right">£60,000</td>
 <td align="right">£40,000</td>
 <td align="right">£25,000</td>
+<td align="right">£12,000</td>
 </tr>
 <tr class="even">
-<td align="right">Standard Deviation</td>
-<td align="right">£250,000</td>
-<td align="right">£10,000</td>
-<td align="right">£12,500</td>
+<td align="right">Standard Error</td>
+<td align="right">£24,000</td>
+<td align="right">£12,000</td>
+<td align="right">£6,000</td>
+<td align="right">£7,500</td>
+<td align="right">£4,800</td>
 </tr>
 </tbody>
 </table>
 <p>The variability is very high in the high income households compared to the low income households which is unsurprising given the substantial differences in the means. In order to account for the differences in the means a measure of relative variability like the coefficient of variation is used.</p>
-<p>Calculating the coefficient of variation shows that when we account for differences in expenses the groups actually have equal variability in the high and middle income households with much greater variability in the low income households.</p>
+<p>Calculating the coefficient of variation shows that when we account for differences in expenses the first two quintiles (Q1 and Q2) actually have equal variability and the greatest variability in seen in the most deprived quntile (Q5).</p>
 <table>
 <caption> Income Study Data</caption>
 <thead>
 <tr class="header">
-<th align="right"></th>
-<th align="right">High Income</th>
-<th align="right">Middle Income</th>
-<th align="right">Low Income</th>
+<th align="right">Expenditure</th>
+<th align="right">Q1 (least deprived)</th>
+<th align="right">Q2</th>
+<th align="right">Q3</th>
+<th align="right">Q4</th>
+<th align="right">Q5 (most deprived)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="right">Coefficient of Variation</td>
-<td align="right">25%</td>
-<td align="right">25%</td>
-<td align="right">50%</td>
+<td align="right">20%</td>
+<td align="right">20%</td>
+<td align="right">30%</td>
+<td align="right">30%</td>
+<td align="right">40%</td>
 </tr>
 </tbody>
 </table>

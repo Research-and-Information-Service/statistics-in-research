@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 9 Inferential Statistics | Statistics Primer</title>
+  <title>Appendices | Statistics Primer</title>
   <meta name="description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 9 Inferential Statistics | Statistics Primer" />
+  <meta property="og:title" content="Appendices | Statistics Primer" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 9 Inferential Statistics | Statistics Primer" />
+  <meta name="twitter:title" content="Appendices | Statistics Primer" />
   
   <meta name="twitter:description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="compdat.html"/>
-<link rel="next" href="correlationchapter.html"/>
+<link rel="prev" href="datvis.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -290,63 +290,48 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="infstat" class="section level1 hasAnchor" number="9">
-<h1><span class="header-section-number">Chapter 9</span> Inferential Statistics<a href="infstat.html#infstat" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="appendices" class="section level1 unnumbered hasAnchor">
+<h1>Appendices<a href="appendices.html#appendices" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <hr />
-<div id="what-is-inferential-statistics" class="section level2 hasAnchor" number="9.1">
-<h2><span class="header-section-number">9.1</span> What is Inferential Statistics?<a href="infstat.html#what-is-inferential-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Inferential statistics is mostly used to explain different phenomenon, predict trends or make decisions relating to whether results are statistically significant or not. This is in contrast to descriptive statistics which is restricted to merely describing the important characteristics of data by using measures of central tendency and measures of dispersion.</p>
-</div>
-<div id="hypothesis-testing" class="section level2 hasAnchor" number="9.2">
-<h2><span class="header-section-number">9.2</span> Hypothesis Testing<a href="infstat.html#hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Hypothesis testing is a statistical process used to test claims about a population parameter based on a sample taken from that population. It involves folumating a null hypothesis and an alternative hypothesis, collecting data and then using statistical methods to determine whether or not the null hypothesis can be rejected.</p>
-<p>The null hypothesis describes the assumption that there is no difference between observations while the alternative hypothesis describes the assumption that there is a difference (not due to chance).</p>
-<p>The decision to reject the null hypothesis is based on the strength of the evidence provided by the sample data. The strength of the evidence provided by the sample data is described by the p-value which is the probability of observing a test statistic as extreme or more extreme than the one computed from the sample, assuming that the null hypothesis is true.</p>
-<p>Researchers will construct hypotheses with the expectation that their findings will contradict the null hypothesis.</p>
-<p>When the null hypothesis is rejected it important to avoid stating acceptance of the alternative hypothesis. In general, studies provide evidence for or against a hypothesis rather than conclusively proving one or another to be true.</p>
-<p>Similarly, the null hypothesis cannot be rejected it is important not to state that the null hypothesis is accepted instead it should be stated that the null hypothesis cannot be rejected.</p>
-<p>This is often compared to how verdicts are made in a court of law. A person can be found guilty or not guilty. A not guilty verdict means that the prosecution was unable not prove beyond a reasonable doubt that the person committed the crime but it doesn’t necessarily mean the person is innocent. The court can provide evidence of guilt but it cannot prove innocence.</p>
-<p>In the same way, statistical tests cannot prove that either hypothesis is true.</p>
-</div>
-<div id="statistical-significance" class="section level2 hasAnchor" number="9.3">
-<h2><span class="header-section-number">9.3</span> Statistical Significance<a href="infstat.html#statistical-significance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Statistical significance is a concept in hypothesis testing that describes whether the results of a study are meaningful or not. Statistical significance is used to determine if the results are due to random chance or not. Results unlikely to have occurred by chance are considered to be statistically significant. The level of statistical significance is typically set by choosing a p-value of 0.05. A p-value less than this it means means that there is less than a 5% chance that the results are due to random chance, the null hypothesis is rejected and the result is considered statistically significant.</p>
-<p>Statistical significance does not always imply practical significance hover and a result may be statistically significant but may not have a large enough effect to be of any practical use.</p>
-</div>
-<div id="errors-in-hypothesis-testing" class="section level2 hasAnchor" number="9.4">
-<h2><span class="header-section-number">9.4</span> Errors in Hypothesis Testing<a href="infstat.html#errors-in-hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In hypothesis testing, there are two types of errors that can occur: Type I errors and Type II errors.</p>
-<div id="type-i-errors" class="section level3 hasAnchor" number="9.4.1">
-<h3><span class="header-section-number">9.4.1</span> Type I Errors<a href="infstat.html#type-i-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A Type I error is known as a false positive and occurs when the null hypothesis is rejected despite being true. A significant result is obtained by chance but is interpreted as a real effect. The probability of making a Type I error is represented by alpha, <span class="math inline">\(\alpha\)</span>:</p>
-<p><span class="math display">\[\alpha= \textrm{P}(\textrm{Null hypothesis rejected} | \textrm{Null hypothesis is true}).\]</span></p>
-</div>
-<div id="type-ii-errors" class="section level3 hasAnchor" number="9.4.2">
-<h3><span class="header-section-number">9.4.2</span> Type II Errors<a href="infstat.html#type-ii-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A Type II error, known as a false negative, occurs when the null hypothesis is not rejected despite being false. The real effect goes undetected and is interpreted as the result of chance. The probability of making a Type II error is represented by beta, <span class="math inline">\(\beta\)</span>:</p>
-<p><span class="math display">\[\beta= \textrm{P} (\textrm{Null hypothesis accepted} | \textrm{Null hypothesis is false}).\]</span></p>
-<p>Minimizing the risk of both of these types of errors is important but there is often a trade-off in that increasing the sample size and reducing the significance level can reduce Type I errors but it can also increase Type II errors.</p>
-</div>
-<div id="test-power" class="section level3 hasAnchor" number="9.4.3">
-<h3><span class="header-section-number">9.4.3</span> Test Power<a href="infstat.html#test-power" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Test power is another useful measure in hypothesis testing. It is a measure of the ability of a hypothesis test to detect an effect or a difference if it actually exists. It represents the probability of correctly rejecting the null hypothesis when it is false. The formula for test power is:</p>
-<p><span class="math display">\[\textrm{Power}= 1-\beta,\]</span></p>
-<p>where <span class="math inline">\(\beta\)</span> is the probability of a Type II error.</p>
-</div>
-</div>
-<div id="nonpara" class="section level2 hasAnchor" number="9.5">
-<h2><span class="header-section-number">9.5</span> Parametric and Non-Parametric Testing<a href="infstat.html#nonpara" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Parametric tests and non-parametric tests are statistical tests used to compare groups of data.</p>
-<p>They differ in that parametric tests generally make assumptions about the data being normally distributed with equal variances. There are a range of parametric tests including: t-tests, ANOVA, and regression analysis. Parametric tests are typically more powerful but for the tests to be reliable the assumptions must be valid.</p>
-<p>Non-parametric tests are often used when data fails to meet the assumptions of parametric tests although non-parametric tests often come with their own sets of assumptions. There are a range of non-parametric tests including: the Wilcoxon rank-sum test, Kruskal-Wallis test, and the Mann-Whitney U test. These tests are generally more flexible but this comes at the expense of being less powerful than parametric tests.</p>
-<!-- Non-parametric tests should be used when any one of the following conditions pertains to the data:
-
-* The level of measurement of all the variables is nominal or ordinal.
-* The sample sizes of the study groups are unequal; for the χ2 the groups may be of equal size or unequal size whereas some parametric tests require groups of equal or approximately equal size.
-* The original data were measured at an interval or ratio level, but violate one of the following assumptions of a parametric test:
-  + The distribution of the data was seriously skewed or kurtotic (parametric tests assume approximately normal distribution of the dependent variable), and thus the researcher must use a distribution free statistic rather than a parametric statistic.
-  + The data violate the assumptions of equal variance or homoscedasticity.
-  + For any of a number of reasons (1), the continuous data were collapsed into a small number of categories, and thus the data are no longer interval or ratio.-->
+<div id="excel-functions" class="section level2 unnumbered hasAnchor">
+<h2>Excel Functions<a href="appendices.html#excel-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Frequency</strong></p>
+<p>=FREQUENCY(start:end,bins_array)</p>
+<p>The frequency() function will return a frequency table describing your data. It takes two arguments, the first being the array of values and the second being an array describing the upper boundary of the bins used.</p>
+<p><strong>Average</strong></p>
+<p>=AVERAGE(start:end)</p>
+<p>The mean is calculated using the average() function. There are several other functions relating to means: geomean(), harmean() and trimmean(). Take care not to use these as they are quite different from calculating the mean that has been described here.</p>
+<p><strong>Median</strong></p>
+<p>=MEDIAN(start:end)</p>
+<p>The median is calculated using the median() function.</p>
+<p><strong>Mode</strong></p>
+<p>=MODE.SNGL(start:end)</p>
+<p>=MODE.MULT(start:end)</p>
+<p>There are several functions for calculating the mode: mode(), mode.sngl() and mode.mult().</p>
+<p>mode() was used in Excel 2007 and may still appear as an option in some versions of Excel.</p>
+<p>mode.sngl() will return one mode and mode.mult() will return multiple modes (if there are multiple modes).</p>
+<p>Neither mode() nor mode.sngl() will provide a warning if there are multiple modes so mode.mult() is usually the safest option.</p>
+<p><strong>Range</strong></p>
+<p>=MAX(start:end)-MIN(start:end)</p>
+<p>There is no single function for calculating the range in Excel but the formula above will subtract the smallest value from the largest value in an array.</p>
+<p><strong>Square Root</strong></p>
+<p>=SQRT(number)</p>
+<p>Takes the square root of a number.</p>
+<p><strong>Percentile</strong></p>
+<p>=PERCENTILE.EXC(array,k)</p>
+<p>=PERCENTILE.INC(array,k)</p>
+<p>These two percentile functions will return the k-th percentile of values in a range where k is in the range 0 to 1 (exclusive and inclusive respectively).</p>
+<p><strong>Standard Deviation</strong></p>
+<p>=STDEV.S(start:end)</p>
+<p>=STDEV.P(stard:end)</p>
+<p>stdev.s() estimates standard deviation based on a sample. stdev.p() calculates standard deviation based on the entire population given as arguments.</p>
+<p><strong>Variance</strong></p>
+<p>=VAR.S(start:end)</p>
+<p>=VAR.P(start:end)</p>
+<p>var.s() estimates variance based on a sample. var.p() calculates variance based on the entire population given as arguments.</p>
+<p><strong>Pearson Correlation Coefficient</strong></p>
+<p>=PEARSON(array1, array2)</p>
+<p>Calculating the correlation coefficient is not simple and the best way to calculate it is to use R, Python, Excel, SPSS or some equivalent software.</p>
 
 </div>
 </div>
@@ -355,8 +340,8 @@ div.csl-indent {
           </div>
         </div>
       </div>
-<a href="compdat.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="correlationchapter.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="datvis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
