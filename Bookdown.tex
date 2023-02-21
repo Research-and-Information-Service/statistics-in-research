@@ -77,7 +77,7 @@
 
 \title{Statistics Primer}
 \author{Aaron McMurray}
-\date{2023-02-20}
+\date{2023-02-21}
 
 \begin{document}
 \maketitle
@@ -148,7 +148,7 @@ Throughout this text, blue boxes will be used to provide depth, context or addit
 
 Information
 
-Throughout this e-book blue boxes like this one will be used to provide additional information, context or mathematical details that go beyond the scope of an introduction to statistics. The information provided in these boxes is provided for interested readers but is not necessary to have a basic understanding of statistics. Sometimes these information boxes will contain mathematical formula. It is not necessary to know or understand these formula. These are provided only for interested readers and those already familiar with statistics who may be using this e-book as a reference.
+Throughout this e-book blue boxes like this one will be used to provide additional information, context or mathematical details that go beyond the scope of an introduction to statistics. The information provided in these boxes is provided for interested readers but is not necessary to have a basic understanding of statistics.
 
 Red boxes will be used at the end of each chapter to summarise important information.
 
@@ -698,11 +698,11 @@ Samples or variables
 \end{minipage} \\
 \midrule
 \endhead
-Mood's median test & Compare medians & 2 or more samples \\
-Mann-Whitney U test (Wilcoxon rank sum test) & Compare sum of rankings of scores & 2 independent samples \\
-Wilcoxon matched-pairs signed-rank test & Compare magnitude and direction of difference between distributions of scores & 2 dependent samples \\
-Kruskal-Wallis H test & Compare mean rankings of scores & 3 or more samples \\
-Spearman's rho or Kendall's Tau & Correlate 2 variables & 2 ordinal variables \\
+Mood's median test & Compares medians & 2 or more samples \\
+Mann-Whitney U test (also referred to as the Wilcoxon rank sum test) & Compares sums of rankings of scores & 2 independent samples \\
+Wilcoxon matched-pairs signed-rank test & Compares the magnitude and direction of the difference between distributions of scores & 2 dependent samples \\
+Kruskal-Wallis H test (also referred to as the one-way ANOVA on ranks) & Compares the mean rankings of scores & 3 or more samples \\
+Spearman's rho or Kendall's Tau & Measures correlation between 2 variables & 2 ordinal variables \\
 \bottomrule
 \end{longtable}
 
@@ -731,20 +731,35 @@ A range of descriptive statistics can be used to describe interval data. The mea
 
 A number of parametric tests can be applied to interval data.
 
-\begin{longtable}[]{@{}rrr@{}}
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
 \caption{\label{tab:table1}Inferential Statistics}\tabularnewline
 \toprule
-Parametric test & Aim & Samples or variables \\
+\begin{minipage}[b]{\linewidth}\raggedleft
+Parametric test
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Aim
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Samples or variables
+\end{minipage} \\
 \midrule
 \endfirsthead
 \toprule
-Parametric test & Aim & Samples or variables \\
+\begin{minipage}[b]{\linewidth}\raggedleft
+Parametric test
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Aim
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Samples or variables
+\end{minipage} \\
 \midrule
 \endhead
-T-test & Comparison of means & 2 samples \\
-ANOVA & Comparison of means & 3 or more samples \\
-Pearson's r & Correlation & 2 variables \\
-Simple linear regression & Regression & 2 variables \\
+T-test & Compares means of two samples & 2 samples \\
+Analysis of Variance (ANOVA) & Compares means of several samples & 3 or more samples \\
+Pearson's r & Measures correlation between two variables & 2 variables \\
+Simple linear regression & Estimate the relationship between a dependent variable and an independent variable using a straight line & 2 variables \\
 \bottomrule
 \end{longtable}
 
@@ -1746,7 +1761,9 @@ Inferential statistics is mostly used to explain different phenomenon, predict t
 \hypertarget{hypothesis-testing}{%
 \section{Hypothesis Testing}\label{hypothesis-testing}}
 
-Hypothesis testing is a statistical process used to test claims about a population parameter based on a sample taken from that population. It involves folumating a null hypothesis and an alternative hypothesis, collecting data and then using statistical methods to determine whether or not the null hypothesis can be rejected.
+People can form different opinions by looking at data but hypothesis testing provides a consistent framework for making decisions about different assumptions for everyone by providing a statistical using a set of rules rather than relying on subjective impressions \citep{pereira}.
+
+Hypothesis testing is used to test assumptions relating to a population parameter based on a sample taken from that population. It involves formulating hypotheses, including a null hypothesis and an alternative hypothesis, and collecting data before using statistical methods to determine whether or not the null hypothesis can be rejected.
 
 The null hypothesis describes the assumption that there is no difference between observations while the alternative hypothesis describes the assumption that there is a difference (not due to chance).
 
@@ -1758,14 +1775,16 @@ When the null hypothesis is rejected it important to avoid stating acceptance of
 
 Similarly, the null hypothesis cannot be rejected it is important not to state that the null hypothesis is accepted instead it should be stated that the null hypothesis cannot be rejected.
 
-This is often compared to how verdicts are made in a court of law. A person can be found guilty or not guilty. A not guilty verdict means that the prosecution was unable not prove beyond a reasonable doubt that the person committed the crime but it doesn't necessarily mean the person is innocent. The court can provide evidence of guilt but it cannot prove innocence.
+This is often compared to how verdicts are made in a court of law \citep{banerjee}. A person can be found guilty or not guilty. A not guilty verdict means that the prosecution was unable not prove beyond a reasonable doubt that the person committed the crime but it doesn't necessarily mean the person is innocent. The court can provide evidence of guilt but it cannot prove innocence.
 
 In the same way, statistical tests cannot prove that either hypothesis is true.
 
 \hypertarget{statistical-significance}{%
 \section{Statistical Significance}\label{statistical-significance}}
 
-Statistical significance is a concept in hypothesis testing that describes whether the results of a study are meaningful or not. Statistical significance is used to determine if the results are due to random chance or not. Results unlikely to have occurred by chance are considered to be statistically significant. The level of statistical significance is typically set by choosing a p-value of 0.05. A p-value less than this it means means that there is less than a 5\% chance that the results are due to random chance, the null hypothesis is rejected and the result is considered statistically significant.
+Statistical significance is a concept in hypothesis testing that describes whether the results of a study are meaningful or not. Statistical significance is used to determine if the results are due to random chance or not and is a measure of the probability of the null hypothesis being true \citep{tenny2}.
+
+A result is statistically significant if the p-value is less than a pre-defined value \citep{tenny2}. Results that are unlikely to have occurred by chance are considered to be statistically significant. The level of statistical significance is typically set by choosing a p-value of 0.05 \citep{uncertainty}. A p-value less than this it means means that there is less than a 5\% chance that the results are due to random chance, the null hypothesis is rejected and the result is considered statistically significant.
 
 Statistical significance does not always imply practical significance hover and a result may be statistically significant but may not have a large enough effect to be of any practical use.
 
@@ -1777,14 +1796,14 @@ In hypothesis testing, there are two types of errors that can occur: Type I erro
 \hypertarget{type-i-errors}{%
 \subsection{Type I Errors}\label{type-i-errors}}
 
-A Type I error is known as a false positive and occurs when the null hypothesis is rejected despite being true. A significant result is obtained by chance but is interpreted as a real effect. The probability of making a Type I error is represented by alpha, \(\alpha\):
+A Type I error is known as a false positive and occurs when the null hypothesis is rejected despite being true \citep{banerjee}. A significant result is obtained by chance but is interpreted as a real effect. The probability of making a Type I error is represented by alpha, \(\alpha\):
 
 \[\alpha= \textrm{P}(\textrm{Null hypothesis rejected} | \textrm{Null hypothesis is true}).\]
 
 \hypertarget{type-ii-errors}{%
 \subsection{Type II Errors}\label{type-ii-errors}}
 
-A Type II error, known as a false negative, occurs when the null hypothesis is not rejected despite being false. The real effect goes undetected and is interpreted as the result of chance. The probability of making a Type II error is represented by beta, \(\beta\):
+A Type II error, known as a false negative, occurs when the null hypothesis is not rejected despite being false \citep{banerjee}. The real effect goes undetected and is interpreted as the result of chance. The probability of making a Type II error is represented by beta, \(\beta\):
 
 \[\beta= \textrm{P} (\textrm{Null hypothesis accepted} | \textrm{Null hypothesis is false}).\]
 
@@ -1793,7 +1812,7 @@ Minimizing the risk of both of these types of errors is important but there is o
 \hypertarget{test-power}{%
 \subsection{Test Power}\label{test-power}}
 
-Test power is another useful measure in hypothesis testing. It is a measure of the ability of a hypothesis test to detect an effect or a difference if it actually exists. It represents the probability of correctly rejecting the null hypothesis when it is false. The formula for test power is:
+Test power is another useful measure in hypothesis testing. It is a measure of the ability of a hypothesis test to detect an effect or a difference if it actually exists. It represents the probability of correctly rejecting the null hypothesis when it is false. The formula for test power is \citep{swinscow}:
 
 \[\textrm{Power}= 1-\beta,\]
 
@@ -1816,11 +1835,11 @@ Non-parametric tests are often used when data fails to meet the assumptions of p
 \hypertarget{pearson-correlation-coefficient}{%
 \section{Pearson Correlation Coefficient}\label{pearson-correlation-coefficient}}
 
-Correlation indicates the strength and direction of a relationship between two variables. Its values range from -1 to 1, where a value of -1 indicates a perfect negative linear relationship (as one variable increases, the other decreases proportionally), 1 indicates a perfect positive linear relationship (as one variable increases, the other increases proportionally), and 0 indicates no linear relationship between the two variables.
+Correlation indicates the strength and direction of a relationship between two variables \citep{schober}. Its values range from -1 to 1, where a value of -1 indicates a perfect negative linear relationship (as one variable increases, the other decreases proportionally), 1 indicates a perfect positive linear relationship (as one variable increases, the other increases proportionally), and 0 indicates no linear relationship between the two variables \citep{swinscow2}.
 
 The extreme values of -1 and 1 indicate perfect linear relationships and for these relationships all of the data points fall on a single line. In practice it is rare to ever see a correlation this strong. Correlation is measured through the Pearson's Correlation Coefficient which is represented by the Greek letter \(\rho\) for a population parameter or the lower case letter r for a sample statistic.
 
-Correlation can be used to summarize the relationship between two variables and can also be used to make predictions about one variable based on the values of the other.
+Correlation can be used to summarize the relationship between two variables and can also be used to make predictions about one variable based on the values of the other. Hypothesis tests and confidence intervals can be used to address the statistical significance of the results \citep{schober}.
 
 Height and weight are an example of two variables which are correlated. As height increases weight also tends to increase. This means that we can reasonably predict that people who are tall will weigh more than people who are short. Correlation is a quantitative assessment of both the direction and the strength of this tendency for variables to change together.
 
@@ -1853,7 +1872,7 @@ This function takes two arguments, each of which should be an array containing t
 
 The calculations that are performed in the background are described below but it isn't necessary to manually calculate r or its associated test statistics as the process is long and prone to error. The details are provided for context to help understand what goes on in the background.
 
-The formula for calculating the Pearson correlation coefficient is:
+The formula for calculating the Pearson correlation coefficient is \citep{swinscow2}:
 
 \[r = \frac{n \sum{xy}-\sum{x} \sum{y}}{\sqrt{[n \sum{x^2}-(\sum{x})^2][n \sum{y^2}-(\sum{y})^2]}}, \]
 
@@ -1868,7 +1887,7 @@ The r value for the height and weight data presented above is approximately 0.8.
 
 The Pearson correlation coefficient can also be used to test whether a relationship between two variables is significant using hypothesis testing where the null hypothesis represents the assumption that the Pearson correlation of the population is equal to zero and the alternative hypothesis represents the assumption that it is not equal to zero.
 
-To test the hypotheses it is necessary to calculate a t-value:
+To test the hypotheses it is necessary to calculate a t-value \citep{swinscow2}:
 
 \[t=\frac{r}{\sqrt{\frac{1-r^2}{n-2}}}.\]
 
@@ -1889,6 +1908,8 @@ From the t table the critical value of t in this case is 1.990 and the calculate
 The Pearson correlation coefficient is one of several correlation coefficients to choose from. It is a good choice when both variables being examined are quantitative; when then variables are normally distributed; the data is free from outliers; and the relationship is linear (the relationship between the two variables can be described by a straight line).
 
 Spearman's rank correlation coefficient may be a better choice when the variables are ordinal; aren't normally distributed; the data contains outliers or the relationship between the variables is non-linear and monotonic.
+
+These techniques are also closely related to linear regression however they all serve distinct purposes. A linear regression allows us to fit a line through data points in a scatter plot and estimate the values of the dependent variable from the independent variable but it does not provide any information on how strongly the variables are related. Correlation does not fit the data or allow estimations but it does describe the strength of the relationship \citep{schober}. These two analyses often go hand in hand.
 
 \hypertarget{fitting-data}{%
 \section{Fitting Data}\label{fitting-data}}

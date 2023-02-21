@@ -23,7 +23,7 @@
 <meta name="author" content="Aaron McMurray" />
 
 
-<meta name="date" content="2023-02-20" />
+<meta name="date" content="2023-02-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -299,18 +299,20 @@ div.csl-indent {
 </div>
 <div id="hypothesis-testing" class="section level2 hasAnchor" number="9.2">
 <h2><span class="header-section-number">9.2</span> Hypothesis Testing<a href="infstat.html#hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Hypothesis testing is a statistical process used to test claims about a population parameter based on a sample taken from that population. It involves folumating a null hypothesis and an alternative hypothesis, collecting data and then using statistical methods to determine whether or not the null hypothesis can be rejected.</p>
+<p>People can form different opinions by looking at data but hypothesis testing provides a consistent framework for making decisions about different assumptions for everyone by providing a statistical using a set of rules rather than relying on subjective impressions <span class="citation">(<a href="#ref-pereira" role="doc-biblioref">Pereira S.M.C, Leslie, G.R.N. 2009</a>)</span>.</p>
+<p>Hypothesis testing is used to test assumptions relating to a population parameter based on a sample taken from that population. It involves formulating hypotheses, including a null hypothesis and an alternative hypothesis, and collecting data before using statistical methods to determine whether or not the null hypothesis can be rejected.</p>
 <p>The null hypothesis describes the assumption that there is no difference between observations while the alternative hypothesis describes the assumption that there is a difference (not due to chance).</p>
 <p>The decision to reject the null hypothesis is based on the strength of the evidence provided by the sample data. The strength of the evidence provided by the sample data is described by the p-value which is the probability of observing a test statistic as extreme or more extreme than the one computed from the sample, assuming that the null hypothesis is true.</p>
 <p>Researchers will construct hypotheses with the expectation that their findings will contradict the null hypothesis.</p>
 <p>When the null hypothesis is rejected it important to avoid stating acceptance of the alternative hypothesis. In general, studies provide evidence for or against a hypothesis rather than conclusively proving one or another to be true.</p>
 <p>Similarly, the null hypothesis cannot be rejected it is important not to state that the null hypothesis is accepted instead it should be stated that the null hypothesis cannot be rejected.</p>
-<p>This is often compared to how verdicts are made in a court of law. A person can be found guilty or not guilty. A not guilty verdict means that the prosecution was unable not prove beyond a reasonable doubt that the person committed the crime but it doesn’t necessarily mean the person is innocent. The court can provide evidence of guilt but it cannot prove innocence.</p>
+<p>This is often compared to how verdicts are made in a court of law <span class="citation">(<a href="#ref-banerjee" role="doc-biblioref">Banerjee A., Chitnis U.B., Jadhav S.L., Bhawalkar, J.S., Chaudhury, S. 2009</a>)</span>. A person can be found guilty or not guilty. A not guilty verdict means that the prosecution was unable not prove beyond a reasonable doubt that the person committed the crime but it doesn’t necessarily mean the person is innocent. The court can provide evidence of guilt but it cannot prove innocence.</p>
 <p>In the same way, statistical tests cannot prove that either hypothesis is true.</p>
 </div>
 <div id="statistical-significance" class="section level2 hasAnchor" number="9.3">
 <h2><span class="header-section-number">9.3</span> Statistical Significance<a href="infstat.html#statistical-significance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Statistical significance is a concept in hypothesis testing that describes whether the results of a study are meaningful or not. Statistical significance is used to determine if the results are due to random chance or not. Results unlikely to have occurred by chance are considered to be statistically significant. The level of statistical significance is typically set by choosing a p-value of 0.05. A p-value less than this it means means that there is less than a 5% chance that the results are due to random chance, the null hypothesis is rejected and the result is considered statistically significant.</p>
+<p>Statistical significance is a concept in hypothesis testing that describes whether the results of a study are meaningful or not. Statistical significance is used to determine if the results are due to random chance or not and is a measure of the probability of the null hypothesis being true <span class="citation">(<a href="#ref-tenny2" role="doc-biblioref">Tenny, S., Abdelgawad, I. 2022</a>)</span>.</p>
+<p>A result is statistically significant if the p-value is less than a pre-defined value <span class="citation">(<a href="#ref-tenny2" role="doc-biblioref">Tenny, S., Abdelgawad, I. 2022</a>)</span>. Results that are unlikely to have occurred by chance are considered to be statistically significant. The level of statistical significance is typically set by choosing a p-value of 0.05 <span class="citation">(<a href="#ref-uncertainty" role="doc-biblioref">Office for National Statistics 2022</a>)</span>. A p-value less than this it means means that there is less than a 5% chance that the results are due to random chance, the null hypothesis is rejected and the result is considered statistically significant.</p>
 <p>Statistical significance does not always imply practical significance hover and a result may be statistically significant but may not have a large enough effect to be of any practical use.</p>
 </div>
 <div id="errors-in-hypothesis-testing" class="section level2 hasAnchor" number="9.4">
@@ -318,18 +320,18 @@ div.csl-indent {
 <p>In hypothesis testing, there are two types of errors that can occur: Type I errors and Type II errors.</p>
 <div id="type-i-errors" class="section level3 hasAnchor" number="9.4.1">
 <h3><span class="header-section-number">9.4.1</span> Type I Errors<a href="infstat.html#type-i-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A Type I error is known as a false positive and occurs when the null hypothesis is rejected despite being true. A significant result is obtained by chance but is interpreted as a real effect. The probability of making a Type I error is represented by alpha, <span class="math inline">\(\alpha\)</span>:</p>
+<p>A Type I error is known as a false positive and occurs when the null hypothesis is rejected despite being true <span class="citation">(<a href="#ref-banerjee" role="doc-biblioref">Banerjee A., Chitnis U.B., Jadhav S.L., Bhawalkar, J.S., Chaudhury, S. 2009</a>)</span>. A significant result is obtained by chance but is interpreted as a real effect. The probability of making a Type I error is represented by alpha, <span class="math inline">\(\alpha\)</span>:</p>
 <p><span class="math display">\[\alpha= \textrm{P}(\textrm{Null hypothesis rejected} | \textrm{Null hypothesis is true}).\]</span></p>
 </div>
 <div id="type-ii-errors" class="section level3 hasAnchor" number="9.4.2">
 <h3><span class="header-section-number">9.4.2</span> Type II Errors<a href="infstat.html#type-ii-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A Type II error, known as a false negative, occurs when the null hypothesis is not rejected despite being false. The real effect goes undetected and is interpreted as the result of chance. The probability of making a Type II error is represented by beta, <span class="math inline">\(\beta\)</span>:</p>
+<p>A Type II error, known as a false negative, occurs when the null hypothesis is not rejected despite being false <span class="citation">(<a href="#ref-banerjee" role="doc-biblioref">Banerjee A., Chitnis U.B., Jadhav S.L., Bhawalkar, J.S., Chaudhury, S. 2009</a>)</span>. The real effect goes undetected and is interpreted as the result of chance. The probability of making a Type II error is represented by beta, <span class="math inline">\(\beta\)</span>:</p>
 <p><span class="math display">\[\beta= \textrm{P} (\textrm{Null hypothesis accepted} | \textrm{Null hypothesis is false}).\]</span></p>
 <p>Minimizing the risk of both of these types of errors is important but there is often a trade-off in that increasing the sample size and reducing the significance level can reduce Type I errors but it can also increase Type II errors.</p>
 </div>
 <div id="test-power" class="section level3 hasAnchor" number="9.4.3">
 <h3><span class="header-section-number">9.4.3</span> Test Power<a href="infstat.html#test-power" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Test power is another useful measure in hypothesis testing. It is a measure of the ability of a hypothesis test to detect an effect or a difference if it actually exists. It represents the probability of correctly rejecting the null hypothesis when it is false. The formula for test power is:</p>
+<p>Test power is another useful measure in hypothesis testing. It is a measure of the ability of a hypothesis test to detect an effect or a difference if it actually exists. It represents the probability of correctly rejecting the null hypothesis when it is false. The formula for test power is <span class="citation">(<a href="#ref-swinscow" role="doc-biblioref">Swinscow, T.D.V 1997b</a>)</span>:</p>
 <p><span class="math display">\[\textrm{Power}= 1-\beta,\]</span></p>
 <p>where <span class="math inline">\(\beta\)</span> is the probability of a Type II error.</p>
 </div>
@@ -348,6 +350,24 @@ div.csl-indent {
   + The data violate the assumptions of equal variance or homoscedasticity.
   + For any of a number of reasons (1), the continuous data were collapsed into a small number of categories, and thus the data are no longer interval or ratio.-->
 
+</div>
+</div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-banerjee" class="csl-entry">
+Banerjee A., Chitnis U.B., Jadhav S.L., Bhawalkar, J.S., Chaudhury, S. 2009. <span>“<span class="nocase">Hypothesis testing, type I and type II errors.</span>”</span> <em>Ind Psychiatry J.</em> 18(2): 127–31. https://doi.org/<a href="https://doi.org/10.4103/0972-6748.62274">https://doi.org/10.4103/0972-6748.62274</a>.
+</div>
+<div id="ref-uncertainty" class="csl-entry">
+Office for National Statistics. 2022. <span>“Uncertainty and How We Measure It for Our Surveys.”</span> <a href="https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts/uncertaintyandhowwemeasureit" class="uri">https://www.ons.gov.uk/methodology/methodologytopicsandstatisticalconcepts/uncertaintyandhowwemeasureit</a>.
+</div>
+<div id="ref-pereira" class="csl-entry">
+Pereira S.M.C, Leslie, G.R.N. 2009. <span>“<span class="nocase">Hypothesis testing</span>.”</span> <em>Australian Critical Care</em> 22 (4): 187–91. https://doi.org/<a href="https://doi.org/10.1016/j.aucc.2009.08.003">https://doi.org/10.1016/j.aucc.2009.08.003</a>.
+</div>
+<div id="ref-swinscow" class="csl-entry">
+———. 1997b. <em><span class="nocase">Statistics at Square One: Differences between means: type I and type II errors and power</span></em>. 9th ed. BMJ Publishing Group. <a href="https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/5-differences-between-means-type-i-an">https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one/5-differences-between-means-type-i-an</a>.
+</div>
+<div id="ref-tenny2" class="csl-entry">
+Tenny, S., Abdelgawad, I. 2022. <em><span>Statistical Significance.</span></em> StatPearls [Internet] StatPearls Publishing, Treasure Island (FL). <a href="https://www.ncbi.nlm.nih.gov/books/NBK459346/">https://www.ncbi.nlm.nih.gov/books/NBK459346/</a>.
 </div>
 </div>
             </section>
