@@ -1538,7 +1538,7 @@ There is no single function for calculating the range in Excel but the formula a
 
 =STDEV.S(start:end)
 
-=STDEV.P(stard:end)
+=STDEV.P(start:end)
 
 stdev.s() estimates standard deviation based on a sample. stdev.p() calculates standard deviation based on the entire population given as arguments.
 
@@ -2015,6 +2015,12 @@ A \(\chi^2\) table is used to compare the calculated value of \(\chi^2\) with cr
 \includegraphics{chisquare.png}
 \caption{Table containing the critical values of the chi-square distribution.}
 \end{figure}
+
+You can also find these values using Excel with the function:
+
+=CHISQ.INV.RT(p,df)
+
+where p is the probability and df is the number of degrees of freedom.
 
 \hypertarget{example-14}{%
 \subsubsection{Example}\label{example-14}}
@@ -2554,7 +2560,7 @@ Ensure your product is accessible by checking the colour contrast ratios of text
 
 \textbf{Frequency}
 
-=FREQUENCY(start:end,bins\_array)
+=FREQUENCY(start:end,bins)
 
 The frequency() function will return a frequency table describing your data. It takes two arguments, the first being the array of values and the second being an array describing the upper boundary of the bins used.
 
@@ -2608,7 +2614,7 @@ These two percentile functions will return the k-th percentile of values in a ra
 
 =STDEV.S(start:end)
 
-=STDEV.P(stard:end)
+=STDEV.P(start:end)
 
 stdev.s() estimates standard deviation based on a sample. stdev.p() calculates standard deviation based on the entire population given as arguments.
 
@@ -2625,6 +2631,12 @@ var.s() estimates variance based on a sample. var.p() calculates variance based 
 =PEARSON(array1, array2)
 
 Calculating the correlation coefficient is not simple and the best way to calculate it is to use R, Python, Excel, SPSS or some equivalent software.
+
+\textbf{Chi-Square Distribution}
+
+=CHISQ.INV.RT(p,df)
+
+Returns the critical values of the chi-square distribution where p is the probability and df is the number of degrees of freedom.
 
   \bibliography{example.bib}
 

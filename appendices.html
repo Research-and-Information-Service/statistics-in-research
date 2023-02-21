@@ -296,7 +296,7 @@ div.csl-indent {
 <div id="excel-functions" class="section level2 unnumbered hasAnchor">
 <h2>Excel Functions<a href="appendices.html#excel-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Frequency</strong></p>
-<p>=FREQUENCY(start:end,bins_array)</p>
+<p>=FREQUENCY(start:end,bins)</p>
 <p>The frequency() function will return a frequency table describing your data. It takes two arguments, the first being the array of values and the second being an array describing the upper boundary of the bins used.</p>
 <p><strong>Average</strong></p>
 <p>=AVERAGE(start:end)</p>
@@ -323,7 +323,7 @@ div.csl-indent {
 <p>These two percentile functions will return the k-th percentile of values in a range where k is in the range 0 to 1 (exclusive and inclusive respectively).</p>
 <p><strong>Standard Deviation</strong></p>
 <p>=STDEV.S(start:end)</p>
-<p>=STDEV.P(stard:end)</p>
+<p>=STDEV.P(start:end)</p>
 <p>stdev.s() estimates standard deviation based on a sample. stdev.p() calculates standard deviation based on the entire population given as arguments.</p>
 <p><strong>Variance</strong></p>
 <p>=VAR.S(start:end)</p>
@@ -332,6 +332,9 @@ div.csl-indent {
 <p><strong>Pearson Correlation Coefficient</strong></p>
 <p>=PEARSON(array1, array2)</p>
 <p>Calculating the correlation coefficient is not simple and the best way to calculate it is to use R, Python, Excel, SPSS or some equivalent software.</p>
+<p><strong>Chi-Square Distribution</strong></p>
+<p>=CHISQ.INV.RT(p,df)</p>
+<p>Returns the critical values of the chi-square distribution where p is the probability and df is the number of degrees of freedom.</p>
 
 </div>
 </div>
