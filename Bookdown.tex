@@ -36,7 +36,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Statistics Primer},
+  pdftitle={Statistics in Research},
   pdfauthor={Aaron McMurray},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
@@ -75,7 +75,7 @@
 \usepackage[]{natbib}
 \bibliographystyle{apalike}
 
-\title{Statistics Primer}
+\title{Statistics in Research}
 \author{Aaron McMurray}
 \date{2023-02-22}
 
@@ -87,8 +87,8 @@
 \tableofcontents
 }
 \hypertarget{Statistics-Primer}{%
-\chapter*{Statistics Primer}\label{Statistics-Primer}}
-\addcontentsline{toc}{chapter}{Statistics Primer}
+\chapter*{Statistics in Research}\label{Statistics-Primer}}
+\addcontentsline{toc}{chapter}{Statistics in Research}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -96,9 +96,9 @@
 
 Today, more than ever, statistics is part of our lives. Statistics can be used to describe the interactions of fundamental particles or to measure biodiversity in our oceans. It can be used to predict election outcomes through opinion polling in politics or to predict the prices of assets in finance. Whatever quantitative research questions we may have the answers will ultimately come from statistics.
 
-This e-book is intended to provide an introduction to statistics and describe the quantitative methods that are useful in research.
+This e-book is intended to provide an introduction to statistics and describe the quantitative methods used in research.
 
-The book has been written for a broad audience and as such most of the mathematical techniques used in statistics are described in plain English (as far as possible) and worked examples are provided to illustrate the process of calculating various statistics. There is no need to be mathematically inclined however to understand and use descriptive statistics in day-to-day research, especially with tools such as Excel, SPSS and Power BI which simplify many of the calculations involved in statistics.
+The book has been written for a broad audience and as such most of the mathematical techniques used in statistics are described in plain English (as far as possible) and worked examples are provided to illustrate the process of calculating various statistics. There is no need to be mathematically inclined however to understand and use descriptive statistics in day-to-day research, especially with tools such as Excel, SPSS and Power BI which simplify many of the calculations involved in statistics. Some of the formula used in Excel calculations are provided throughout and the \protect\hyperlink{appendices}{appendices} include a list of useful excel formula. In later chapters detailing inferential statistics mathematical descriptions are provided and a glossary of mathematical notation is included in the \protect\hyperlink{appendices}{appendices}.
 
 \textbf{Contents}
 
@@ -128,6 +128,8 @@ The book has been written for a broad audience and as such most of the mathemati
   \protect\hyperlink{chisq}{Chi Square Tests}
 \item
   \protect\hyperlink{datvis}{Data Visualisation}
+\item
+  \protect\hyperlink{appendices}{Appendices}
 \end{itemize}
 
 Chapter 1 details the two main branches of statistics and how they might be useful.
@@ -261,7 +263,7 @@ In real world scenarios SRS can be difficult to achieve either due to the scale 
 \hypertarget{non-probability-sampling}{%
 \subsection{Non-Probability Sampling}\label{non-probability-sampling}}
 
-Non-probability sampling involves non-random selection. To draw conclusions about a population from a sample it is a requirement that the sample be representative of the population however when using non-probability sampling this is not guarenteed and it is important to consider this when using it as a sampling method in a study.
+Non-probability sampling involves non-random selection. To draw conclusions about a population from a sample it is a requirement that the sample be representative of the population however when using non-probability sampling this is not guaranteed and it is important to consider this when using it as a sampling method in a study.
 
 Non-probability sampling has seen some use within official statistics as a result of the growing popularity of non-probability data sources such as social media (webscraping Twitter or Facebook to conduct sentiment analysis for instance) and the desire for real time statistics. There are a range of methods which can be used to conduct non-probability sampling including: convenience or haphazard sampling, volunteer sampling, judgement sampling, quota sampling, snowball or network sampling, crowd-sourcing and web panels.
 
@@ -2081,7 +2083,7 @@ Calculating \(\chi^2\) gives:
 
 \[\chi^2=5.25.\]
 
-After calculating \(chi^2\) the number of degrees of freedom, df, is needed. This is given by:
+After calculating \(\chi^2\) the number of degrees of freedom, df, is needed. This is given by:
 
 \[df=(p-1),\]
 
@@ -2637,6 +2639,108 @@ Calculating the correlation coefficient is not simple and the best way to calcul
 =CHISQ.INV.RT(p,df)
 
 Returns the critical values of the chi-square distribution where p is the probability and df is the number of degrees of freedom.
+
+\hypertarget{glossary-of-mathematical-symbols}{%
+\section*{Glossary of Mathematical Symbols}\label{glossary-of-mathematical-symbols}}
+\addcontentsline{toc}{section}{Glossary of Mathematical Symbols}
+
+A mathematical symbol is a figure used to represent a mathematical object, an action which is performed on mathematical object or a relationship between mathematical objects. The most basic symbols used are the decimal digits (0,1,2,3\ldots{} etc) and lower-case letters which are generally used to denote variables (\(x,y,z\)). The Greek alphabet is also sometimes to used to denote variables (\(\alpha\),\(\beta\), \(\gamma\), \(\delta\)\ldots{} etc) or constants although upper case Greek letters can also be used to denote operations which are performed on objects (\(\large\Sigma\)).
+
+\hypertarget{arithmetic-operators}{%
+\subsection*{Arithmetic Operators}\label{arithmetic-operators}}
+\addcontentsline{toc}{subsection}{Arithmetic Operators}
+
+\begin{itemize}
+\tightlist
+\item
+  \(+\) denotes addition.
+\item
+  \(-\) denotes subtraction.
+\item
+  \(/\) denotes division.
+\item
+  \(\times\) denotes multiplication although sometimes multiplication is implied and the operator will be omitted for instance:
+\end{itemize}
+
+\[(x-y)(y+x)=xy+x^2-y^2-xy=x^2-y^2.\]
+
+\begin{itemize}
+\tightlist
+\item
+  \(\pm\) is the ``plus or minus'' sign and is usually used in reporting a result to show that the result lies within a range. For example, 176 \(\pm\) 4 denotes that the measured value is 176 but the true value could lie between 172 and 180.
+\end{itemize}
+
+\hypertarget{equality-equivalence-approximation-and-comparison}{%
+\subsection*{Equality, equivalence, approximation and comparison}\label{equality-equivalence-approximation-and-comparison}}
+\addcontentsline{toc}{subsection}{Equality, equivalence, approximation and comparison}
+
+\begin{itemize}
+\tightlist
+\item
+  \(=\) denotes two values are equal to one another.
+\item
+  \(\approx\) denotes that two values are approximately equal to one another for instance \(\pi \approx 3.14.\)
+\item
+  \(<\) means less than, for example \(x <\) 4 is a statement that the variable \(x\) is less than the value 4.
+\item
+  \(>\) means greater than.
+\item
+  \(\le\) means less than or equal to.
+\item
+  \(\ge\) means greater than or equal to.
+\end{itemize}
+
+\hypertarget{linear-algebra}{%
+\subsection*{Linear algebra}\label{linear-algebra}}
+\addcontentsline{toc}{subsection}{Linear algebra}
+
+\begin{itemize}
+\tightlist
+\item
+  \(\large\Sigma\) denotes the sum of some number of terms. For instance:
+\end{itemize}
+
+\[\large\Sigma x,\]
+
+should be read as an instruction to sum all the measured values of the variable denoted by \(x\).
+
+\[\large\Sigma_{i=0}^{n} x^2,\]
+
+is more specific and indicates that a sum should be taken between the 0\(^{th}\) and the n\(^{th}\) value of the variable \(x^2\).
+
+For example, x might represent test scores at GCSE and in a class of 8 students those scores might be:
+
+\begin{longtable}[]{@{}rr@{}}
+\caption{\label{tab:table0112} Test scores}\tabularnewline
+\toprule
+Index (i) & Test scores (x) \\
+\midrule
+\endfirsthead
+\toprule
+Index (i) & Test scores (x) \\
+\midrule
+\endhead
+0 & 99.0 \\
+1 & 91.2 \\
+2 & 84.6 \\
+3 & 73.1 \\
+4 & 72.4 \\
+5 & 55.6 \\
+6 & 44.3 \\
+7 & 32.2 \\
+8 & 28.6 \\
+\bottomrule
+\end{longtable}
+
+An instruction to sum the first three terms squared would be written as:
+
+\[\Sigma_{i=0}^{3} x^2 = (99.0)^2+(91.2)^2+(84.6)^2 = 25,275.6.\]
+
+\begin{itemize}
+\tightlist
+\item
+  \(\bar{x}\) A variable with a line written above it denotes the mean of the variable. Using the data from the table above the mean test score (\(\bar{x}\)) is given by the sum of the test scores divided by the number of scores recorded (9) which is \(\bar{x}=64.6.\)
+\end{itemize}
 
   \bibliography{example.bib}
 
