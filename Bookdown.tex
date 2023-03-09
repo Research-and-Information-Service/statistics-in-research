@@ -69,6 +69,7 @@
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{5}
 \usepackage{booktabs}
+%\usepackage[style=ieee,dashed=false]{biblatex}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -77,7 +78,7 @@
 
 \title{Statistics in Research}
 \author{Aaron McMurray}
-\date{2023-02-22}
+\date{2023-02-23}
 
 \begin{document}
 \maketitle
@@ -152,7 +153,7 @@ Information
 
 Throughout this e-book blue boxes like this one will be used to provide additional information, context or mathematical details that go beyond the scope of an introduction to statistics. The information provided in these boxes is provided for interested readers but is not necessary to have a basic understanding of statistics.
 
-Red boxes will be used at the end of each chapter to summarise important information.
+Red boxes will be used throughout to summarise important information.
 
 Summary
 
@@ -241,6 +242,14 @@ To generalise the results from a sample to the full population, the sample must 
 
 In practice, this means that if we conducted a survey to gauge the views of the Northern Ireland population on an upcoming election and only residents of Antrim were surveyed then the sample results could not be used to infer attitudes of all Northern Ireland residents.
 
+Summary
+
+\textbf{Populations and Samples}
+
+The population includes all the elements from a set of data. The population characteristics (e.g.~mean or standard deviation) that we measure are called parameters.
+
+A sample is comprised of one or more observations which are drawn from the population. Sample characteristics that we measure are called statistics.
+
 \hypertarget{sampling-methods}{%
 \section{Sampling Methods}\label{sampling-methods}}
 
@@ -279,12 +288,6 @@ Samples are independent if the subjects in one sample do not determine which sub
 Dependent samples (sometimes referred to as matched pairs) differ from independent samples in that subjects in one sample can be matched with a corresponding subject in another sample. This can get confusing because sometimes matched pair consists of just one subject. For instance, if a sample is drawn of people who have hip replacement surgery with the NHS and the people in the sample are each interviewed before and after the surgery to assess their mobility before and after surgery then the study is engaged in dependent sampling. The same person was interviewed at two points in time.
 
 Summary
-
-\textbf{Populations and Samples}
-
-The population includes all the elements from a set of data. The population characteristics (e.g.~mean or standard deviation) that we measure are called parameters.
-
-A sample is comprised of one or more observations which are drawn from the population. Sample characteristics that we measure are called statistics.
 
 \textbf{Sampling}
 
@@ -368,7 +371,7 @@ The coefficient of variation should not be used for estimates of values that are
 Imagine a study that measures household expenditures where we want to compare the variability of spending in households of different incomes.
 
 \begin{longtable}[]{@{}rrrrrr@{}}
-\caption{\label{tab:table0000} Income Study Data}\tabularnewline
+\caption{\label{tab:table0000} Fictional Income Study Data}\tabularnewline
 \toprule
 Expenditure & Q1 (least deprived) & Q2 & Q3 & Q4 & Q5 (most deprived) \\
 \midrule
@@ -387,7 +390,7 @@ The variability is very high in the high income households compared to the low i
 Calculating the coefficient of variation shows that when we account for differences in expenses the first two quintiles (Q1 and Q2) actually have equal variability and the greatest variability in seen in the most deprived quntile (Q5).
 
 \begin{longtable}[]{@{}rrrrrr@{}}
-\caption{\label{tab:table00000} Income Study Data}\tabularnewline
+\caption{\label{tab:table00000} Fictional Income Study Data}\tabularnewline
 \toprule
 Expenditure & Q1 (least deprived) & Q2 & Q3 & Q4 & Q5 (most deprived) \\
 \midrule
@@ -427,7 +430,7 @@ Confidence intervals for religious composition of the economically active (Worki
   >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
   >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
   >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}@{}}
-\caption{\label{tab:table00}}\tabularnewline
+\caption{\label{tab:table00} Religious Denomination, 2011}\tabularnewline
 \toprule
 \begin{minipage}[b]{\linewidth}\raggedleft
 Religious Demonination
@@ -567,7 +570,7 @@ Variables can be classified as qualitative (categorical) or quantitative (numeri
 To obtain data we have to observe or measure something, the something we observe or measure is a variable. For example, height, shoe size, weight and nationality are all variables as we can obtain observations or measurements for each of them \citep{Campbell2021}:
 
 \begin{longtable}[]{@{}rrr@{}}
-\caption{\label{tab:table000} Variables and Measurements}\tabularnewline
+\caption{\label{tab:table000} Variables and Measurement}\tabularnewline
 \toprule
 Variable & Measurement or Observation & Type \\
 \midrule
@@ -679,7 +682,7 @@ There are a number of possible statistical tests that can be used with ordinal d
   >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
-\caption{\label{tab:table0}Inferential Statistics}\tabularnewline
+\caption{\label{tab:table0} Non-parametric tests}\tabularnewline
 \toprule
 \begin{minipage}[b]{\linewidth}\raggedleft
 Non-parametric test
@@ -737,7 +740,7 @@ A number of parametric tests can be applied to interval data.
   >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
-\caption{\label{tab:table1}Inferential Statistics}\tabularnewline
+\caption{\label{tab:table1} Parametric Tests}\tabularnewline
 \toprule
 \begin{minipage}[b]{\linewidth}\raggedleft
 Parametric test
@@ -827,18 +830,55 @@ The mean (sometimes referred to as the arithmetic mean) is the sum of the record
 
 \[ \textrm{Mean} = \frac{\textrm{Sum of recorded values}}{\textrm{Number of values recorded}}.\]
 
-\hypertarget{firstexamp}{%
-\subsubsection{Example}\label{firstexamp}}
+\hypertarget{example-1}{%
+\subsubsection{Example}\label{example-1}}
 
-Find the mean of the following list of numbers:
+The table below shows data on male and female life expectancy at birth in the period 2018-2020 \citep{nisra12}.
 
-\[ 2, 3, 3, 4, 20.\]
-\[ \textrm{Mean} = \frac{\textrm{Sum of recorded values}}{\textrm{Number of values recorded}},\]
-\[ \textrm{Mean} = \frac{\textrm{2 + 3 + 3 + 4 + 20}}{\textrm{5}},\]
-\[ \textrm{Mean} = \frac{\textrm{32}}{\textrm{5}},\]
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3505}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3196}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3299}}@{}}
+\caption{\label{tab:table190} Life Expectancy at Birth, 2020}\tabularnewline
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+Local Government District (2014)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Male life expectancy at birth
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Female life expectancy at birth
+\end{minipage} \\
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+Local Government District (2014)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Male life expectancy at birth
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Female life expectancy at birth
+\end{minipage} \\
+\midrule
+\endhead
+Antrim and Newtownabbey & 78.8 & 82.6 \\
+Ards and North Down & 79.6 & 82.7 \\
+Armagh City, Banbridge and Craigavon & 79.3 & 83.2 \\
+Belfast & 75.8 & 80.5 \\
+Causeway Coast and Glens & 79.7 & 82.6 \\
+Derry City and Strabane & 78.0 & 81.6 \\
+Fermanagh and Omagh & 79.2 & 83.2 \\
+Lisburn and Castlereagh & 80.3 & 83.3 \\
+Mid and East Antrim & 79.0 & 82.3 \\
+Mid Ulster & 79.6 & 83.1 \\
+Newry, Mourne and Down & 79.3 & 83.2 \\
+\bottomrule
+\end{longtable}
 
-\[ \textrm{Mean} = 6.4.\]
-The list of numbers could have been a population or a sample from a population and the steps involved in the calculation would remain unchanged.
+The mean male life expectancy at birth is:
+
+\[\textrm{Mean}=\frac{(78.8+79.6+79.3+75.8+79.7+78.0+79.2+80.3+79.0+79.6+79.3)}{11},\]
+
+\[\textrm{Mean}=79.0\]
 
 \hypertarget{median}{%
 \subsection{Median}\label{median}}
@@ -851,31 +891,122 @@ For an even number of values there will be two values in the center. Those value
 
 The median is sometimes used as opposed to the mean when there are outliers that might skew the average of the values. For ordinal data, the median is usually the best indicator of central tendency \citep{mchugh3}.
 
-\hypertarget{example-1}{%
-\subsubsection{Example}\label{example-1}}
-
-Find the median of this list of numbers:
-
-\[ 2, 3, 3, 4, 20.\]
-
-There are 5 values listed in ascending order and the middle value is the third value in the list so the median is 3.
-
-Information
-
-In the previous \protect\hyperlink{firstexamp}{example} the mean was 6.4. It was skewed by the outlier (20). The median remains closer to what might be considered to be the middle of the data set if the outlier was not present. This illustrates one of the main uses of the median. It is often used when there are outliers in a data set that might skew the average of the values.
-
 \hypertarget{example-2}{%
 \subsubsection{Example}\label{example-2}}
 
-Find the median of this list of numbers:
+Using the same table as before calculate the median male life expectancy at birth.
 
-\[ 3, 5, 4, 4, 2, 8, 7, 1.\]
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3505}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3196}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3299}}@{}}
+\caption{\label{tab:table191} Life Expectancy at Birth, 2020}\tabularnewline
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+Local Government District (2014)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Male life expectancy at birth
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Female life expectancy at birth
+\end{minipage} \\
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+Local Government District (2014)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Male life expectancy at birth
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Female life expectancy at birth
+\end{minipage} \\
+\midrule
+\endhead
+Antrim and Newtownabbey & 78.8 & 82.6 \\
+Ards and North Down & 79.6 & 82.7 \\
+Armagh City, Banbridge and Craigavon & 79.3 & 83.2 \\
+Belfast & 75.8 & 80.5 \\
+Causeway Coast and Glens & 79.7 & 82.6 \\
+Derry City and Strabane & 78.0 & 81.6 \\
+Fermanagh and Omagh & 79.2 & 83.2 \\
+Lisburn and Castlereagh & 80.3 & 83.3 \\
+Mid and East Antrim & 79.0 & 82.3 \\
+Mid Ulster & 79.6 & 83.1 \\
+Newry, Mourne and Down & 79.3 & 83.2 \\
+\bottomrule
+\end{longtable}
 
-The list should be sorted:
+To calculate the median the male life expectancy at birth needs to be ordered.
 
-\[ 1, 2, 3, 4, 4, 5, 7, 8. \]
+\begin{longtable}[]{@{}ll@{}}
+\caption{\label{tab:table192} Life Expectancy at Birth, 2020}\tabularnewline
+\toprule
+Local Government District (2014) & Male life expectancy at birth \\
+\midrule
+\endfirsthead
+\toprule
+Local Government District (2014) & Male life expectancy at birth \\
+\midrule
+\endhead
+Belfast & 75.8 \\
+Derry City and Strabane & 78.0 \\
+Antrim and Newtownabbey & 78.8 \\
+Mid and East Antrim & 79.0 \\
+Fermanagh and Omagh & 79.2 \\
+Armagh City, Banbridge and Craigavon & 79.3 \\
+Newry, Mourne and Down & 79.3 \\
+Ards and North Down & 79.6 \\
+Mid Ulster & 79.6 \\
+Causeway Coast and Glens & 79.7 \\
+Lisburn and Castlereagh & 80.3 \\
+\bottomrule
+\end{longtable}
 
-There are an even number of values so there will be two middle values. The middle values are 4 and 4. Sum them and divide by two to get the median: 4.
+The middle value (median) in this case is the 6th entry (Armagh City, Banbridge and Craigavon): 79.3.
+
+The same data can be sorted by Administrative Area rather than Local Government District. As there is an even number of administrative areas, there are two middle values (East Antrim and North Down):
+
+\begin{longtable}[]{@{}ll@{}}
+\caption{\label{tab:table193} Life Expectancy at Birth, 2020}\tabularnewline
+\toprule
+Administrative Area & Male life expectancy at birth \\
+\midrule
+\endfirsthead
+\toprule
+Administrative Area & Male life expectancy at birth \\
+\midrule
+\endhead
+Belfast West & 73.7 \\
+Belfast North & 73.8 \\
+Foyle & 77.1 \\
+Belfast East & 77.6 \\
+Upper Bann & 78.5 \\
+West Tyrone & 79.2 \\
+North Antrim & 79.2 \\
+Fermanagh and South Tyrone & 79.4 \\
+East Antrim & 79.4 \\
+North Down & 79.5 \\
+South Down & 79.5 \\
+Newry and Armagh & 79.7 \\
+Belfast South & 79.7 \\
+South Antrim & 79.7 \\
+Mid Ulster & 79.9 \\
+East Londonderry & 79.9 \\
+Strangford & 80.0 \\
+Lagan Valley & 80.1 \\
+\bottomrule
+\end{longtable}
+
+When there are two middle values they should be summed and divided by two to find the median:
+
+\[\textrm{Median} =\frac{79.4+79.5}{2}=79.45.\]
+
+Information
+
+Try finding the mean and median of this list of numbers: 2, 3, 3, 4, 20.
+
+The mean is 6.4 while the median is 3.
+
+The mean is being skewed by the outlier (20) while the median remains closer to what might be considered to be the middle of the data set if the outlier was not present. This illustrates one of the main uses of the median. It is often used when there are outliers in a data set that might skew the average of the values.
 
 \hypertarget{mode}{%
 \subsection{Mode}\label{mode}}
@@ -885,40 +1016,60 @@ The mode of a set of data values is the value that appears most often. It is the
 \hypertarget{example-3}{%
 \subsubsection{Example}\label{example-3}}
 
-Find the mode of this list of numbers:
+The table below shows the total number of events funded by the Arts Council of Northern Ireland in 2010 through the Annual Support for Organisations Programme \citep{nisra13} filtered by Local Government District.
 
-\[ 1, 2, 2, 2, 3, 3, 4.\]
-
-A simple way to find the mode is to make a frequency table with the unique values on the left hand side and their frequency on the right hand side. We can tally up how many times each number occurs. Whichever has the greatest frequency is our mode.
-
-\begin{longtable}[]{@{}rr@{}}
-\caption{\label{tab:table2}}\tabularnewline
+\begin{longtable}[]{@{}lr@{}}
+\caption{\label{tab:table194} Events Funded by the Arts Council, 2010}\tabularnewline
 \toprule
-Value & Frequency \\
+Local Government District & Events Funded \\
 \midrule
 \endfirsthead
 \toprule
-Value & Frequency \\
+Local Government District & Events Funded \\
 \midrule
 \endhead
-1 & 1 \\
-2 & 3 \\
-3 & 2 \\
-4 & 1 \\
+Cookstown & 11 \\
+Magherafelt & 14 \\
+Moyle & 20 \\
+Limavady & 22 \\
+Ballymoney & 23 \\
+Carrickfergus & 23 \\
+Strabane & 23 \\
+Ballymena & 28 \\
+Dungannon & 32 \\
+Ards & 34 \\
+Larne & 36 \\
+Banbridge & 38 \\
+Fermanagh & 38 \\
+Newtownabbey & 40 \\
+Omagh & 50 \\
+Down & 95 \\
+Coleraine & 109 \\
+Lisburn & 117 \\
+Antrim & 143 \\
+North Down & 145 \\
+Newry and Mourne & 152 \\
+Armagh & 169 \\
+Craigavon & 207 \\
+Castlereagh & 216 \\
+Derry & 750 \\
+Belfast & 3,177 \\
 \bottomrule
 \end{longtable}
 
-The mode is 2.
+Ballymoney, Carrickfergus and Strabane all had a total of 23 events funded by the Arts Council of Northern Ireland and this represents the mode as this is the most frequently occurring value.
 
 \hypertarget{example-4}{%
 \subsubsection{Example}\label{example-4}}
 
-Find the mode of this list of numbers:
+It is also possible to have multiple modes. For instance, consider the list of numbers:
 
 \[ 7, 3, 5, 3, 4, 3, 5, 6, 8, 5.\]
 
+The frequency table below counts how often each value appears.
+
 \begin{longtable}[]{@{}rr@{}}
-\caption{\label{tab:table3}}\tabularnewline
+\caption{\label{tab:table195} Frequency Table of Values}\tabularnewline
 \toprule
 Value & Frequency \\
 \midrule
@@ -946,7 +1097,7 @@ Find the mode of this list of numbers:
 \[ 1, 2, 3, 4, 5, 6.\]
 
 \begin{longtable}[]{@{}rr@{}}
-\caption{\label{tab:table4}}\tabularnewline
+\caption{\label{tab:table4} Frequency Table of Values}\tabularnewline
 \toprule
 Value & Frequency \\
 \midrule
@@ -1010,13 +1161,29 @@ mode.sngl() will return one mode and mode.mult() will return multiple modes (if 
 
 Neither mode() nor mode.sngl() will provide a warning if there are multiple modes so mode.mult() is usually the safest option.
 
+Summary
+
+\textbf{Measures of Central Tendency}
+
+The mean (sometimes referred to as the arithmetic mean) is the sum of the recorded values divided by the number of values recorded. The formula for the mean then is given by:
+
+\[ \textrm{Mean} = \frac{\textrm{Sum of recorded values}}{\textrm{Number of values recorded}}.\]
+
+The median is the middle number in a sorted, ascending or descending, list of values.
+
+If there are an odd number of values the median is simply the middle value.
+
+For an even number of values there will be two values in the center. Those values are summed and divided by two.
+
+The mode of a set of data values is the value that appears most often.
+
 \hypertarget{frequency}{%
 \section{Frequency}\label{frequency}}
 
-The frequency of an observation is the number of times it occurs or is recorded. A frequency distribution for grouped data, like the one shown below detailing exam grades, is a commonly used method of depicting frequency.
+The frequency of an observation is the number of times it occurs or is recorded. A frequency table for data, like the one shown below detailing fictional exam grades, is a commonly used method of depicting frequency.
 
 \begin{longtable}[]{@{}rr@{}}
-\caption{\label{tab:table5}Frequency Table for Grouped Data}\tabularnewline
+\caption{\label{tab:table5} Frequency Table}\tabularnewline
 \toprule
 Grade & Frequency \\
 \midrule
@@ -1038,7 +1205,7 @@ A frequency distribution is a collection of observations produced by sorting obs
 The total of all frequencies so far in a frequency distribution is the cumulative frequency. It is the `running total' of frequencies.
 
 \begin{longtable}[]{@{}rrr@{}}
-\caption{\label{tab:table6}Cumulative Frequency Table}\tabularnewline
+\caption{\label{tab:table6} Cumulative Frequency Table}\tabularnewline
 \toprule
 Grade & Frequency & Cumulative Frequency \\
 \midrule
@@ -1062,7 +1229,7 @@ The relative frequency is the ratio of the category frequency to the total numbe
 The table can be extended to include the relative frequency.
 
 \begin{longtable}[]{@{}rrr@{}}
-\caption{\label{tab:table7}Relative Frequency Table}\tabularnewline
+\caption{\label{tab:table7} Relative Frequency Table}\tabularnewline
 \toprule
 Grade & Frequency & Relative Frequency \\
 \midrule
@@ -1092,7 +1259,7 @@ While it is common to calculate the mean of a data set sometimes we receive data
 Calculate the mean given the values and their respective frequencies in the table below:
 
 \begin{longtable}[]{@{}rrr@{}}
-\caption{\label{tab:table07}Relative Frequency Table}\tabularnewline
+\caption{\label{tab:table07} Frequency Table}\tabularnewline
 \toprule
 Value & Frequency & Value x Frequency \\
 \midrule
@@ -1135,7 +1302,7 @@ The modal value (or the modal class in the case of a frequency distribution) is 
 To find the median of a frequency distribution we need to first calculate the cumulative frequency:
 
 \begin{longtable}[]{@{}rrrr@{}}
-\caption{\label{tab:table007}Relative Frequency Table}\tabularnewline
+\caption{\label{tab:table007} Frequency Table}\tabularnewline
 \toprule
 Value & Frequency & Value x Frequency & Cumulative Frequency \\
 \midrule
@@ -1165,7 +1332,7 @@ If the frequency table is a grouped data frequency table, where the values are b
 Take the table below for instance:
 
 \begin{longtable}[]{@{}rr@{}}
-\caption{\label{tab:table0007}Grouped Frequency Table}\tabularnewline
+\caption{\label{tab:table0007} Grouped Frequency Table}\tabularnewline
 \toprule
 Bin & Frequency \\
 \midrule
@@ -1184,7 +1351,7 @@ Bin & Frequency \\
 To calculate the mean we would rewrite this table as follows:
 
 \begin{longtable}[]{@{}rr@{}}
-\caption{\label{tab:table00007}Grouped Frequency Table}\tabularnewline
+\caption{\label{tab:table00007} Frequency Table}\tabularnewline
 \toprule
 Midpoint & Frequency \\
 \midrule
@@ -1203,7 +1370,7 @@ Midpoint & Frequency \\
 Previously we created a new column for the product of the value and the frequency. We do the same again but this time the new column will hold values for the product of the midpoint with the frequency:
 
 \begin{longtable}[]{@{}rrr@{}}
-\caption{\label{tab:table000007}Grouped Frequency Table}\tabularnewline
+\caption{\label{tab:table000007} Frequency Table}\tabularnewline
 \toprule
 Midpoint & Frequency & Mf \\
 \midrule
@@ -1239,7 +1406,7 @@ To find the median we need several values, \(l\), the lower limit of the median 
 \[\textrm{Median}=l + c_l \frac{\frac{n}{2}-c_f}{f} \]
 
 \begin{longtable}[]{@{}rrrr@{}}
-\caption{\label{tab:table0000007}Relative Frequency Table}\tabularnewline
+\caption{\label{tab:table0000007} Grouped Frequency Table}\tabularnewline
 \toprule
 Bin & Frequency & cf & Mf \\
 \midrule
@@ -1286,6 +1453,16 @@ The variance (more on this later) of a grouped frequency distribution is given b
 where \(f_i\) are the frequencies, \(M_i\) are the midpoints of the bands (or bins), \(\mu\) is the mean.
 
 The standard deviation given by the square root of \(V\).
+
+Summary
+
+\textbf{Frequency}
+
+The frequency of an observation is the number of times it occurs or is recorded. A frequency table is a commonly used method of depicting frequency.
+
+The total of all frequencies so far in a frequency distribution is the cumulative frequency. It is the `running total' of frequencies.
+
+The relative frequency is the ratio of the category frequency to the total number of outcomes.
 
 \hypertarget{measures-of-dispersion}{%
 \section{Measures of Dispersion}\label{measures-of-dispersion}}
@@ -1476,7 +1653,7 @@ Start by finding the mean of the values in the dataset:
 Find the difference between each recorded value and the mean.
 
 \begin{longtable}[]{@{}rr@{}}
-\caption{\label{tab:table8}}\tabularnewline
+\caption{\label{tab:table8} Calculating Differences}\tabularnewline
 \toprule
 Value & Difference \\
 \midrule
@@ -1496,7 +1673,7 @@ Value & Difference \\
 Square the differences.
 
 \begin{longtable}[]{@{}rrr@{}}
-\caption{\label{tab:table9}}\tabularnewline
+\caption{\label{tab:table9} Squaring Differences}\tabularnewline
 \toprule
 Value & Difference & Squared Difference \\
 \midrule
@@ -1553,28 +1730,6 @@ stdev.s() estimates standard deviation based on a sample. stdev.p() calculates s
 var.s() estimates variance based on a sample. var.p() calculates variance based on the entire population given as arguments.
 
 Summary
-
-\textbf{Measures of Central Tendency}
-
-The mean (sometimes referred to as the arithmetic mean) is the sum of the recorded values divided by the number of values recorded. The formula for the mean then is given by:
-
-\[ \textrm{Mean} = \frac{\textrm{Sum of recorded values}}{\textrm{Number of values recorded}}.\]
-
-The median is the middle number in a sorted, ascending or descending, list of values.
-
-If there are an odd number of values the median is simply the middle value.
-
-For an even number of values there will be two values in the center. Those values are summed and divided by two.
-
-The mode of a set of data values is the value that appears most often.
-
-\textbf{Frequency}
-
-The frequency of an observation is the number of times it occurs or is recorded. A frequency table is a commonly used method of depicting frequency.
-
-The total of all frequencies so far in a frequency distribution is the cumulative frequency. It is the `running total' of frequencies.
-
-The relative frequency is the ratio of the category frequency to the total number of outcomes.
 
 \textbf{Measures of Dispersion}
 
@@ -1650,11 +1805,7 @@ One researcher produced thirteen research reports in 2022 another produced 11. W
 
 \[ \textrm{Percentage Difference} = 100\% \frac{2}{(\frac{24}{2})},\]
 
-\[ \textrm{Percentage Difference} = 100\% \frac{2}{12},\]
-
-\[ \textrm{Percentage Difference} = 100\% \frac{1}{6},\]
-
-\[ \textrm{Percentage Difference} =16.7\%.\]
+\[ \textrm{Percentage Difference} = 100\% \frac{2}{12} = 16.7\%\]
 
 \hypertarget{percentage-change}{%
 \section{Percentage Change}\label{percentage-change}}
@@ -1666,65 +1817,62 @@ Percentage change is about comparing old to new values. The formula for calculat
 \hypertarget{example-12}{%
 \subsection{Example}\label{example-12}}
 
-What is the percentage change in the population in these three places between 2018 and 2019?
+The table below details mid-2020 population estimates for several Local Government Districts in Northern Ireland \citep{nisra14}. What is the percentage change in the reported population of Banbridge between 2010 and 2020?
 
-\begin{longtable}[]{@{}rrrr@{}}
-\caption{\label{tab:table10}}\tabularnewline
+\begin{longtable}[]{@{}rrr@{}}
+\caption{\label{tab:table10} Mid Year Population Estimates, 2010-2020}\tabularnewline
 \toprule
-Location & 2018 & 2019 & Percentage Change (\%) \\
+Local Government District & Persons (2010) & Persons (2020) \\
 \midrule
 \endfirsthead
 \toprule
-Location & 2018 & 2019 & Percentage Change (\%) \\
+Local Government District & Persons (2010) & Persons (2020) \\
 \midrule
 \endhead
-Somewhere & 50 & 36 & -28 \\
-Anywhere & 50 & 50 & 0 \\
-Elsewhere & 50 & 58 & 16 \\
+Craigavon & 92,242 & 103,341 \\
+Dungannon & 57,263 & 63,552 \\
+Lisburn & 119,442 & 129,485 \\
+Armagh & 59,137 & 63,874 \\
+Newry and Mourne & 99,136 & 106,813 \\
+Magherafelt & 44,664 & 47,789 \\
+Banbridge & 47,821 & 51,108 \\
 \bottomrule
 \end{longtable}
 
-Use the formula above to calculate the percentage change for Upper Braniel:
+Use the formula above to calculate the percentage change for Upper Banbridge:
 
 \[ \textrm{Percentage Change} = 100\% \frac{\textrm{New Value} - \textrm{Old Value}}{\textrm{Old Value}},\]
 
-\[ \textrm{Percentage Change} = 100\% \frac{36 - 50}{50},\]
+\[ \textrm{Percentage Change} = 100\% \frac{51,108-47,821}{47,281}=6.9\%,\]
 
-\[ \textrm{Percentage Change} = 100\% \frac{(-14)}{50},\]
+A negative percentage change indicates a percentage decrease while a positive percentage change indicates a percentage increase so the population has increased by 6.9\%.
 
-\[ \textrm{Percentage Change} = -100\% \frac{14}{50},\]
+The percentage change in the population of each area between 2010 and 2020 has been calculated using this formula and the results are detailed in the table below.
 
-\[ \textrm{Percentage Change} = -100\% \frac{7}{25},\]
-
-\[ \textrm{Percentage Change} = -28\%.\]
-
-A negative percentage change indicates a percentage decrease while a positive percentage change indicates a percentage increase.
+\begin{longtable}[]{@{}rrrr@{}}
+\caption{\label{tab:table1023} Mid Year Population Estimates, 2010-2020}\tabularnewline
+\toprule
+LGD & Persons (2010) & Persons (2020) & Percentage Change \\
+\midrule
+\endfirsthead
+\toprule
+LGD & Persons (2010) & Persons (2020) & Percentage Change \\
+\midrule
+\endhead
+Craigavon & 92,242 & 103,341 & 12.0\% \\
+Dungannon & 57,263 & 63,552 & 11.0\% \\
+Lisburn & 119,442 & 129,485 & 8.4\% \\
+Armagh & 59,137 & 63,874 & 8.0\% \\
+Newry and Mourne & 99,136 & 106,813 & 7.7\% \\
+Magherafelt & 44,664 & 47,789 & 7.0\% \\
+Banbridge & 47,821 & 51,108 & 6.9\% \\
+\bottomrule
+\end{longtable}
 
 \hypertarget{percentage-point-change}{%
 \section{Percentage Point Change}\label{percentage-point-change}}
 
 Note that subtracting one percentage from another gives the percentage point change rather than the percentage change.
-
-\hypertarget{example-13}{%
-\subsection{Example}\label{example-13}}
-
-What is the percentage point change in the population in these locations between 2018 and 2019?
-
-\begin{longtable}[]{@{}rrrr@{}}
-\caption{\label{tab:table11}}\tabularnewline
-\toprule
-Location & 2018 & 2019 & Percentage Change (\%) \\
-\midrule
-\endfirsthead
-\toprule
-Location & 2018 & 2019 & Percentage Change (\%) \\
-\midrule
-\endhead
-Somewhere & 3.5 & 2.5 & -1 \\
-Anywhere & 3.4 & 3.3 & -0.1 \\
-Elsewhere & 3.3 & 3.8 & 0.5 \\
-\bottomrule
-\end{longtable}
 
 \hypertarget{quantiles}{%
 \section{Quantiles}\label{quantiles}}
@@ -2024,8 +2172,8 @@ You can also find these values using Excel with the function:
 
 where p is the probability and df is the number of degrees of freedom.
 
-\hypertarget{example-14}{%
-\subsection{Example}\label{example-14}}
+\hypertarget{example-13}{%
+\subsection{Example}\label{example-13}}
 
 Rock-scissors-paper is a game of chance in which any player should be expected to win, tie and lose with equal frequency. Over the course of 30 games a player could be expected to win approximately ten times, lose ten times and tie times. Imagine a random sample of 24 games:
 
@@ -2099,9 +2247,9 @@ For a \(df\) of 3 and a desired significance of 0.05 the calculated \(\chi^2\) v
 \hypertarget{chi-square-test-of-independence}{%
 \section{Chi-Square Test of Independence}\label{chi-square-test-of-independence}}
 
-The chi-square test of independence is used when two categorical variables are to be tested for independence. The aim is to analyze whether the characteristic values of the first variable are influenced by the characteristic values of the second variable and vice versa.
+The chi-square test of independence is used when two categorical variables are to be tested for independence.
 
-In order to calculate the chi-square, an observed and an expected frequency must be given. In the independence test, the expected frequency is the one that results when both variables are independent. If two variables are independent, the expected frequencies of the individual cells are obtained with:
+In order to calculate the chi-square value, an observed and an expected frequency must be given. In the independence test, the expected frequency is the one that results when both variables are independent. If two variables are independent, the expected frequencies of the individual cells are obtained with:
 
 \[\textrm{Expected Value}= \frac{\textrm{Row Total} \times \textrm{Column Total}}{\textrm{Grand Total}}.\]
 Note that this differs from the goodness of fit test.
@@ -2112,60 +2260,45 @@ The calculation of degrees of freedom also differs and is given by:
 
 where p is the number of rows and q is the number of columns.
 
-\hypertarget{example-15}{%
-\subsection{Example}\label{example-15}}
+\hypertarget{chi-square-homogeneity-test}{%
+\section{Chi Square Homogeneity Test}\label{chi-square-homogeneity-test}}
 
-The example below calculates chi square for some simulated data.
+The Chi-square homogeneity test can be used to check whether two or more samples come from the same population. The homogeneity and independence tests are performed in exactly the same way but there is a subtle difference.
 
-\begin{longtable}[]{@{}rrrr@{}}
-\caption{\label{tab:table12} Educational Attainment: Observed Values}\tabularnewline
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\caption{\label{tab:table181} Independence and Homogeneity}\tabularnewline
 \toprule
-Education & Male (Observed) & Female (Observed) & Total \\
+\begin{minipage}[b]{\linewidth}\raggedleft
+Test
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Sample
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Question
+\end{minipage} \\
 \midrule
 \endfirsthead
 \toprule
-Education & Male (Observed) & Female (Observed) & Total \\
+\begin{minipage}[b]{\linewidth}\raggedleft
+Test
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Sample
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Question
+\end{minipage} \\
 \midrule
 \endhead
-GCSE & 15 & 13 & 28 \\
-A Level & 5 & 3 & 8 \\
-Total & 20 & 16 & 36 \\
+Independence & Two categorical variables are measured on one sample & Are the two categorical variables independent? \\
+Homogeneity & A single categorical variable is measured on several samples & Are the groups homogeneous (have the same distribution of the categorical variable)? \\
 \bottomrule
 \end{longtable}
 
-Expected values are calculated using:
+In practice these tests are performed identically and the difference lies in the question being asked and how results are reported.
 
-\[\textrm{Expected Value}= \frac{\textrm{Row Total} \times \textrm{Column Total}}{\textrm{Grand Total}}.\]
-
-The results are shown below:
-
-\begin{longtable}[]{@{}rrr@{}}
-\caption{\label{tab:table13} Educational Attainment: Expected Values}\tabularnewline
-\toprule
-Education & Male (Expected) & Female (Expected) \\
-\midrule
-\endfirsthead
-\toprule
-Education & Male (Expected) & Female (Expected) \\
-\midrule
-\endhead
-GCSE & 16 & 12 \\
-A Level & 4 & 4 \\
-\bottomrule
-\end{longtable}
-
-Now calculate \(\chi^2\):
-
-\[\chi^2=(15-16)^2/16 +(13-12)^2/12+(5-4)^2/4 + (3-4)^2/4 = 0.645.\]
-
-After calculating \(\chi^2\) the degrees of freedom, df, is needed. This is given by:
-
-\[df=(p-1)(q-1)=(2-1)(2-1)=1.\]
-
-For a significance level of 5\% a \(\chi^2\) value greater than 3.84 is needed. Since the calculated \(\chi^2\) value is larger, there is a significant difference and the null hypothesis is rejected. A p value close to zero means that our variables are very unlikely to be completely unassociated in some population. However, this does not mean the variables are strongly associated; a weak association in a large sample size may also result in p\textless0.05.
-
-\hypertarget{strength-of-association}{%
-\section{Strength of Association}\label{strength-of-association}}
+\hypertarget{association}{%
+\section{Strength of Association}\label{association}}
 
 A few different statistics can be used for calculating effect size when a Chi squared test has been conducted, depending on the number of categories for each variable, the type of variables (nominal or ordinal) and the nature of the study.
 
@@ -2186,8 +2319,8 @@ This is considered a small effect (0.1 is considered a small effect size, 0.3 me
 
 Note also that an extension of ϕ for nominal variables with more than two categories is Cramer's V, while other measures of effect size include relative risk and odds ratio.
 
-\hypertarget{cramers-v}{%
-\subsection{Cramer's V}\label{cramers-v}}
+\hypertarget{cramer}{%
+\subsection{Cramer's V}\label{cramer}}
 
 Cramer's V is an alternative to phi in tables bigger than 2 \(\times\) 2 tabules \citep{akoglu}.
 
@@ -2201,6 +2334,99 @@ An alternative association measure for two nominal variables is the contingency 
 
 For two ordinal variables, a Spearman correlation or Kendall's tau are preferable over Cramér's V. For two metric (interval or ratio) variables, a Pearson correlation is the preferred measure.
 
+\hypertarget{example-14}{%
+\section{Example}\label{example-14}}
+
+This chi square test could be useful in determining whether the duration of suspensions given to students in Northern Ireland differs by SEN status.
+
+Data from the Education Authority, processed by the Department of Education for pupil suspensions across Northern Ireland for 2020/21 is presented below:
+
+\begin{longtable}[]{@{}rrrrr@{}}
+\caption{\label{tab:table18} Suspension Duration by SEN Status, 2019/20}\tabularnewline
+\toprule
+Duration of Suspension & Non-SEN & SEN & Total & \\
+\midrule
+\endfirsthead
+\toprule
+Duration of Suspension & Non-SEN & SEN & Total & \\
+\midrule
+\endhead
+5 days & 2015 & 985 & 3000 & \\
+6 - 10 days & 152 & 165 & 317 & \\
+10 - 20 days & 64 & 74 & 138 & \\
+21+ days & 21 & 30 & 51 & \\
+Total & 2252 & 1254 & 3506 & \\
+\bottomrule
+\end{longtable}
+
+Expected values are calculated using:
+
+\[\textrm{Expected Value}= \frac{\textrm{Row Total} \times \textrm{Column Total}}{\textrm{Grand Total}}.\]
+
+The results are shown below:
+
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}
+  >{\raggedleft\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1667}}@{}}
+\caption{\label{tab:table180} Suspension Duration by SEN Status, 2019/20}\tabularnewline
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedleft
+Duration of Suspension
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Non-SEN
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+SEN
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Total
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Non-SEN (expected)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+SEN (expected)
+\end{minipage} \\
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedleft
+Duration of Suspension
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Non-SEN
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+SEN
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Total
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Non-SEN (expected)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+SEN (expected)
+\end{minipage} \\
+\midrule
+\endhead
+5 days & 2015 & 985 & 3000 & 1927 & 1073 \\
+6 - 10 days & 152 & 165 & 317 & 204 & 113 \\
+10 - 20 days & 64 & 74 & 138 & 89 & 50 \\
+21+ days & 21 & 30 & 51 & 33 & 18 \\
+Total & 2252 & 1254 & 3506 & NA & NA \\
+\bottomrule
+\end{longtable}
+
+Now calculate \(\chi^2\):
+
+\[\chi^2=\frac{(1927-2015)^2}{2015} +\frac{(1073-985)^2}{985}+... + \frac{(18-30)^2}{30} = 78.8.\]
+
+After calculating \(\chi^2\) the degrees of freedom, df, is needed to check the critical value on a look-up table. This is given by:
+
+\[df=(p-1)(q-1)=(2-1)(4-1)=3.\]
+
+For a significance level of 5\% a \(\chi^2\) value greater than 3.84 is needed. Since the calculated \(\chi^2\) value is larger, there is a significant difference. The strength of the relationship can be determined using \protect\hyperlink{cramer}{Cramer's V}. In this case, Cramer's V is 0.15 which indicates a weak \protect\hyperlink{association}{association}. In practice, a Cramer's V of 0.1, while weak, is usually sufficient to demonstrate that some association exists.
+
+In 2020/21 there was a total of 1,254 compulsory school age pupils suspended who had SEN and 2,252 pupils who did not \citep{nisra11}. These numbers of pupils suspended represent 2.0\% of pupils with SEN, and 0.9\% for pupils with no SEN. While this does not provide any indication as to the possible links between duration of suspension and SEN status it does show that the rates of suspension are higher for pupils with SEN \citep{nisra11}.
+
+In a real study more time would be spent determining the best way to record the data. Chi-square tests are sensitive to the bin width for instance although most reasonable choices should produce similar results. It would also be possible to investigate frequency of suspension in terms of the number of times students were suspended rather than the duration of the suspension. It would also be useful to consider other factors such as whether students are eligible for free school meals, whether they are newcomers and break down the data by gender, ethnicity and the type of school attended. Inferential statistics are best used when substantial planning has been undertaken with regards to data collection. Ideally, a more complex logistic regression could be used to predict the odds of suspension for different genders based on a range of characteristic variables such as ethnicity, SEN status, FSM eligibility\ldots{} etc.
+
 \hypertarget{relative-risk}{%
 \section{Relative Risk}\label{relative-risk}}
 
@@ -2211,7 +2437,7 @@ The Relative Risk is used when comparing the probability of an event occurring t
 For example consider the risk of developing cancer in those exposed and unexposed to second hand smoke. On a study's conclusion we might have a table like the one below:
 
 \begin{longtable}[]{@{}rrr@{}}
-\caption{\label{tab:table14}}\tabularnewline
+\caption{\label{tab:table14} Relative Risk}\tabularnewline
 \toprule
 Status & Disease & No Disease \\
 \midrule
@@ -2232,7 +2458,7 @@ To calculate the relative risk associated with an exposure we must compare the r
 Let's add values to do the calculations:
 
 \begin{longtable}[]{@{}rrr@{}}
-\caption{\label{tab:table15}}\tabularnewline
+\caption{\label{tab:table15} Relative Risk}\tabularnewline
 \toprule
 Status & Disease & No Disease \\
 \midrule
@@ -2282,7 +2508,7 @@ For instance, a 60\% probability to win gives 1.5 odds to win.
 Given some data:
 
 \begin{longtable}[]{@{}rrr@{}}
-\caption{\label{tab:table16}}\tabularnewline
+\caption{\label{tab:table16} Odds Ratio}\tabularnewline
 \toprule
 Status & Disease (case) & Disease (Control \\
 \midrule
@@ -2306,7 +2532,7 @@ Here's an example with real data:
   >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
   >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}@{}}
-\caption{\label{tab:table17}}\tabularnewline
+\caption{\label{tab:table17} Odds Ratio}\tabularnewline
 \toprule
 \begin{minipage}[b]{\linewidth}\raggedleft
 Exposure: Parental smoking in pregnancy
@@ -2344,32 +2570,6 @@ OR \textgreater{} 1, exposure is positively associated with the disease.
 OR \textless{} 1, exposure is negatively associated with the disease.
 
 The further the OR is from 1, the stronger the association.
-
-\hypertarget{chi-square-homogeneity-test}{%
-\section{Chi Square Homogeneity Test}\label{chi-square-homogeneity-test}}
-
-The Chi-square homogeneity test can be used to check whether two or more samples come from the same population. One question could be whether the subscription frequency of three fictional video streaming services Netflocks, Amazing, Fizzney and Tantamount differ in different age groups. As a fictitious example, a survey is made in three age groups with the following result:
-
-\begin{longtable}[]{@{}rrrr@{}}
-\caption{\label{tab:table18}}\tabularnewline
-\toprule
-Network & 15-25 & 25-35 & 35-45 \\
-\midrule
-\endfirsthead
-\toprule
-Network & 15-25 & 25-35 & 35-45 \\
-\midrule
-\endhead
-Netflocks & 25 & 23 & 20 \\
-Amazing & 29 & 30 & 33 \\
-Fizzney & 11 & 13 & 12 \\
-Tantamount & 16 & 24 & 26 \\
-\bottomrule
-\end{longtable}
-
-As with the chi-square independence test, this result is compared with the table that would result if the distributions of Streaming providers were independent of age.
-
-The process is the same as in the Independence test where the expected values are calculated.
 
 Summary
 
