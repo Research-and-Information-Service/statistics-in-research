@@ -2094,12 +2094,12 @@ The faint blue lines show the outcome of the resampling that occurs when bootstr
 The expression that ``correlation does not imply causation'' is fairly well known and it is a warning against interpreting a strong correlation to imply that change in one variable directly causes the change in another. This is rarely the case. Ice cream sales and drownings are positively correlated but it is unlikely that ice cream sales are somehow driving people to drown or vice versa. Instead, it is temperature that causes a change in the other two variables. Higher temperatures cause higher ice cream sales and drives a greater number of swimmers into the sea and swimming pools (where they will be at greater risk of drowning).
 
 \hypertarget{chisq}{%
-\chapter{Chi Square Tests}\label{chisq}}
+\chapter{Chi-Square Tests}\label{chisq}}
 
 \hypertarget{description}{%
 \section{Description}\label{description}}
 
-Chi-square tests are a set of several non-parametric hypothesis tests used for categorical variables with nominal or ordinal measurement scale. There are three tests, the chi square test of goodness of fit; the chi square test of independence; and the chi square test of homogeneity.
+Chi-square tests are a set of several non-parametric hypothesis tests used for categorical variables with nominal or ordinal measurement scale. There are three tests, the chi-square test of goodness of fit; the chi-square test of independence; and the chi-square test of homogeneity.
 
 \begin{itemize}
 \item
@@ -2115,7 +2115,7 @@ Chi-square tests are a set of several non-parametric hypothesis tests used for c
 
 Non-parametric tests and parametric tests make a number of assumptions that should hold true if the test is to be performed. Both types of testing assume the data was obtained through random selection, however it is not uncommon to find inferential statistics used when data has been collected from convenience samples and when this assumption is violated multiple replication studies will usually be performed to ensure confidence in the results.
 
-The assumptions of the chi square test are \citep{McHugh2013}:
+The assumptions of the chi-square test are \citep{McHugh2013}:
 
 \begin{itemize}
 \item
@@ -2135,9 +2135,9 @@ The assumptions of the chi square test are \citep{McHugh2013}:
 \end{itemize}
 
 \hypertarget{chi-square-goodness-of-fit-distribution-test}{%
-\section{Chi Square Goodness of Fit (Distribution Test)}\label{chi-square-goodness-of-fit-distribution-test}}
+\section{Chi-Square Goodness of Fit (Distribution Test)}\label{chi-square-goodness-of-fit-distribution-test}}
 
-The Chi-square Goodness-of-fit test, checks whether the frequencies of the individual characteristic values in the sample correspond to the frequencies of a defined distribution. In most cases, this defined distribution is that of the population.
+The chi-square Goodness-of-fit test, checks whether the frequencies of the individual characteristic values in the sample correspond to the frequencies of a defined distribution. In most cases, this defined distribution is that of the population.
 
 In the general case the null and alternative hypotheses being tested are:
 
@@ -2264,9 +2264,9 @@ The calculation of degrees of freedom also differs and is given by:
 where p is the number of rows and q is the number of columns.
 
 \hypertarget{chi-square-homogeneity-test}{%
-\section{Chi Square Homogeneity Test}\label{chi-square-homogeneity-test}}
+\section{Chi-Square Homogeneity Test}\label{chi-square-homogeneity-test}}
 
-The Chi-square homogeneity test can be used to check whether two or more samples come from the same population. The homogeneity and independence tests are performed in exactly the same way but there is a subtle difference.
+The chi-square homogeneity test can be used to check whether two or more samples come from the same population. The homogeneity and independence tests are performed in exactly the same way but there is a subtle difference.
 
 \begin{longtable}[]{@{}
   >{\raggedleft\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3333}}
@@ -2303,14 +2303,14 @@ In practice these tests are performed identically and the difference lies in the
 \hypertarget{association}{%
 \section{Strength of Association}\label{association}}
 
-Different statistics can be used to calculate the effect size when a Chi squared test has been conducted, depending on the number of categories for each variable, the type of variables (nominal or ordinal) and the nature of the study.
+Different statistics can be used to calculate the effect size when a chi-squared test has been conducted, depending on the number of categories for each variable, the type of variables (nominal or ordinal) and the nature of the study.
 
 \hypertarget{phi}{%
 \subsection{Phi}\label{phi}}
 
 In the case where there are only two categories for each variable, then effect size can be measured using phi (\(\phi\)). Phi is a measure for the strength of an association between two categorical variables in a 2 \(\times\) 2 contingency table. It is calculated by taking the chi-square value, dividing it by the sample size, and then taking the square root of this value \citep{akoglu}.
 
-This is calculated using the Chi-square value (\(\chi^2\)) and the sample size (\(n\)), as follows:
+This is calculated using the chi-square value (\(\chi^2\)) and the sample size (\(n\)), as follows:
 
 \[\phi=\sqrt{\frac{\chi^2}{n}}.\]
 
@@ -2340,7 +2340,7 @@ For two ordinal variables, a Spearman correlation or Kendall's tau are preferabl
 \hypertarget{example-14}{%
 \section{Example}\label{example-14}}
 
-This chi square test could be useful in determining whether the duration of suspensions given to students in Northern Ireland differs by SEN status.
+This chi-square test could be useful in determining whether the duration of suspensions given to students in Northern Ireland differs by SEN status.
 
 Data from the Education Authority, processed by the Department of Education for pupil suspensions across Northern Ireland for 2020/21 is presented below:
 
@@ -2428,7 +2428,7 @@ For a significance level of 5\% a \(\chi^2\) value greater than 3.84 is needed. 
 
 In 2020/21 there was a total of 1,254 compulsory school age pupils suspended who had SEN and 2,252 pupils who did not \citep{nisra11}. These numbers of pupils suspended represent 2.0\% of pupils with SEN, and 0.9\% for pupils with no SEN. While this does not provide any indication as to the possible links between duration of suspension and SEN status it does show that the rates of suspension are higher for pupils with SEN \citep{nisra11}.
 
-In a real study more time would be spent determining the best way to record the data. For instance, Chi-square tests are sensitive to the bin width although most reasonable choices should produce similar results. It would also be possible to investigate frequency of suspension in terms of the number of times students were suspended rather than the duration of the suspension. It would also be useful to consider other factors such as whether students are eligible for free school meals, whether they are newcomers and break down the data by gender, ethnicity and the type of school attended. Inferential statistics are best used when substantial planning has been undertaken with regards to data collection. Ideally, a more complex logistic regression could be used to predict the odds of suspension for different genders based on a range of characteristic variables such as ethnicity, SEN status, FSM eligibility\ldots{} etc.
+In a real study more time would be spent determining the best way to record the data. For instance, Chi-square tests are sensitive to the bin width although most reasonable choices should produce similar results. It would also be possible to investigate frequency of suspension in terms of the number of times students were suspended rather than the duration of the suspension. It would also be useful to consider other factors such as whether students are eligible for free school meals, whether they are newcomers and break down the data by gender, ethnicity and the type of school attended. Inferential statistics are best used when substantial planning has been undertaken with regards to data collection. Ideally, a more complex logistic regression could be used to predict the odds of suspension for different genders based on a range of characteristic variables such as ethnicity, SEN status, FSM eligibility, etc.
 
 \hypertarget{relative-risk}{%
 \section{Relative Risk}\label{relative-risk}}
