@@ -37,7 +37,7 @@
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
   pdftitle={Statistics in Research},
-  pdfauthor={Aaron McMurray},
+  pdfauthor={Dr.~Aaron Alan McMurray},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
@@ -77,8 +77,8 @@
 \bibliographystyle{apalike}
 
 \title{Statistics in Research}
-\author{Aaron McMurray}
-\date{2023-05-12}
+\author{Dr.~Aaron Alan McMurray}
+\date{2023-07-28}
 
 \begin{document}
 \maketitle
@@ -95,11 +95,11 @@
 
 \textbf{Introduction}
 
-Today, more than ever, statistics is part of our lives. Statistics can be used to describe the interactions of fundamental particles or to measure biodiversity in our oceans. It can be used to predict election outcomes through opinion polling in politics or to predict the prices of assets in finance. Whatever quantitative research questions we may have the answers will ultimately come from statistics.
+Today, more than ever, statistics is part of our lives. Statistics can be used to describe the interactions of fundamental particles or to measure biodiversity in our oceans. It can be used to predict election outcomes or predict prices of assets in finance. Whatever the quantitative research questions is the answers will ultimately come from statistics.
 
 This e-book is intended to provide an introduction to statistics and describe the quantitative methods used in research.
 
-The book has been written for a broad audience and most of the mathematical techniques used are described in plain English (as far as possible). Worked examples are provided to demonstrate the process of calculating various statistics. There is no need to be mathematically inclined however to understand and use descriptive statistics in day-to-day research, especially with tools such as Excel, SPSS and Power BI which simplify many of the calculations involved in statistics. Some of the formula used in Excel calculations are provided throughout and the \protect\hyperlink{appendices}{appendices} include a list of useful excel formula. In later chapters detailing inferential statistics mathematical descriptions are provided and a glossary of mathematical notation is included in the \protect\hyperlink{appendices}{appendices}.
+The book has been written for a broad audience and most of the mathematical techniques used are described in plain English (as far as possible). Worked examples are provided to demonstrate the process of calculating various statistics. There is no need to be mathematically inclined to understand and use descriptive statistics in day-to-day research, especially with tools such as Excel and SPSS which simplify many of the calculations involved in statistics. Some of the formula used in Excel calculations are provided throughout and the \protect\hyperlink{appendices}{appendices} include a list of useful excel formula. In later chapters, detailing inferential statistics, mathematical descriptions are provided and a glossary of mathematical notation is included in the \protect\hyperlink{appendices}{appendices}.
 
 \textbf{Contents}
 
@@ -155,17 +155,13 @@ Throughout this text, blue boxes will be used to provide depth, context or addit
 
 Information
 
-Throughout this e-book blue boxes like this one will be used to provide additional information, context or mathematical details that go beyond the scope of an introduction to statistics. The information provided in these boxes is provided for interested readers but is not necessary to have a basic understanding of statistics.
+Blue boxes like this one will be used to provide additional information, context or mathematical details that go beyond the scope of an introduction to statistics. The information contained in these boxes is not necessary to have a basic understanding of statistics.
 
 Red boxes will be used throughout to summarise important information.
 
 Summary
 
 These are intended to provide a recap of all the most important information provided in a chapter needed to gain a basic understanding of statistics.
-
-\textbf{Questions or Corrections}
-
-Feel free to forward any feedback, questions or corrections to: \href{mailto:xxxxxxxxx@xxxxxxxxxxxx.uk}{\nolinkurl{xxxxxxxxx@xxxxxxxxxxxx.uk}}
 
 \hypertarget{intro}{%
 \chapter{Introduction}\label{intro}}
@@ -214,14 +210,14 @@ Samples and populations are important in both inferential and descriptive statis
 \hypertarget{population}{%
 \subsection{Population}\label{population}}
 
-The population includes all the elements from a set of data and the population characteristics that we calculate (e.g.~mean, median, mode\ldots{} etc) are called parameters.
+The population includes all the elements from a set of data and the population characteristics that we calculate (e.g.~mean, median, mode, etc) are called parameters.
 
-Populations can include people but other examples include objects, events, businesses and so on. Before starting a research study it is important to define the population that is being studied. Many populations can additionally be stratified into sub populations where sub-populations share additional attributes \citep{Frost2019} for instance, the population of a country can be subdivided into the male and female or subdivided into age bands. Sometimes the differences between sub-populations are unimportant and other times they are crucial.
+Populations can include people but other examples include objects, events, businesses and so on. Before starting a research study it is important to define the population that is being studied. Many populations can be stratified into sub-populations which share attributes \citep{Frost2019}. A country for instance can be sub-divided into male and female or sub-divided by age. The differences between sub-populations are sometimes unimportant but other times they are crucial.
 
 \hypertarget{sample}{%
 \subsection{Sample}\label{sample}}
 
-A sample differs from a population in that it is comprised of one or more observations which are drawn from the population. It is a subset of the population. The sample characteristics (e.g.~mean, median, mode\ldots{} etc) that we calculate are called statistics. Where possible, w use samples to draw inferences about wider populations. For instance, the voting intentions of 1,000 people (a sample) might be used to predict the outcome of a vote held for a general election involving 68,000,000 people (the population).
+A sample differs from a population in that it is comprised of one or more observations which are drawn from the population. It is a subset of the population. The sample characteristics (e.g.~mean, median, mode, etc) that we calculate are called statistics. Where possible, w use samples to draw inferences about wider populations. For instance, the voting intentions of 1,000 people (a sample) might be used to predict the outcome of a vote held for a general election involving 68,000,000 people (the population).
 
 Surveying a sample rather than an entire population is often more financially cost effective but using a sample comes with a different kind of cost. Using a sample rather than the population means that the reported statistics come with associated measures of uncertainty which describe how the estimate might differ from the true value of the population \citep{uncertainty}. If we were to measure the heights of 1,000 individuals in Northern Ireland, the average height of the sample is typically not going to be the same as the average height of all 1.8 million people in the country. The difference between the sample and the population values is considered a sampling error. If the sample mean is 176 cm and the population mean is 178 cm then the sampling error is 2 cm.
 
@@ -2105,22 +2101,25 @@ The expression that ``correlation does not imply causation'' is fairly well know
 
 Chi-square tests are a set of several non-parametric hypothesis tests used for categorical variables with nominal or ordinal measurement scale. There are three tests, the chi square test of goodness of fit; the chi square test of independence; and the chi square test of homogeneity.
 
-The goodness-of-fit test is used to determine whether sample data matches a given distribution.
-
-The test of independence is used to determine whether there is a relationship between two categorical variables in a contingency table.
-
-The test of homogeneity is used to determine whether two or more categorical variables with unknown distributions have the same distribution as each other in several populations.
+\begin{itemize}
+\item
+  The goodness-of-fit test is used to determine whether sample data matches a given distribution.
+\item
+  The test of independence is used to determine whether there is a relationship between two categorical variables in a contingency table.
+\item
+  The test of homogeneity is used to determine whether two or more categorical variables with unknown distributions have the same distribution as each other in several populations.
+\end{itemize}
 
 \hypertarget{assumptions}{%
 \section{Assumptions}\label{assumptions}}
 
-Non-parametric tests and parametric tests come with assumptions that ought to hold true if the test is to be performed. Both assume the data was obtained through random selection, however it is not uncommon to find inferential statistics used when data has been collected from convenience samples. Typically, multiple replication studies are performed to ensure confidence in results when this assumption is violated.
+Non-parametric tests and parametric tests make a number of assumptions that should hold true if the test is to be performed. Both types of testing assume the data was obtained through random selection, however it is not uncommon to find inferential statistics used when data has been collected from convenience samples and when this assumption is violated multiple replication studies will usually be performed to ensure confidence in the results.
 
 The assumptions of the chi square test are \citep{McHugh2013}:
 
 \begin{itemize}
 \item
-  The data in the table must be counts or frequency data, not percentages or transformed data.
+  The data in the table must be counts or frequency data. It is not appropriate to use percentages or transformed data.
 \item
   The categories of the variables should not overlap (e.g., male or female).
 \item
@@ -2128,9 +2127,9 @@ The assumptions of the chi square test are \citep{McHugh2013}:
 \item
   The groups being compared must be independent and a different test should be used if they are related (e.g.~paired samples).
 \item
-  The variables being compared must be categorized at the nominal level, although data that has been transformed from ordinal, interval or ratio data may also be used.
+  The variables being compared must be categorised at the nominal level, although data that has been transformed from ordinal, interval or ratio data may also be used.
 \item
-  At least 80\% of the cells should have expected values greater than or equal to five. When this occurs, the chi-square test with Yates' continuity correction (if the total sample size is greater than 20) or Fisher's exact test should be used \citep{chica}.
+  At least 80\% of the cells should have expected values greater than or equal to five. Yates's continuity correction can be used to to prevent overestimation of statistical significance when at least one entry has an expected count less than 5. Fisher's exact test can also be used \citep{chica}.
 \item
   No cell should have an expected value of zero.
 \end{itemize}
@@ -2193,11 +2192,11 @@ Outcome & Frequency (Observed) \\
 \endhead
 Win & 4 \\
 Loss & 13 \\
-Tie & 7 \\
+Draw & 7 \\
 \bottomrule
 \end{longtable}
 
-It doesn't seem like the outcomes occur with equal probability. It seems that the player is losing much more frequently than they win or tie.
+It does not seem like the outcomes occur with equal probability. It seems that the player is losing games much more frequently than games result in a draw or a win.
 
 A \(\chi^2\) goodness of fit test could be used to determine if the distribution of these outcomes disagrees with an even distribution. This is essentially a hypothesis test:
 
@@ -2205,7 +2204,7 @@ A \(\chi^2\) goodness of fit test could be used to determine if the distribution
 
 \(H_a\): The outcomes do not have equal probability.
 
-Since it's expected that the player should win, lose and tie with equal frequency the expected outcomes are 8 wins, 8 losses and 8 ties.
+Since it is expected that the player should win, lose and draw with equal frequency the expected outcomes are 8 wins, 8 losses and 8 draws.
 
 \begin{longtable}[]{@{}rrr@{}}
 \caption{\label{tab:table0011} Chi Square Goodness of Fit}\tabularnewline
@@ -2219,7 +2218,7 @@ Outcome & Frequency (Observed) & Frequency (Expected) \\
 \endhead
 Win & 4 & 8 \\
 Loss & 13 & 8 \\
-Tie & 7 & 8 \\
+Draw & 7 & 8 \\
 \bottomrule
 \end{longtable}
 
@@ -2304,7 +2303,7 @@ In practice these tests are performed identically and the difference lies in the
 \hypertarget{association}{%
 \section{Strength of Association}\label{association}}
 
-A few different statistics can be used for calculating effect size when a Chi squared test has been conducted, depending on the number of categories for each variable, the type of variables (nominal or ordinal) and the nature of the study.
+Different statistics can be used to calculate the effect size when a Chi squared test has been conducted, depending on the number of categories for each variable, the type of variables (nominal or ordinal) and the nature of the study.
 
 \hypertarget{phi}{%
 \subsection{Phi}\label{phi}}
@@ -2328,7 +2327,7 @@ Note also that an extension of ϕ for nominal variables with more than two categ
 
 Cramer's V is an alternative to phi in tables bigger than 2 \(\times\) 2 tabules \citep{akoglu}.
 
-\[V = \sqrt{\frac{\chi^2}{n*min(r-1,c-1)}},\]
+\[V = \sqrt{\frac{\chi^2}{n*\textrm{min}(r-1, c-1)}},\]
 
 where \(n\) in the sample size and \(min()\) is the minimum of the two arguments \(r-1\) and \(c-1\). A Cramer's V value of 0-0.29 indicates a weak association; 0.3-0.59 indicates a moderate association and a Cramer's V of 0.6-1 indicates a strong association. The scale goes from complete independence to perfect association.
 
@@ -2429,7 +2428,7 @@ For a significance level of 5\% a \(\chi^2\) value greater than 3.84 is needed. 
 
 In 2020/21 there was a total of 1,254 compulsory school age pupils suspended who had SEN and 2,252 pupils who did not \citep{nisra11}. These numbers of pupils suspended represent 2.0\% of pupils with SEN, and 0.9\% for pupils with no SEN. While this does not provide any indication as to the possible links between duration of suspension and SEN status it does show that the rates of suspension are higher for pupils with SEN \citep{nisra11}.
 
-In a real study more time would be spent determining the best way to record the data. Chi-square tests are sensitive to the bin width for instance although most reasonable choices should produce similar results. It would also be possible to investigate frequency of suspension in terms of the number of times students were suspended rather than the duration of the suspension. It would also be useful to consider other factors such as whether students are eligible for free school meals, whether they are newcomers and break down the data by gender, ethnicity and the type of school attended. Inferential statistics are best used when substantial planning has been undertaken with regards to data collection. Ideally, a more complex logistic regression could be used to predict the odds of suspension for different genders based on a range of characteristic variables such as ethnicity, SEN status, FSM eligibility\ldots{} etc.
+In a real study more time would be spent determining the best way to record the data. For instance, Chi-square tests are sensitive to the bin width although most reasonable choices should produce similar results. It would also be possible to investigate frequency of suspension in terms of the number of times students were suspended rather than the duration of the suspension. It would also be useful to consider other factors such as whether students are eligible for free school meals, whether they are newcomers and break down the data by gender, ethnicity and the type of school attended. Inferential statistics are best used when substantial planning has been undertaken with regards to data collection. Ideally, a more complex logistic regression could be used to predict the odds of suspension for different genders based on a range of characteristic variables such as ethnicity, SEN status, FSM eligibility\ldots{} etc.
 
 \hypertarget{relative-risk}{%
 \section{Relative Risk}\label{relative-risk}}
@@ -2480,11 +2479,11 @@ Unexposed & C & D \\
 \[\textrm{Disease Risk (incidence) in unexposed}=\frac{64}{64+319}=0.17,\]
 
 \[\textrm{Relative Risk}=\frac{0.92}{0.17}=5.41.\]
-RR=1, the incidence in the exposed is the same as the incidence in the non-exposed. No increased risk, no association.
+RR = 1 indicates that the incidence in the exposed is the same as the incidence in the non-exposed. No increased risk, no association.
 
-RR\textgreater1, the incidence in the exposed is greater than the incidence in the non-exposed. Increased risk, positive association.
+RR \textgreater{} 1 indicates that the incidence in the exposed is greater than the incidence in the non-exposed. Increased risk, positive association.
 
-RR\textless1, the incidence in the exposed is lower than the incidence in the non exposed. Decreased risk, negative association.
+RR \textless{} 1 indicates that the incidence in the exposed is lower than the incidence in the non exposed. Decreased risk, negative association.
 
 The further the RR is from 1 the stronger the association.
 
@@ -2567,11 +2566,11 @@ The odds ratio is:
 \[OR=\frac{(\frac{87}{201})}{(\frac{147}{508})}=1.48.\]
 This is different from the relative risk equation.
 
-OR = 1, exposure is not associated with the disease.
+OR = 1 indicates that exposure is not associated with the disease.
 
-OR \textgreater{} 1, exposure is positively associated with the disease.
+OR \textgreater{} 1 indicates that exposure is positively associated with the disease.
 
-OR \textless{} 1, exposure is negatively associated with the disease.
+OR \textless{} 1 indicates that exposure is negatively associated with the disease.
 
 The further the OR is from 1, the stronger the association.
 
@@ -2908,7 +2907,7 @@ A mathematical symbol is a figure used to represent a mathematical object, an ac
 
 should be read as an instruction to sum all the measured values of the variable denoted by \(x\).
 
-\[\large\Sigma_{i=0}^{n} x^2,\]
+\[\large\Sigma_{i=0}^{n} x_i^2,\]
 
 is more specific and indicates that a sum should be taken between the 0\(^{th}\) and the n\(^{th}\) value of the variable \(x^2\).
 

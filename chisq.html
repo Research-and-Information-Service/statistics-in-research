@@ -20,10 +20,10 @@
   <meta name="twitter:description" content="This book is designed to provide readers with a broad overview of descriptive and inferential statistics and their use in research." />
   
 
-<meta name="author" content="Aaron McMurray" />
+<meta name="author" content="Dr. Aaron Alan McMurray" />
 
 
-<meta name="date" content="2023-05-12" />
+<meta name="date" content="2023-07-28" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -300,21 +300,23 @@ div.csl-indent {
 <div id="description" class="section level2 hasAnchor" number="11.1">
 <h2><span class="header-section-number">11.1</span> Description<a href="chisq.html#description" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Chi-square tests are a set of several non-parametric hypothesis tests used for categorical variables with nominal or ordinal measurement scale. There are three tests, the chi square test of goodness of fit; the chi square test of independence; and the chi square test of homogeneity.</p>
-<p>The goodness-of-fit test is used to determine whether sample data matches a given distribution.</p>
-<p>The test of independence is used to determine whether there is a relationship between two categorical variables in a contingency table.</p>
-<p>The test of homogeneity is used to determine whether two or more categorical variables with unknown distributions have the same distribution as each other in several populations.</p>
+<ul>
+<li><p>The goodness-of-fit test is used to determine whether sample data matches a given distribution.</p></li>
+<li><p>The test of independence is used to determine whether there is a relationship between two categorical variables in a contingency table.</p></li>
+<li><p>The test of homogeneity is used to determine whether two or more categorical variables with unknown distributions have the same distribution as each other in several populations.</p></li>
+</ul>
 </div>
 <div id="assumptions" class="section level2 hasAnchor" number="11.2">
 <h2><span class="header-section-number">11.2</span> Assumptions<a href="chisq.html#assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Non-parametric tests and parametric tests come with assumptions that ought to hold true if the test is to be performed. Both assume the data was obtained through random selection, however it is not uncommon to find inferential statistics used when data has been collected from convenience samples. Typically, multiple replication studies are performed to ensure confidence in results when this assumption is violated.</p>
+<p>Non-parametric tests and parametric tests make a number of assumptions that should hold true if the test is to be performed. Both types of testing assume the data was obtained through random selection, however it is not uncommon to find inferential statistics used when data has been collected from convenience samples and when this assumption is violated multiple replication studies will usually be performed to ensure confidence in the results.</p>
 <p>The assumptions of the chi square test are <span class="citation">(<a href="#ref-McHugh2013" role="doc-biblioref">McHugh M. L. 2013</a>)</span>:</p>
 <ul>
-<li><p>The data in the table must be counts or frequency data, not percentages or transformed data.</p></li>
+<li><p>The data in the table must be counts or frequency data. It is not appropriate to use percentages or transformed data.</p></li>
 <li><p>The categories of the variables should not overlap (e.g., male or female).</p></li>
 <li><p>The chi-square test should not be used if the same subjects are tested at different time points.</p></li>
 <li><p>The groups being compared must be independent and a different test should be used if they are related (e.g. paired samples).</p></li>
-<li><p>The variables being compared must be categorized at the nominal level, although data that has been transformed from ordinal, interval or ratio data may also be used.</p></li>
-<li><p>At least 80% of the cells should have expected values greater than or equal to five. When this occurs, the chi-square test with Yates’ continuity correction (if the total sample size is greater than 20) or Fisher’s exact test should be used <span class="citation">(<a href="#ref-chica" role="doc-biblioref">Gonzalez-Chica D. A., Bastos J. L., Duquia R. P., Bonamigo R. R., Martínez-Mesa J. 2015</a>)</span>.</p></li>
+<li><p>The variables being compared must be categorised at the nominal level, although data that has been transformed from ordinal, interval or ratio data may also be used.</p></li>
+<li><p>At least 80% of the cells should have expected values greater than or equal to five. Yates’s continuity correction can be used to to prevent overestimation of statistical significance when at least one entry has an expected count less than 5. Fisher’s exact test can also be used <span class="citation">(<a href="#ref-chica" role="doc-biblioref">Gonzalez-Chica D. A., Bastos J. L., Duquia R. P., Bonamigo R. R., Martínez-Mesa J. 2015</a>)</span>.</p></li>
 <li><p>No cell should have an expected value of zero.</p></li>
 </ul>
 </div>
@@ -364,16 +366,16 @@ where <span class="math inline">\(p\)</span> is the number of categories.</p>
 <td align="right">13</td>
 </tr>
 <tr class="odd">
-<td align="right">Tie</td>
+<td align="right">Draw</td>
 <td align="right">7</td>
 </tr>
 </tbody>
 </table>
-<p>It doesn’t seem like the outcomes occur with equal probability. It seems that the player is losing much more frequently than they win or tie.</p>
+<p>It does not seem like the outcomes occur with equal probability. It seems that the player is losing games much more frequently than games result in a draw or a win.</p>
 <p>A <span class="math inline">\(\chi^2\)</span> goodness of fit test could be used to determine if the distribution of these outcomes disagrees with an even distribution. This is essentially a hypothesis test:</p>
 <p><span class="math inline">\(H_0\)</span>: All the outcomes have equal probability.</p>
 <p><span class="math inline">\(H_a\)</span>: The outcomes do not have equal probability.</p>
-<p>Since it’s expected that the player should win, lose and tie with equal frequency the expected outcomes are 8 wins, 8 losses and 8 ties.</p>
+<p>Since it is expected that the player should win, lose and draw with equal frequency the expected outcomes are 8 wins, 8 losses and 8 draws.</p>
 <table>
 <caption> Chi Square Goodness of Fit</caption>
 <thead>
@@ -395,7 +397,7 @@ where <span class="math inline">\(p\)</span> is the number of categories.</p>
 <td align="right">8</td>
 </tr>
 <tr class="odd">
-<td align="right">Tie</td>
+<td align="right">Draw</td>
 <td align="right">7</td>
 <td align="right">8</td>
 </tr>
@@ -461,7 +463,7 @@ Note that this differs from the goodness of fit test.</p>
 </div>
 <div id="association" class="section level2 hasAnchor" number="11.6">
 <h2><span class="header-section-number">11.6</span> Strength of Association<a href="chisq.html#association" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A few different statistics can be used for calculating effect size when a Chi squared test has been conducted, depending on the number of categories for each variable, the type of variables (nominal or ordinal) and the nature of the study.</p>
+<p>Different statistics can be used to calculate the effect size when a Chi squared test has been conducted, depending on the number of categories for each variable, the type of variables (nominal or ordinal) and the nature of the study.</p>
 <div id="phi" class="section level3 hasAnchor" number="11.6.1">
 <h3><span class="header-section-number">11.6.1</span> Phi<a href="chisq.html#phi" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In the case where there are only two categories for each variable, then effect size can be measured using phi (<span class="math inline">\(\phi\)</span>). Phi is a measure for the strength of an association between two categorical variables in a 2 <span class="math inline">\(\times\)</span> 2 contingency table. It is calculated by taking the chi-square value, dividing it by the sample size, and then taking the square root of this value <span class="citation">(<a href="#ref-akoglu" role="doc-biblioref">Akoglu, H. 2018</a>)</span>.</p>
@@ -475,7 +477,7 @@ Note that this differs from the goodness of fit test.</p>
 <div id="cramer" class="section level3 hasAnchor" number="11.6.2">
 <h3><span class="header-section-number">11.6.2</span> Cramer’s V<a href="chisq.html#cramer" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Cramer’s V is an alternative to phi in tables bigger than 2 <span class="math inline">\(\times\)</span> 2 tabules <span class="citation">(<a href="#ref-akoglu" role="doc-biblioref">Akoglu, H. 2018</a>)</span>.</p>
-<p><span class="math display">\[V = \sqrt{\frac{\chi^2}{n*min(r-1,c-1)}},\]</span></p>
+<p><span class="math display">\[V = \sqrt{\frac{\chi^2}{n*\textrm{min}(r-1, c-1)}},\]</span></p>
 <p>where <span class="math inline">\(n\)</span> in the sample size and <span class="math inline">\(min()\)</span> is the minimum of the two arguments <span class="math inline">\(r-1\)</span> and <span class="math inline">\(c-1\)</span>. A Cramer’s V value of 0-0.29 indicates a weak association; 0.3-0.59 indicates a moderate association and a Cramer’s V of 0.6-1 indicates a strong association. The scale goes from complete independence to perfect association.</p>
 <p>Association should never be greater than 1. A relatively weak correlation is all that can be expected when a phenomena is only partially dependent on the independent variable.</p>
 <p>An alternative association measure for two nominal variables is the contingency coefficient. However, it’s better avoided since its maximum value depends on the dimensions of the contingency table involved.</p>
@@ -607,7 +609,7 @@ Note that this differs from the goodness of fit test.</p>
 <p><span class="math display">\[df=(p-1)(q-1)=(2-1)(4-1)=3.\]</span></p>
 <p>For a significance level of 5% a <span class="math inline">\(\chi^2\)</span> value greater than 3.84 is needed. Since the calculated <span class="math inline">\(\chi^2\)</span> value is larger, there is a significant difference. The strength of the relationship can be determined using <a href="chisq.html#cramer">Cramer’s V</a>. In this case, Cramer’s V is 0.15 which indicates a weak <a href="chisq.html#association">association</a>. In practice, a Cramer’s V of 0.1, while weak, is usually sufficient to demonstrate that some association exists.</p>
 <p>In 2020/21 there was a total of 1,254 compulsory school age pupils suspended who had SEN and 2,252 pupils who did not <span class="citation">(<a href="#ref-nisra11" role="doc-biblioref">NISRA 2022b</a>)</span>. These numbers of pupils suspended represent 2.0% of pupils with SEN, and 0.9% for pupils with no SEN. While this does not provide any indication as to the possible links between duration of suspension and SEN status it does show that the rates of suspension are higher for pupils with SEN <span class="citation">(<a href="#ref-nisra11" role="doc-biblioref">NISRA 2022b</a>)</span>.</p>
-<p>In a real study more time would be spent determining the best way to record the data. Chi-square tests are sensitive to the bin width for instance although most reasonable choices should produce similar results. It would also be possible to investigate frequency of suspension in terms of the number of times students were suspended rather than the duration of the suspension. It would also be useful to consider other factors such as whether students are eligible for free school meals, whether they are newcomers and break down the data by gender, ethnicity and the type of school attended. Inferential statistics are best used when substantial planning has been undertaken with regards to data collection. Ideally, a more complex logistic regression could be used to predict the odds of suspension for different genders based on a range of characteristic variables such as ethnicity, SEN status, FSM eligibility… etc.</p>
+<p>In a real study more time would be spent determining the best way to record the data. For instance, Chi-square tests are sensitive to the bin width although most reasonable choices should produce similar results. It would also be possible to investigate frequency of suspension in terms of the number of times students were suspended rather than the duration of the suspension. It would also be useful to consider other factors such as whether students are eligible for free school meals, whether they are newcomers and break down the data by gender, ethnicity and the type of school attended. Inferential statistics are best used when substantial planning has been undertaken with regards to data collection. Ideally, a more complex logistic regression could be used to predict the odds of suspension for different genders based on a range of characteristic variables such as ethnicity, SEN status, FSM eligibility… etc.</p>
 </div>
 <div id="relative-risk" class="section level2 hasAnchor" number="11.8">
 <h2><span class="header-section-number">11.8</span> Relative Risk<a href="chisq.html#relative-risk" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -664,9 +666,9 @@ Note that this differs from the goodness of fit test.</p>
 <p><span class="math display">\[\textrm{Disease Risk (incidence) in exposed}=\frac{366}{366+32}=0.92,\]</span>
 <span class="math display">\[\textrm{Disease Risk (incidence) in unexposed}=\frac{64}{64+319}=0.17,\]</span></p>
 <p><span class="math display">\[\textrm{Relative Risk}=\frac{0.92}{0.17}=5.41.\]</span>
-RR=1, the incidence in the exposed is the same as the incidence in the non-exposed. No increased risk, no association.</p>
-<p>RR&gt;1, the incidence in the exposed is greater than the incidence in the non-exposed. Increased risk, positive association.</p>
-<p>RR&lt;1, the incidence in the exposed is lower than the incidence in the non exposed. Decreased risk, negative association.</p>
+RR = 1 indicates that the incidence in the exposed is the same as the incidence in the non-exposed. No increased risk, no association.</p>
+<p>RR &gt; 1 indicates that the incidence in the exposed is greater than the incidence in the non-exposed. Increased risk, positive association.</p>
+<p>RR &lt; 1 indicates that the incidence in the exposed is lower than the incidence in the non exposed. Decreased risk, negative association.</p>
 <p>The further the RR is from 1 the stronger the association.</p>
 <p>The relative risk will be reported alongside a p value or a 95% confidence interval. If the p value is not less than 0.05 or if the confidence interval includes 1 then the RR is not statistically significant.</p>
 <div class="defbox">
@@ -744,9 +746,9 @@ Information
 <p>The odds ratio is:</p>
 <p><span class="math display">\[OR=\frac{(\frac{87}{201})}{(\frac{147}{508})}=1.48.\]</span>
 This is different from the relative risk equation.</p>
-<p>OR = 1, exposure is not associated with the disease.</p>
-<p>OR &gt; 1, exposure is positively associated with the disease.</p>
-<p>OR &lt; 1, exposure is negatively associated with the disease.</p>
+<p>OR = 1 indicates that exposure is not associated with the disease.</p>
+<p>OR &gt; 1 indicates that exposure is positively associated with the disease.</p>
+<p>OR &lt; 1 indicates that exposure is negatively associated with the disease.</p>
 <p>The further the OR is from 1, the stronger the association.</p>
 <div class="sumbox">
 <h2>
