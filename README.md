@@ -27,8 +27,3 @@ The documentation is hosted through GitHub and available as an [interactive docu
 ## Contributions
 
 It is the author's intention that this documentation be updated in the future to cover a range of additional topics including the use of linear and non linear regression, more complex statistical modelling and introductory machine learning models. 
-
-Credits
-Massive thanks to Emma Beynon for her work on the Statistics and Machine Learning notebooks and also for her help in QA'ing and delivering this.
-
-Also another massive thanks to Jose Portilla whose excellent Python For Analysis and visualisation served as much of the inspiration for this course. You can check out his course on Udemy here: https://www.udemy.com/learning-python-for-data-analysis-and-visualization/
